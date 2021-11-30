@@ -205,7 +205,7 @@ document.querySelector("body").addEventListener("click", (event) => {
     let goodByeMessage = document.querySelector(".goodByeMessage");
 
     setTimeout(function () {
-      goodByeMessage.innerHTML = `<p>À bientôt!<p>`;
+      goodByeMessage.innerHTML = `<p>Vous pouvez me contacter par mail à l'adresse: kanurebecca0@gmail.com ou par téléphone au: 07.82.43.32.22. À bientôt!<p>`;
       goodByeMessage.style.border = `2px solid#dbdeea`;
       goodByeMessage.style.width = "229px";
       goodByeMessage.style.borderRadius = "6px";
