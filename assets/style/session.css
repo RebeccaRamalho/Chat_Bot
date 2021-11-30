@@ -1,0 +1,79 @@
+@font-face {
+  font-family: "OpenSans-Light";
+  src: local("OpenSans-Light"),
+    url(../font/open_sans/OpenSans-Light.ttf) format("truetype");
+}
+@font-face {
+  font-family: "OpenSans-Bold";
+  src: local("OpenSans-Bold"),
+    url(../font/open_sans/OpenSans-Bold.ttf) format("truetype");
+}
+body {
+  background: rgba(255, 255, 255, 0.73);
+  /* border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(18.3px);
+  -webkit-backdrop-filter: blur(18.3px);
+  border: 1px solid rgba(255, 255, 255, 0.85); */
+}
+
+.sessionContainer {
+  margin-left: 290px;
+  margin-top: 152px;
+}
+.time {
+  font-family: "OpenSans-Bold";
+  margin-left: 272px;
+  margin-bottom: 32px;
+}
+.userImageContainer {
+  display: flex;
+}
+.userImageContainer > div > a > #firstImg {
+  width: 44%;
+  height: 54%;
+  margin-left: 127px;
+  border: 4px solid #00afcc;
+  box-shadow: 7px 0 17px #4285f4;
+  border-radius: 5%;
+}
+.userImageContainer > div > a > #firstImg:hover {
+  width: 46%;
+  height: 56%;
+  margin-left: 127px;
+  border: 4px solid #00afcc;
+  box-shadow: 7px 0 17px #4285f4;
+  border-radius: 5%;
+  transition: width 2s;
+}
+.userImageContainer > div > a > #secondImg {
+  width: 56%;
+  height: 54%;
+  margin-top: 0px;
+  margin-left: 36px;
+  border: 4px solid #00afcc;
+  box-shadow: 7px 0 17px #4285f4;
+  border-radius: 5%;
+}
+.userImageContainer > div > a > #secondImg:hover {
+  width: 58%;
+  height: 56%;
+  margin-top: 0px;
+  margin-left: 36px;
+  border: 4px solid #00afcc;
+  box-shadow: 7px 0 17px #4285f4;
+  border-radius: 5%;
+  transition: width 2s;
+}
+.firstImageLegend {
+  margin-left: 146px;
+}
+.secondImageLegend {
+  margin-left: 85px;
+  margin-top: 13px;
+}
+.userImageContainer > div > p {
+  font-family: "OpenSans-Bold";
+  width: 69%;
+  height: 75%;
+}

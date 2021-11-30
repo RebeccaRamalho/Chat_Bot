@@ -1,0 +1,209 @@
+.button {
+  width: 21px;
+  height: 19px;
+  background-color: #dbdeea;
+  border-right: 3px solid #0e2356;
+  border-bottom: 3px solid #0e2356;
+  border-top: 1px solid white;
+  margin-left: 308px;
+  margin-top: 4px;
+}
+.crossPartOne {
+  width: 3px;
+  height: 22px;
+  background-color: white;
+  transform: rotate(-48deg);
+  margin-left: 10px;
+}
+.crossPartTwo {
+  width: 3px;
+  height: 24px;
+  background-color: white;
+  transform: rotate(46deg);
+  margin-top: -24px;
+  margin-left: 9px;
+}
+
+.rectangle {
+  display: flex;
+  width: 444px;
+  height: 32px;
+  background-color: #d9d9d9;
+  border-right: 2px solid #a6a6a6;
+  border-bottom: 1px solid #a6a6a6;
+  border-top: 1px solid white;
+}
+.rectangle > #folderTitle {
+  font-size: 2.2vh;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+#folderFileImg {
+  height: 31px;
+  margin-left: 9px;
+  margin-top: -4px;
+}
+.square {
+  display: flex;
+  width: 391px;
+  height: 222px;
+  /* background-color: white; */
+}
+.square > p {
+  font-size: 2.4vh;
+  margin-left: 10px;
+}
+#file {
+  width: 445px;
+  border-right: 2px solid #a6a6a6;
+  border-bottom: 1px solid #a6a6a6;
+  border-top: 1px solid white;
+  border-left: 1px solid #a6a6a6;
+}
+.container2File {
+  display: flex;
+}
+.container2FileRectangle {
+  width: 130px;
+  height: 181px;
+  border-top: 2px solid #a6a6a6;
+  border-right: 2px solid #a6a6a6;
+  margin-top: -181px;
+  margin-bottom: 15px;
+}
+.container3File {
+  width: 268px;
+  height: 181px;
+  border-top: 2px solid #a6a6a6;
+  border-right: 2px solid #a6a6a6;
+  border-right: 2px solid #a6a6a6;
+  border-bottom: 2px solid #a6a6a6;
+  margin-bottom: 15px;
+  margin-top: -181px;
+}
+.firstP {
+  font-size: 2.4vh;
+  display: flex;
+}
+.secondP {
+  display: flex;
+  font-size: 2.4vh;
+
+  margin-top: -35px;
+}
+.firstP > img {
+  margin-left: 11px;
+  width: 20%;
+  height: 26%;
+  margin-top: 9px;
+  margin-right: 11px;
+}
+.secondP > img {
+  margin-left: 25px;
+  width: 28%;
+  height: 14%;
+  margin-right: 1px;
+  margin-top: 9px;
+  margin-right: 10px;
+}
+/**/
+.firstPSquare {
+  display: flex;
+  margin-left: 10px;
+}
+.firstPSquare > p:nth-child(1) {
+  margin-left: 21px;
+  padding-right: 56px;
+  margin-top: 16px;
+  font-size: 2.2vh;
+  color: black;
+}
+.firstPSquare > p:nth-child(2) {
+  margin-left: 14px;
+  font-size: 2.2vh;
+}
+.firstPSquare > a:nth-child(2) {
+  margin-left: 13px;
+  padding-right: 56px;
+  margin-top: 16px;
+  font-size: 2.2vh;
+  color: black;
+}
+.secondPSquare {
+  display: flex;
+}
+.secondPSquare > a {
+  font-size: 2.1vh;
+  margin-top: -8px;
+  margin-left: 5px;
+  color: black;
+}
+.secondPSquare > img {
+  margin-left: 10px;
+  margin-top: -6px;
+}
+.secondPSquare > a:nth-child(3) {
+  color: #a6a6a6;
+  font-size: 2.1vh;
+  margin-left: 18px;
+  color: #a6a6a6;
+}
+.thirdPSquare {
+  display: flex;
+}
+.thirdPSquare > a:nth-child(3) {
+  color: #a6a6a6;
+  font-size: 2.1vh;
+  margin-top: -28px;
+  margin-left: 14px;
+  color: #a6a6a6;
+}
+.thirdPSquare > img {
+  display: flex;
+  margin-left: 10px;
+}
+.thirdPSquare > a:nth-child(2) {
+  font-size: 2.1vh;
+  margin-top: -29px;
+  margin-left: 5px;
+  color: black;
+}
+.fileSideBarFirstPart {
+  width: 24px;
+  height: 20px;
+  background-color: #e8e8e8;
+  border-right: 3px solid #a6a6a6;
+  border-bottom: 3px solid #a6a6a6;
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+  margin-top: -181px;
+  margin-left: 6px;
+}
+.fileSideBarFirstPart > .triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent grey;
+  margin-top: 4px;
+  margin-left: 2px;
+}
+.fileSideBarSecondPart {
+  width: 21px;
+  height: 528%;
+  background-color: white;
+  border-right: 3px solid #a6a6a6;
+  border-left: 2px solid #a6a6a6;
+  margin-left: 7px;
+}
+.fileSideBarThirdPart {
+  cursor: pointer;
+  width: 21px;
+  height: 314%;
+  background-color: #e8e8e8;
+  border-right: 3px solid #a6a6a6;
+  border-left: 2px solid white;
+  border-bottom: 1px solid #a6a6a6;
+  margin-left: 7px;
+  border-top: 2px solid white;
+}
