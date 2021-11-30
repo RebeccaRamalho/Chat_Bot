@@ -60,32 +60,26 @@ let bubbleText = document.querySelector(".bubbleText").children[0];
 
 let text = [
   "",
-  "H",
-  "e",
-  "l",
-  "l",
+  "B",
   "o",
-  " ",
-  "M",
-  "&",
-  "R",
-  " ",
-  "D",
-  "E",
-  "V",
-  "I",
-  "C",
-  "E",
-  "S",
-  "!",
-  " ",
-  "t",
+  "n",
+  "j",
+  "o",
   "u",
+  "r",
   " ",
   "v",
-  "e",
+  "o",
   "u",
-  "x",
+  "s",
+  " ",
+  "v",
+  "o",
+  "u",
+  "l",
+  "e",
+  "z",
+  " ",
   " ",
   "d",
   "i",
@@ -119,7 +113,7 @@ function pushTextInTheBubble() {
 }
 
 window.addEventListener("load", () => {
-  for (let i = 100; i <= 1600; i += 100) {
+  for (let i = 100; i <= 1500; i += 100) {
     timerInt = i;
 
     const interval = setInterval(function () {
@@ -128,6 +122,6 @@ window.addEventListener("load", () => {
 
     setTimeout(function () {
       clearInterval(interval);
-    }, 1600);
+    }, 1500);
   }
 });
