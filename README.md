@@ -42,7 +42,7 @@ This is a chatbot made in **Vanilla javascript** that can answer my Cv questions
 
             npm i jsdoc
 
-#### 🔨 Conception of the chatbot
+### 🔨 Conception of the chatbot
 
 #### :building_construction: Architecture
 
