@@ -26,9 +26,9 @@ This is a chatbot made in **Vanilla javascript** that can answer my Cv questions
 
 ---
 
-## How To Use
+## :memo: How To Use
 
-#### ⚙️ Installation
+### ⚙️ Installation
 
 1.  Installation of Nodejs
 
@@ -44,11 +44,11 @@ This is a chatbot made in **Vanilla javascript** that can answer my Cv questions
 
 #### 🔨 Conception of the chatbot
 
-##### 🧱 Architecture
+#### 🧱 Architecture
 
 <img src="./assets/img/chatbotArchitecture.png" alt=""/>
 
-##### 💬 Conversation flow
+#### 💬 Conversation flow
 
 It is necessary to begin with a **chatbot flow**. This step will help you find the structure that will determines how the conversation will take place, taking into account the questions the chatbot would ask and the various replies that a user could provide.
 
