@@ -44,7 +44,7 @@ This is a chatbot made in **Vanilla javascript** that can answer my Cv questions
 
 #### 🔨 Conception of the chatbot
 
-#### 🧱 Architecture
+#### :building_construction: Architecture
 
 <img src="./assets/img/chatbotArchitecture.png" alt=""/>
 
