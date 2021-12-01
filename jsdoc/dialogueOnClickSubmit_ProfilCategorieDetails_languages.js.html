@@ -1,177 +1,208 @@
-/**
- * hobbies details (to refacto into a string)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: dialogueOnClickSubmit/ProfilCategorieDetails/languages.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: dialogueOnClickSubmit/ProfilCategorieDetails/languages.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * languages details
  * @type {Array}
  */
-let hobbiesDetails = [
+let languagesDetails = [
   [
-    `J'aime passer mon temps libre à apprendre de nouvelle chose que ce soit par la <b>lecture</b> ou par le <b>dessin</b> que je pratique depuis mon enfance`,
+    `Je peux tenir une conversation en &lt;b>Anglais&lt;/b> et maitrise l'&lt;b>Anglais professionnel&lt;/b>.`,
   ],
 ];
-/**
- * @type {number}
- */
-let compteur6 = 1;
+function makeLanguagesDotsMoves(genericLanguagesAndYes) {
+  let compteurLanguagesAndYesInt = Number(
+    document
+      .querySelectorAll(".genericLanguagesAndYes")
+      [genericLanguagesAndYes].attributes[0].textContent.slice(15)
+  );
+
+  compteurGeneric = compteurLanguagesAndYesInt;
+
+  //test
+  // constructor function
+  function Chargement(chargingDotsThree, dots, dotsOne, dotsTwo, dotsThree) {
+    (this.chargingDotsThree = chargingDotsThree),
+      (this.dots = dots),
+      (this.dotsOne = dotsOne),
+      (this.dotsTwo = dotsTwo),
+      (this.dotsThree = dotsThree);
+  }
+
+  // creating objects
+  const firstGroupeOfDots = new Chargement(
+    document.querySelector(`.yesPlusCategoryChargingDots${compteurGeneric}`),
+    document.querySelector(`.yesPlusCategoryDots${compteurGeneric}`),
+    document.querySelector(`.dotsOneYesPlusCategory${compteurGeneric}`),
+    document.querySelector(`.dotsTwoYesPlusCategory${compteurGeneric}`),
+    document.querySelector(`.dotsThreeYesPlusCategory${compteurGeneric}`)
+  );
+  const secondeGroupeOfDots = new Chargement(
+    document.querySelector(`.yesPlusCategoryChargingDots2${compteurGeneric}`),
+    document.querySelector(`.yesPlusCategoryDots2${compteurGeneric}`),
+    document.querySelector(`.dotsOneYesPlusCategory2${compteurGeneric}`),
+    document.querySelector(`.dotsTwoYesPlusCategory2${compteurGeneric}`),
+    document.querySelector(`.dotsThreeYesPlusCategory2${compteurGeneric}`)
+  );
+  function firstDotsValues() {
+    chargingDotsThree = firstGroupeOfDots.chargingDotsThree;
+    dots = firstGroupeOfDots.dots;
+    dotsOne = firstGroupeOfDots.dotsOne;
+    dotsTwo = firstGroupeOfDots.dotsTwo;
+    dotsThree = firstGroupeOfDots.dotsThree;
+  }
+  function secondDotsValues() {
+    chargingDotsThree = secondeGroupeOfDots.chargingDotsThree;
+    dots = secondeGroupeOfDots.dots;
+    dotsOne = secondeGroupeOfDots.dotsOne;
+    dotsTwo = secondeGroupeOfDots.dotsTwo;
+    dotsThree = secondeGroupeOfDots.dotsThree;
+  }
+
+  functionMakeDotsMoveCounter += 1;
+  {
+    functionMakeDotsMoveCounter % 2 ? firstDotsValues() : secondDotsValues();
+  }
+
+  //when the user click on the button yes make the 3 dots move x time and during 3 secondes
+  chargingDotsThree.style.marginTop = "-214px";
+  chargingDotsThree.style.display = "flex";
+  chargingDotsThree.style.flexDirection = "row";
+  // chargingDotsThree.style.marginBottom = "10px";
+  chargingDotsThree.style.marginLeft = "122px";
+  //
+  dots.style.border = "4px solid #0e2356";
+  // dots.style.visibility = "hidden";
+  dots.style.borderRadius = "30px";
+  dots.style.marginLeft = "4px";
+  dots.style.marginTop = "217px";
+  dots.style.backgroundColor = "#0e2356";
+
+  //when the user clik on the button yes change the dots style from invisible to visible
+  dotsOne.style.visibility = "visible";
+  dotsOne.style.marginLeft = "236px";
+  //
+  dotsTwo.style.visibility = "visible";
+  dotsTwo.style.marginLeft = "236px";
+  dotsTwo.style.border = "4px solid #0e2356";
+  dotsTwo.style.borderRadius = "30px";
+  dotsTwo.style.marginLeft = "4px";
+  dotsTwo.style.marginTop = "217px";
+  dotsTwo.style.backgroundColor = "#0e2356";
+  //
+  dotsThree.style.visibility = "visible";
+  dotsThree.style.marginLeft = "236px";
+  dotsThree.style.border = "4px solid #0e2356";
+  dotsThree.style.borderRadius = "30px";
+  dotsThree.style.marginLeft = "4px";
+  dotsThree.style.marginTop = "217px";
+  dotsThree.style.backgroundColor = "#0e2356";
+
+  //Then make the dots move back to top
+  const intervalDotMOving = setInterval(function () {
+    //first dot
+    for (let impairTimer = 200; impairTimer &lt;= 300; impairTimer += 100) {
+      const intervalEearMoving = setInterval(function () {
+        dotsOne.style.marginTop = "214px";
+      }, impairTimer);
+      setTimeout(function () {
+        clearInterval(intervalEearMoving);
+      }, 300);
+    }
+    for (let pairTimer = 300; pairTimer &lt;= 400; pairTimer += 100) {
+      const intervalSecondEarMoving = setInterval(function () {
+        dotsOne.style.marginTop = "224px";
+        dotsTwo.style.marginTop = "214px";
+      }, pairTimer);
+      setTimeout(function () {
+        clearInterval(intervalSecondEarMoving);
+      }, 400);
+    }
+    for (let impairTimer = 400; impairTimer &lt;= 500; impairTimer += 100) {
+      const intervalEearMoving = setInterval(function () {
+        dotsTwo.style.marginTop = "224px";
+        dotsThree.style.marginTop = "214px";
+      }, impairTimer);
+      setTimeout(function () {
+        clearInterval(intervalEearMoving);
+      }, 500);
+    }
+    for (let impairTimer = 500; impairTimer &lt;= 600; impairTimer += 100) {
+      const intervalEearMoving = setInterval(function () {
+        dotsThree.style.marginTop = "224px";
+      }, impairTimer);
+      setTimeout(function () {
+        clearInterval(intervalEearMoving);
+      }, 600);
+    }
+    //
+  }, 1000);
+  //After X secondes stop the dot movement and make them invisible
+  setTimeout(function () {
+    dotsOne.style.visibility = "hidden";
+    dotsTwo.style.visibility = "hidden";
+    dotsThree.style.visibility = "hidden";
+    //
+    clearInterval(intervalDotMOving);
+  }, 2000);
+}
 document.querySelector("body").addEventListener("click", (event) => {
-  let questions7 = [
+  //I_VARIABLES
+  let experienceQuestion = [
     [`Quelles expériences souhaitez-vous découvrir?`],
     [`Souhaitez-vous découvrir une autre expérience?`],
   ];
-  let compteurHobbies = 1;
+  let compteurLanguages = 1;
+  let compteurGeneric = 1;
+  let yes = ["oui", "OUI"];
   let inputVal = document.querySelector("#userAnswers").value;
   let emptyString = "";
   let otherExperienceChoice = document.querySelector("#otherExperienceChoice");
   let categorieAnswer = document.querySelector("#categoriesAnswer");
-  let genericHobbies = document.querySelectorAll(".genericHobbies").length - 1;
-  let genericHobbiesAndYesButtonAll = document.querySelectorAll(
-    ".genericHobbiesAndYes"
+  let genericLanguages =
+    document.querySelectorAll(".genericLanguages").length - 1;
+  let genericLanguagesAndYesButtonAll = document.querySelectorAll(
+    ".genericLanguagesAndYes"
   );
-  let genericHobbiesAndYes =
-    document.querySelectorAll(".genericHobbiesAndYes").length - 1;
+  let genericLanguagesAndYes =
+    document.querySelectorAll(".genericLanguagesAndYes").length - 1;
   let functionMakeDotsMoveCounter = 0;
+
   //
+  function cleartext() {
+    document.querySelector("#form").reset();
+    console.log("yoshi");
+  }
   function scrollToTheBottom() {
     const chatBotContainer = document.querySelector("#chatBotContainer");
     chatBotContainer.scrollTop = chatBotContainer.scrollHeight;
   }
   //
-  function makeDotsMoves() {
-    let compteurHobbiesAndYesInt = Number(
-      document
-        .querySelectorAll(".genericHobbiesAndYes")
-        [genericHobbiesAndYes].attributes[0].textContent.slice(13)
-    );
-
-    compteurHobbies = compteurHobbiesAndYesInt;
-    // constructor function
-    function Chargement(chargingDotsThree, dots, dotsOne, dotsTwo, dotsThree) {
-      (this.chargingDotsThree = chargingDotsThree),
-        (this.dots = dots),
-        (this.dotsOne = dotsOne),
-        (this.dotsTwo = dotsTwo),
-        (this.dotsThree = dotsThree);
-    }
-
-    // creating objects
-    const firstGroupeOfDots = new Chargement(
-      document.querySelector(`.yesPlusCategoryChargingDots${compteurHobbies}`),
-      document.querySelector(`.yesPlusCategoryDots${compteurHobbies}`),
-      document.querySelector(`.dotsOneYesPlusCategory${compteurHobbies}`),
-      document.querySelector(`.dotsTwoYesPlusCategory${compteurHobbies}`),
-      document.querySelector(`.dotsThreeYesPlusCategory${compteurHobbies}`)
-    );
-    const secondeGroupeOfDots = new Chargement(
-      document.querySelector(`.yesPlusCategoryChargingDots2${compteurHobbies}`),
-      document.querySelector(`.yesPlusCategoryDots2${compteurHobbies}`),
-      document.querySelector(`.dotsOneYesPlusCategory2${compteurHobbies}`),
-      document.querySelector(`.dotsTwoYesPlusCategory2${compteurHobbies}`),
-      document.querySelector(`.dotsThreeYesPlusCategory2${compteurHobbies}`)
-    );
-
-    function firstDotsValues() {
-      chargingDotsThree = firstGroupeOfDots.chargingDotsThree;
-      dots = firstGroupeOfDots.dots;
-      dotsOne = firstGroupeOfDots.dotsOne;
-      dotsTwo = firstGroupeOfDots.dotsTwo;
-      dotsThree = firstGroupeOfDots.dotsThree;
-    }
-    function secondDotsValues() {
-      chargingDotsThree = secondeGroupeOfDots.chargingDotsThree;
-      dots = secondeGroupeOfDots.dots;
-      dotsOne = secondeGroupeOfDots.dotsOne;
-      dotsTwo = secondeGroupeOfDots.dotsTwo;
-      dotsThree = secondeGroupeOfDots.dotsThree;
-    }
-
-    functionMakeDotsMoveCounter += 1;
-    {
-      functionMakeDotsMoveCounter % 2 ? firstDotsValues() : secondDotsValues();
-    }
-
-    //when the user click on the button yes make the 3 dots move x time and during 3 secondes
-    chargingDotsThree.style.marginTop = "-214px";
-    chargingDotsThree.style.display = "flex";
-    chargingDotsThree.style.flexDirection = "row";
-    // chargingDotsThree.style.marginBottom = "10px";
-    chargingDotsThree.style.marginLeft = "122px";
-    //
-    dots.style.border = "4px solid #0e2356";
-    // dots.style.visibility = "hidden";
-    dots.style.borderRadius = "30px";
-    dots.style.marginLeft = "4px";
-    dots.style.marginTop = "217px";
-    dots.style.backgroundColor = "#0e2356";
-    //when the user clik on the button yes change the dots style from invisible to visible
-    dotsOne.style.visibility = "visible";
-    dotsOne.style.marginLeft = "236px";
-    //
-    dotsTwo.style.visibility = "visible";
-    dotsTwo.style.marginLeft = "236px";
-    dotsTwo.style.border = "4px solid #0e2356";
-    dotsTwo.style.borderRadius = "30px";
-    dotsTwo.style.marginLeft = "4px";
-    dotsTwo.style.marginTop = "217px";
-    dotsTwo.style.backgroundColor = "#0e2356";
-    //
-    dotsThree.style.visibility = "visible";
-    dotsThree.style.marginLeft = "236px";
-    dotsThree.style.border = "4px solid #0e2356";
-    dotsThree.style.borderRadius = "30px";
-    dotsThree.style.marginLeft = "4px";
-    dotsThree.style.marginTop = "217px";
-    dotsThree.style.backgroundColor = "#0e2356";
-
-    //Then make the dots move back to top
-    const intervalDotMOving = setInterval(function () {
-      //first dot
-      for (let impairTimer = 200; impairTimer <= 300; impairTimer += 100) {
-        const intervalEearMoving = setInterval(function () {
-          dotsOne.style.marginTop = "214px";
-        }, impairTimer);
-        setTimeout(function () {
-          clearInterval(intervalEearMoving);
-        }, 300);
-      }
-      for (let pairTimer = 300; pairTimer <= 400; pairTimer += 100) {
-        const intervalSecondEarMoving = setInterval(function () {
-          dotsOne.style.marginTop = "224px";
-          dotsTwo.style.marginTop = "214px";
-        }, pairTimer);
-        setTimeout(function () {
-          clearInterval(intervalSecondEarMoving);
-        }, 400);
-      }
-      for (let impairTimer = 400; impairTimer <= 500; impairTimer += 100) {
-        const intervalEearMoving = setInterval(function () {
-          dotsTwo.style.marginTop = "224px";
-          dotsThree.style.marginTop = "214px";
-        }, impairTimer);
-        setTimeout(function () {
-          clearInterval(intervalEearMoving);
-        }, 500);
-      }
-      for (let impairTimer = 500; impairTimer <= 600; impairTimer += 100) {
-        const intervalEearMoving = setInterval(function () {
-          dotsThree.style.marginTop = "224px";
-        }, impairTimer);
-        setTimeout(function () {
-          clearInterval(intervalEearMoving);
-        }, 600);
-      }
-      //
-    }, 1000);
-    //After X secondes stop the dot movement and make them invisible
-    setTimeout(function () {
-      dotsOne.style.visibility = "hidden";
-      dotsTwo.style.visibility = "hidden";
-      dotsThree.style.visibility = "hidden";
-      //
-      clearInterval(intervalDotMOving);
-    }, 2000);
-  }
-  //
-  function cleartext() {
-    document.querySelector("#form").reset();
-  }
   //
   let finalInputVal;
   finalInputVal = inputVal.toLowerCase();
@@ -179,7 +210,7 @@ document.querySelector("body").addEventListener("click", (event) => {
   //CONDITION
   //1)if user use several keyword "oui" + catgory key word like "Scolarité"
   if (
-    event.target.matches("#submitMessage") &&
+    event.target.matches("#submitMessage") &amp;&amp;
     //YES
     (finalInputVal.includes("oui") ||
       finalInputVal.includes("ok") ||
@@ -209,70 +240,32 @@ document.querySelector("body").addEventListener("click", (event) => {
       finalInputVal.includes("évidemment") ||
       finalInputVal.includes("en effet") ||
       finalInputVal.includes("naturellement") ||
-      finalInputVal.includes("bien évidemment")) &&
-    //HOBBIES
-    (finalInputVal.includes("hobbies") ||
-      finalInputVal.includes("centre d'intérêt") ||
-      finalInputVal.includes("centre d'intérêts") ||
-      finalInputVal.includes("centres d'intérêts") ||
-      finalInputVal.includes("centres d'intérêt") ||
-      finalInputVal.includes("loisir") ||
-      finalInputVal.includes("loisirs") ||
-      finalInputVal.includes("passe temps") ||
-      finalInputVal.includes("passes temps") ||
-      finalInputVal.includes("passe-temps") ||
-      finalInputVal.includes("passes-temps") ||
-      finalInputVal.includes("temps-libre") ||
-      finalInputVal.includes("temps-libres") ||
-      finalInputVal.includes("passion") ||
-      finalInputVal.includes("passions") ||
-      finalInputVal.includes("détente") ||
-      finalInputVal.includes("détentes") ||
-      finalInputVal.includes("détent") ||
-      finalInputVal.includes("détens") ||
-      finalInputVal.includes("relaxe") ||
-      finalInputVal.includes("relaxes") ||
-      finalInputVal.includes("délasser") ||
-      finalInputVal.includes("délasse") ||
-      finalInputVal.includes("délasses") ||
-      finalInputVal.includes("s'amuse") ||
-      finalInputVal.includes("s'amuses") ||
-      finalInputVal.includes("temps-libre") ||
-      finalInputVal.includes("temps-libres") ||
-      finalInputVal.includes("en dehors du travail") ||
-      finalInputVal.includes("distrait") ||
-      finalInputVal.includes("distractions") ||
-      finalInputVal.includes("distraction") ||
-      finalInputVal.includes("divertit") ||
-      finalInputVal.includes("divertis") ||
-      finalInputVal.includes("diverti") ||
-      finalInputVal.includes("divertissement") ||
-      finalInputVal.includes("divertissements") ||
-      finalInputVal.includes("s'occuper") ||
-      finalInputVal.includes("s'occupe") ||
-      finalInputVal.includes("s'occupes") ||
-      finalInputVal.includes("occupation") ||
-      finalInputVal.includes("occupations") ||
-      finalInputVal.includes("repos") ||
-      finalInputVal.includes("sport") ||
-      finalInputVal.includes("sports") ||
-      finalInputVal.includes("instrument") ||
-      finalInputVal.includes("instruments") ||
-      finalInputVal.includes("danses") ||
-      finalInputVal.includes("danse") ||
-      finalInputVal.includes("association") ||
-      finalInputVal.includes("associations"))
+      finalInputVal.includes("bien évidemment")) &amp;&amp;
+    //LANGUAGES
+    (finalInputVal.includes("langues") ||
+      finalInputVal.includes("langue") ||
+      finalInputVal.includes("parler") ||
+      finalInputVal.includes("parlé") ||
+      finalInputVal.includes("parle") ||
+      finalInputVal.includes("parles") ||
+      finalInputVal.includes("s'exprimer") ||
+      finalInputVal.includes("s'exprime") ||
+      finalInputVal.includes("s'exprimes") ||
+      finalInputVal.includes("exprime") ||
+      finalInputVal.includes("exprimes") ||
+      finalInputVal.includes("dialecte") ||
+      finalInputVal.includes("dialectes"))
   ) {
-    let compteurHobbiesAndYesInt = Number(
+    let compteurLanguagesAndYesInt = Number(
       document
-        .querySelectorAll(".genericHobbiesAndYes")
-        [genericHobbiesAndYes].attributes[0].textContent.slice(13)
+        .querySelectorAll(".genericLanguagesAndYes")
+        [genericLanguagesAndYes].attributes[0].textContent.slice(15)
     );
-    //
-    compteurHobbies = compteurHobbiesAndYesInt;
-    //
+
+    compteurGeneric = compteurLanguagesAndYesInt;
+
     let yesAndCatAnswer = document.querySelector(
-      `#yesAndCatAnswer${compteurHobbies}`
+      `#yesAndCatAnswer${compteurGeneric}`
     );
     let genericYes = document.querySelectorAll(".genericYes").length - 1;
     let inputVal = document.querySelector("#userAnswers").value;
@@ -281,15 +274,14 @@ document.querySelector("body").addEventListener("click", (event) => {
     let firstNoButton = document.querySelectorAll(".noEvent")[0];
     let noEventButton;
     let yesEventButton;
-    //retreive of the counter value:
+
     compteur4 = Number(
       document
         .querySelectorAll(".genericYes")
         [genericYes].attributes[1].textContent.slice(9)
     );
-
     let yesAns = document.querySelector(`#yesAns${compteur4}`);
-    //If we click on the first yes button we push it to the left and make the no button invisible
+
     if (!inputVal) {
       if (document.querySelector(".yes")) {
         yesAns.classList.add("invisible");
@@ -345,7 +337,7 @@ document.querySelector("body").addEventListener("click", (event) => {
         yesAndCatAnswer.style.paddingRight = "13px";
         yesAndCatAnswer.style.marginLeft = "126px";
         yesAndCatAnswer.style.marginBottom = "18px";
-        yesAndCatAnswer.innerHTML = `<p class="font">${inputVal}</p>`;
+        yesAndCatAnswer.innerHTML = `&lt;p class="font">${inputVal}&lt;/p>`;
 
         firstNoButton.classList.remove("no");
         firstYesButton.classList.remove("yes");
@@ -370,7 +362,7 @@ document.querySelector("body").addEventListener("click", (event) => {
               ].attributes[1].textContent.slice(8)}`
           );
 
-          yesAndCatAnswer.innerHTML = `<p class="font">${inputVal}</p>`;
+          yesAndCatAnswer.innerHTML = `&lt;p class="font">${inputVal}&lt;/p>`;
           yesAndCatAnswer.style.marginTop = "6px";
           yesAndCatAnswer.style.border = `2px solid #dbdeea`;
           yesAndCatAnswer.style.backgroundColor = "#dbdeea";
@@ -386,11 +378,13 @@ document.querySelector("body").addEventListener("click", (event) => {
         }
       }
     }
-    makeDotsMoves();
+
+    makeLanguagesDotsMoves(genericLanguagesAndYes);
     //5_i make the element which is initially invisible => visible and if the user choose scolarity show him what is inside scolarityDetails array
+
     setTimeout(function () {
       let experienceDetailsSub = document.querySelector(
-        `#experienceDetailsSub${compteurHobbies}`
+        `#experienceDetailsSub${compteurGeneric}`
       );
       experienceDetailsSub.classList.remove("invisible");
       experienceDetailsSub.style.marginTop = "6px"; //-84px
@@ -401,7 +395,7 @@ document.querySelector("body").addEventListener("click", (event) => {
       experienceDetailsSub.style.paddingRight = "13px";
       experienceDetailsSub.style.marginLeft = "126px";
       experienceDetailsSub.style.marginBottom = "18px";
-      experienceDetailsSub.innerHTML = `<p class="font">${hobbiesDetails[0]}</p>`;
+      experienceDetailsSub.innerHTML = `&lt;p class="font">${languagesDetails[0]}&lt;/p>`;
     }, 1500);
 
     setTimeout(function () {
@@ -410,7 +404,7 @@ document.querySelector("body").addEventListener("click", (event) => {
 
     //6_when the scolarity experience his shown, the user can choose an other experience again
     setTimeout(function () {
-      makeDotsMoves();
+      makeLanguagesDotsMoves(genericLanguagesAndYes);
     }, 4000);
 
     setTimeout(function () {
@@ -422,12 +416,12 @@ document.querySelector("body").addEventListener("click", (event) => {
       setTimeout(function () {
         //request to the DOM of the user response html element
         let otherExperiencesRequest = document.querySelector(
-          `#experiencesSub${compteurHobbies}`
+          `#experiencesSub${compteurGeneric}`
         );
         let yesQuestion = document.querySelector(
-          `#yesButton${compteurHobbies}`
+          `#yesButton${compteurGeneric}`
         );
-        let noQuestion = document.querySelector(`#noButton${compteurHobbies}`);
+        let noQuestion = document.querySelector(`#noButton${compteurGeneric}`);
 
         setTimeout(function () {
           //after 7500ms move the answer to the top so they can be space for the following questions
@@ -444,97 +438,57 @@ document.querySelector("body").addEventListener("click", (event) => {
         otherExperiencesRequest.style.paddingRight = "13px";
         otherExperiencesRequest.style.marginLeft = "126px";
         otherExperiencesRequest.style.marginBottom = "18px";
-        otherExperiencesRequest.innerHTML = `<p class="font">${questions7[1]}</p>`;
+        otherExperiencesRequest.innerHTML = `&lt;p class="font">${experienceQuestion[1]}&lt;/p>`;
       }, 5000);
     }
     chooseAnOtherExperience();
-    // return;
+    //
+    return;
   }
   //2)if user use on of the category keyword (here relative to Scolarity)
   else if (
-    event.target.matches("button[class='genericHobbies']>p") ||
-    (event.target.matches("#submitMessage") &&
-      (finalInputVal.includes("hobbies") ||
-        finalInputVal.includes("centre d'intérêt") ||
-        finalInputVal.includes("centre d'intérêts") ||
-        finalInputVal.includes("centres d'intérêts") ||
-        finalInputVal.includes("centres d'intérêt") ||
-        finalInputVal.includes("loisir") ||
-        finalInputVal.includes("loisirs") ||
-        finalInputVal.includes("passe temps") ||
-        finalInputVal.includes("passes temps") ||
-        finalInputVal.includes("passe-temps") ||
-        finalInputVal.includes("passes-temps") ||
-        finalInputVal.includes("temps-libre") ||
-        finalInputVal.includes("temps-libres") ||
-        finalInputVal.includes("passion") ||
-        finalInputVal.includes("passions") ||
-        finalInputVal.includes("détente") ||
-        finalInputVal.includes("détentes") ||
-        finalInputVal.includes("détent") ||
-        finalInputVal.includes("détens") ||
-        finalInputVal.includes("relaxe") ||
-        finalInputVal.includes("relaxes") ||
-        finalInputVal.includes("délasser") ||
-        finalInputVal.includes("délasse") ||
-        finalInputVal.includes("délasses") ||
-        finalInputVal.includes("s'amuse") ||
-        finalInputVal.includes("s'amuses") ||
-        finalInputVal.includes("temps-libre") ||
-        finalInputVal.includes("temps-libres") ||
-        finalInputVal.includes("en dehors du travail") ||
-        finalInputVal.includes("distrait") ||
-        finalInputVal.includes("distractions") ||
-        finalInputVal.includes("distraction") ||
-        finalInputVal.includes("divertit") ||
-        finalInputVal.includes("divertis") ||
-        finalInputVal.includes("diverti") ||
-        finalInputVal.includes("divertissement") ||
-        finalInputVal.includes("divertissements") ||
-        finalInputVal.includes("s'occuper") ||
-        finalInputVal.includes("s'occupe") ||
-        finalInputVal.includes("s'occupes") ||
-        finalInputVal.includes("occupation") ||
-        finalInputVal.includes("occupations") ||
-        finalInputVal.includes("repos") ||
-        finalInputVal.includes("sport") ||
-        finalInputVal.includes("sports") ||
-        finalInputVal.includes("instrument") ||
-        finalInputVal.includes("instruments") ||
-        finalInputVal.includes("danses") ||
-        finalInputVal.includes("danse") ||
-        finalInputVal.includes("danses") ||
-        finalInputVal.includes("association") ||
-        finalInputVal.includes("associations")))
+    event.target.matches("button[class='genericLanguages']>p") ||
+    (event.target.matches("#submitMessage") &amp;&amp;
+      (finalInputVal.includes("langues") ||
+        finalInputVal.includes("langue") ||
+        finalInputVal.includes("parler") ||
+        finalInputVal.includes("parlé") ||
+        finalInputVal.includes("parle") ||
+        finalInputVal.includes("parles") ||
+        finalInputVal.includes("s'exprimer") ||
+        finalInputVal.includes("s'exprime") ||
+        finalInputVal.includes("s'exprimes") ||
+        finalInputVal.includes("exprime") ||
+        finalInputVal.includes("exprimes") ||
+        finalInputVal.includes("dialecte") ||
+        finalInputVal.includes("dialectes")))
   ) {
     {
       document
-        .querySelectorAll(".genericHobbies")
-        [genericHobbies].attributes[1].textContent.slice(7)
-        ? (compteur6 = Number(
+        .querySelectorAll(".genericLanguages")
+        [genericLanguages].attributes[1].textContent.slice(9)
+        ? (compteurLanguages = Number(
             document
-              .querySelectorAll(".genericHobbies")
-              [genericHobbies].attributes[1].textContent.slice(7)
+              .querySelectorAll(".genericLanguages")
+              [genericLanguages].attributes[1].textContent.slice(9)
           ))
-        : (compteur6 = Number(
-            event.target.parentElement.attributes[1].textContent.slice(7)
+        : (compteurLanguages = Number(
+            event.target.parentElement.attributes[1].textContent.slice(9)
           ));
     }
-    // INSERTION OF USER INPUT
+
     let categorieAnswer = document.querySelector(
-      `#categoriesAnswer${compteur6}`
+      `#categoriesAnswer${compteurLanguages}`
     );
-    let hobbies = document.querySelector(`#hobbies${compteur6}`);
-    //
+    let languages = document.querySelector(`#languages${compteurLanguages}`);
     {
       !inputVal
-        ? ((hobbies.style.marginLeft = "254px"),
+        ? ((languages.style.marginLeft = "254px"),
           categorieAnswer.classList.add("invisible"))
-        : ((categorieAnswer.innerHTML = `<p class="font">${inputVal}</p>`),
-          hobbies.classList.add("invisible"));
+        : ((categorieAnswer.innerHTML = `&lt;p class="font">${inputVal}&lt;/p>`),
+          languages.classList.add("invisible"));
     }
-    //
-    categorieAnswer.innerHTML = `<p class="font">${inputVal}</p>`;
+
     categorieAnswer.style.marginTop = "6px"; //-84px
     categorieAnswer.style.border = `2px solid #dbdeea`;
     categorieAnswer.style.backgroundColor = "#dbdeea";
@@ -549,19 +503,19 @@ document.querySelector("body").addEventListener("click", (event) => {
       cleartext();
     }, 95);
     //1_dom request
-    let scolarity = document.querySelector(`#scolarity${compteur6}`);
+    let scolarity = document.querySelector(`#scolarity${compteurLanguages}`);
     let professionalExperience = document.querySelector(
-      `#professionalExperience${compteur6}`
+      `#professionalExperience${compteurLanguages}`
     );
-
-    let skills = document.querySelector(`#skills${compteur6}`);
-    let languages = document.querySelector(`#languages${compteur6}`);
+    let hobbies = document.querySelector(`#hobbies${compteurLanguages}`);
+    let skills = document.querySelector(`#skills${compteurLanguages}`);
 
     //2_make the other experiences categories invisibles
     professionalExperience.classList.add("invisible");
     skills.classList.add("invisible");
     scolarity.classList.add("invisible");
-    languages.classList.add("invisible");
+    hobbies.classList.add("invisible");
+    //2_push the scolarity categories to the right
 
     //3_dots chargements
     function makeDotsMove() {
@@ -583,18 +537,18 @@ document.querySelector("body").addEventListener("click", (event) => {
 
       // creating objects
       const firstGroupeOfDots = new Chargement(
-        document.querySelector(`.categoriesChargingDots${compteur6}`),
-        document.querySelector(`.categoriesDots${compteur6}`),
-        document.querySelector(`.categoriesDotsOne${compteur6}`),
-        document.querySelector(`.categoriesDotsTwo${compteur6}`),
-        document.querySelector(`.categoriesDotsThree${compteur6}`)
+        document.querySelector(`.categoriesChargingDots${compteurLanguages}`),
+        document.querySelector(`.categoriesDots${compteurLanguages}`),
+        document.querySelector(`.categoriesDotsOne${compteurLanguages}`),
+        document.querySelector(`.categoriesDotsTwo${compteurLanguages}`),
+        document.querySelector(`.categoriesDotsThree${compteurLanguages}`)
       );
       const secondeGroupeOfDots = new Chargement(
-        document.querySelector(`.categoriesChargingDots3${compteur6}`),
-        document.querySelector(`.categoriesDots3${compteur6}`),
-        document.querySelector(`.categoriesDotsOne3${compteur6}`),
-        document.querySelector(`.categoriesDotsTwo3${compteur6}`),
-        document.querySelector(`.categoriesDotsThree3${compteur6}`)
+        document.querySelector(`.categoriesChargingDots3${compteurLanguages}`),
+        document.querySelector(`.categoriesDots3${compteurLanguages}`),
+        document.querySelector(`.categoriesDotsOne3${compteurLanguages}`),
+        document.querySelector(`.categoriesDotsTwo3${compteurLanguages}`),
+        document.querySelector(`.categoriesDotsThree3${compteurLanguages}`)
       );
 
       function firstDotsValues() {
@@ -661,7 +615,7 @@ document.querySelector("body").addEventListener("click", (event) => {
       //Then make the dots move back to top
       const intervalDotMOving = setInterval(function () {
         //first dot
-        for (let impairTimer = 200; impairTimer <= 300; impairTimer += 100) {
+        for (let impairTimer = 200; impairTimer &lt;= 300; impairTimer += 100) {
           const intervalEearMoving = setInterval(function () {
             dotsOne.style.marginTop = "214px";
           }, impairTimer);
@@ -669,7 +623,7 @@ document.querySelector("body").addEventListener("click", (event) => {
             clearInterval(intervalEearMoving);
           }, 300);
         }
-        for (let pairTimer = 300; pairTimer <= 400; pairTimer += 100) {
+        for (let pairTimer = 300; pairTimer &lt;= 400; pairTimer += 100) {
           const intervalSecondEarMoving = setInterval(function () {
             dotsOne.style.marginTop = "224px";
             dotsTwo.style.marginTop = "214px";
@@ -678,7 +632,7 @@ document.querySelector("body").addEventListener("click", (event) => {
             clearInterval(intervalSecondEarMoving);
           }, 400);
         }
-        for (let impairTimer = 400; impairTimer <= 500; impairTimer += 100) {
+        for (let impairTimer = 400; impairTimer &lt;= 500; impairTimer += 100) {
           const intervalEearMoving = setInterval(function () {
             dotsTwo.style.marginTop = "224px";
             dotsThree.style.marginTop = "214px";
@@ -687,7 +641,7 @@ document.querySelector("body").addEventListener("click", (event) => {
             clearInterval(intervalEearMoving);
           }, 500);
         }
-        for (let impairTimer = 500; impairTimer <= 600; impairTimer += 100) {
+        for (let impairTimer = 500; impairTimer &lt;= 600; impairTimer += 100) {
           const intervalEearMoving = setInterval(function () {
             dotsThree.style.marginTop = "224px";
           }, impairTimer);
@@ -706,23 +660,24 @@ document.querySelector("body").addEventListener("click", (event) => {
         clearInterval(intervalDotMOving);
       }, 2000);
     }
+    //
     makeDotsMove();
 
+    //4_i retreive the html element to the DOM where i want to push my scolarity details
     let experienceDetails = document.querySelector(
-      `#experienceDetails${compteur6}`
+      `#experienceDetails${compteurLanguages}`
     );
     //5_i make the element which is initially invisible => visible and if the user choose scolarity show him what is inside scolarityDetails array
     setTimeout(function () {
       experienceDetails.classList.remove("invisible");
       experienceDetails.style.marginTop = "-84px";
       experienceDetails.style.border = `2px solid#dbdeea`;
-      // (experienceDetails.style.backgroundColor = "#dbdeea"),
       experienceDetails.style.width = "229px";
       experienceDetails.style.borderRadius = "6px";
       experienceDetails.style.paddingLeft = "22px";
       experienceDetails.style.paddingRight = "13px";
       experienceDetails.style.marginLeft = "126px";
-      experienceDetails.innerHTML = `<p class="font">${hobbiesDetails[0]}</p>`;
+      experienceDetails.innerHTML = languagesDetails[0];
     }, 1500);
 
     setTimeout(function () {
@@ -734,19 +689,19 @@ document.querySelector("body").addEventListener("click", (event) => {
       makeDotsMove();
     }, 4000);
 
-    setTimeout(function () {
-      scrollToTheBottom();
-    }, 6000);
-
     //7_
     function chooseAnOtherExperience() {
       setTimeout(function () {
         //request to the DOM of the user response html element
         let otherExperiencesRequest = document.querySelector(
-          `#experiences${compteur6}`
+          `#experiences${compteurLanguages}`
         );
-        let yesQuestion = document.querySelector(`#yesButton${compteur6}`);
-        let noQuestion = document.querySelector(`#noButton${compteur6}`);
+        let yesQuestion = document.querySelector(
+          `#yesButton${compteurLanguages}`
+        );
+        let noQuestion = document.querySelector(
+          `#noButton${compteurLanguages}`
+        );
 
         setTimeout(function () {
           //after 7500ms move the answer to the top so they can be space for the following questions
@@ -763,7 +718,7 @@ document.querySelector("body").addEventListener("click", (event) => {
         otherExperiencesRequest.style.paddingRight = "13px";
         otherExperiencesRequest.style.marginLeft = "126px";
         otherExperiencesRequest.style.marginBottom = "18px";
-        otherExperiencesRequest.innerHTML = `<p class="font">${questions7[1]}</p>`;
+        otherExperiencesRequest.innerHTML = `&lt;p class="font">${experienceQuestion[1]}&lt;/p>`;
       }, 5000);
     }
     chooseAnOtherExperience();
@@ -771,3 +726,26 @@ document.querySelector("body").addEventListener("click", (event) => {
     //
   }
 });
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#compteur">compteur</a></li><li><a href="global.html#compteur2">compteur2</a></li><li><a href="global.html#compteur3">compteur3</a></li><li><a href="global.html#compteur5">compteur5</a></li><li><a href="global.html#compteur6">compteur6</a></li><li><a href="global.html#compteurx">compteurx</a></li><li><a href="global.html#compteurYesPlusCat">compteurYesPlusCat</a></li><li><a href="global.html#enterSubmitCounter">enterSubmitCounter</a></li><li><a href="global.html#errorCompteurs">errorCompteurs</a></li><li><a href="global.html#errorCounterOne">errorCounterOne</a></li><li><a href="global.html#experienceDetailsTexte2">experienceDetailsTexte2</a></li><li><a href="global.html#experienceDetailsTexte9">experienceDetailsTexte9</a></li><li><a href="global.html#functionMakeDotsMoveCounter">functionMakeDotsMoveCounter</a></li><li><a href="global.html#hobbiesDetails">hobbiesDetails</a></li><li><a href="global.html#languagesDetails">languagesDetails</a></li><li><a href="global.html#makeDotsMoves">makeDotsMoves</a></li><li><a href="global.html#otherExperienceQuestion">otherExperienceQuestion</a></li><li><a href="global.html#otherExperiencesCategories">otherExperiencesCategories</a></li><li><a href="global.html#otherExperiencesCategories1">otherExperiencesCategories1</a></li><li><a href="global.html#professionalExperiencesDetails">professionalExperiencesDetails</a></li><li><a href="global.html#questions99">questions99</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Wed Dec 01 2021 17:53:56 GMT+0100 (heure normale d’Europe centrale)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

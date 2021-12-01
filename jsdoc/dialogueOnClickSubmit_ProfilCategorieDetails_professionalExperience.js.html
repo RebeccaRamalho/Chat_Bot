@@ -1,47 +1,82 @@
-/**
- * hobbies details (to refacto into a string)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: dialogueOnClickSubmit/ProfilCategorieDetails/professionalExperience.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: dialogueOnClickSubmit/ProfilCategorieDetails/professionalExperience.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * professional experiences details
  * @type {Array}
  */
-let hobbiesDetails = [
+let professionalExperiencesDetails = [
   [
-    `J'aime passer mon temps libre à apprendre de nouvelle chose que ce soit par la <b>lecture</b> ou par le <b>dessin</b> que je pratique depuis mon enfance`,
+    "&lt;br>&lt;b>De de Janvier à Mars 2020&lt;/b> j'ai été fille Au pair auprès d'une famille à Londres. J'ai effectué comme principales tâches: les soins quotidiens à un enfant atteint d'épilepsie. &lt;br>&lt;b> En Mars 2020 (1mois)&lt;/b> Femme de chambre à Hôtel Hyatt à Londres -Tâches principales: nettoyage des chambres de l'hôtel. &lt;br>&lt;b>De Mai à Juin 2021&lt;/b> Développeuse web et web mobile, à Association Hand-of hope, -Tâches principales: réalisation au cours d'un stage d'une applications fullstack.",
   ],
 ];
-/**
- * @type {number}
- */
-let compteur6 = 1;
+
 document.querySelector("body").addEventListener("click", (event) => {
-  let questions7 = [
-    [`Quelles expériences souhaitez-vous découvrir?`],
-    [`Souhaitez-vous découvrir une autre expérience?`],
+  let questions10 = [
+    ["Quelles expériences souhaitez-vous découvrir?"],
+    ["Souhaitez-vous découvrir une autre expérience?"],
   ];
-  let compteurHobbies = 1;
+
+  let compteur3 = 1;
+  let compteurProfessionalExperiences = 1;
+  let yes = ["oui", "OUI"];
   let inputVal = document.querySelector("#userAnswers").value;
   let emptyString = "";
   let otherExperienceChoice = document.querySelector("#otherExperienceChoice");
-  let categorieAnswer = document.querySelector("#categoriesAnswer");
-  let genericHobbies = document.querySelectorAll(".genericHobbies").length - 1;
-  let genericHobbiesAndYesButtonAll = document.querySelectorAll(
-    ".genericHobbiesAndYes"
+
+  let genericProfessionalExperience =
+    document.querySelectorAll(".genericProfessionalExperience").length - 1;
+  let genericProfessionalExperienceAndYesButtonAll = document.querySelectorAll(
+    ".genericProfessionalExperienceAndYes"
   );
-  let genericHobbiesAndYes =
-    document.querySelectorAll(".genericHobbiesAndYes").length - 1;
+  let genericProfessionalExperienceAndYes =
+    document.querySelectorAll(".genericProfessionalExperienceAndYes").length -
+    1;
   let functionMakeDotsMoveCounter = 0;
-  //
+
   function scrollToTheBottom() {
     const chatBotContainer = document.querySelector("#chatBotContainer");
     chatBotContainer.scrollTop = chatBotContainer.scrollHeight;
   }
   //
+  //
   function makeDotsMoves() {
-    let compteurHobbiesAndYesInt = Number(
+    let compteurProfessionalExperiencesAndYesInt = Number(
       document
-        .querySelectorAll(".genericHobbiesAndYes")
-        [genericHobbiesAndYes].attributes[0].textContent.slice(13)
+        .querySelectorAll(".genericProfessionalExperienceAndYes")
+        [genericProfessionalExperienceAndYes].attributes[0].textContent.slice(
+          28
+        )
     );
 
-    compteurHobbies = compteurHobbiesAndYesInt;
+    compteurProfessionalExperiences = compteurProfessionalExperiencesAndYesInt;
+
+    //test
     // constructor function
     function Chargement(chargingDotsThree, dots, dotsOne, dotsTwo, dotsThree) {
       (this.chargingDotsThree = chargingDotsThree),
@@ -53,19 +88,44 @@ document.querySelector("body").addEventListener("click", (event) => {
 
     // creating objects
     const firstGroupeOfDots = new Chargement(
-      document.querySelector(`.yesPlusCategoryChargingDots${compteurHobbies}`),
-      document.querySelector(`.yesPlusCategoryDots${compteurHobbies}`),
-      document.querySelector(`.dotsOneYesPlusCategory${compteurHobbies}`),
-      document.querySelector(`.dotsTwoYesPlusCategory${compteurHobbies}`),
-      document.querySelector(`.dotsThreeYesPlusCategory${compteurHobbies}`)
+      document.querySelector(
+        `.yesPlusCategoryChargingDots${compteurProfessionalExperiences}`
+      ),
+      document.querySelector(
+        `.yesPlusCategoryDots${compteurProfessionalExperiences}`
+      ),
+      document.querySelector(
+        `.dotsOneYesPlusCategory${compteurProfessionalExperiences}`
+      ),
+      document.querySelector(
+        `.dotsTwoYesPlusCategory${compteurProfessionalExperiences}`
+      ),
+      document.querySelector(
+        `.dotsThreeYesPlusCategory${compteurProfessionalExperiences}`
+      )
     );
     const secondeGroupeOfDots = new Chargement(
-      document.querySelector(`.yesPlusCategoryChargingDots2${compteurHobbies}`),
-      document.querySelector(`.yesPlusCategoryDots2${compteurHobbies}`),
-      document.querySelector(`.dotsOneYesPlusCategory2${compteurHobbies}`),
-      document.querySelector(`.dotsTwoYesPlusCategory2${compteurHobbies}`),
-      document.querySelector(`.dotsThreeYesPlusCategory2${compteurHobbies}`)
+      document.querySelector(
+        `.yesPlusCategoryChargingDots2${compteurProfessionalExperiences}`
+      ),
+      document.querySelector(
+        `.yesPlusCategoryDots2${compteurProfessionalExperiences}`
+      ),
+      document.querySelector(
+        `.dotsOneYesPlusCategory2${compteurProfessionalExperiences}`
+      ),
+      document.querySelector(
+        `.dotsTwoYesPlusCategory2${compteurProfessionalExperiences}`
+      ),
+      document.querySelector(
+        `.dotsThreeYesPlusCategory2${compteurProfessionalExperiences}`
+      )
     );
+
+    //à chaque appel de fonction on incrémente d'un
+    //lorsque le compteur est un chiffre pair
+    //alors les boutons de chargements prennent la valeur de firstGroupeOfDots
+    //sinon les boutons de chargements prennent a valeur de secondeGroupeOfDots
 
     function firstDotsValues() {
       chargingDotsThree = firstGroupeOfDots.chargingDotsThree;
@@ -100,6 +160,7 @@ document.querySelector("body").addEventListener("click", (event) => {
     dots.style.marginLeft = "4px";
     dots.style.marginTop = "217px";
     dots.style.backgroundColor = "#0e2356";
+
     //when the user clik on the button yes change the dots style from invisible to visible
     dotsOne.style.visibility = "visible";
     dotsOne.style.marginLeft = "236px";
@@ -123,7 +184,7 @@ document.querySelector("body").addEventListener("click", (event) => {
     //Then make the dots move back to top
     const intervalDotMOving = setInterval(function () {
       //first dot
-      for (let impairTimer = 200; impairTimer <= 300; impairTimer += 100) {
+      for (let impairTimer = 200; impairTimer &lt;= 300; impairTimer += 100) {
         const intervalEearMoving = setInterval(function () {
           dotsOne.style.marginTop = "214px";
         }, impairTimer);
@@ -131,7 +192,7 @@ document.querySelector("body").addEventListener("click", (event) => {
           clearInterval(intervalEearMoving);
         }, 300);
       }
-      for (let pairTimer = 300; pairTimer <= 400; pairTimer += 100) {
+      for (let pairTimer = 300; pairTimer &lt;= 400; pairTimer += 100) {
         const intervalSecondEarMoving = setInterval(function () {
           dotsOne.style.marginTop = "224px";
           dotsTwo.style.marginTop = "214px";
@@ -140,7 +201,7 @@ document.querySelector("body").addEventListener("click", (event) => {
           clearInterval(intervalSecondEarMoving);
         }, 400);
       }
-      for (let impairTimer = 400; impairTimer <= 500; impairTimer += 100) {
+      for (let impairTimer = 400; impairTimer &lt;= 500; impairTimer += 100) {
         const intervalEearMoving = setInterval(function () {
           dotsTwo.style.marginTop = "224px";
           dotsThree.style.marginTop = "214px";
@@ -149,7 +210,7 @@ document.querySelector("body").addEventListener("click", (event) => {
           clearInterval(intervalEearMoving);
         }, 500);
       }
-      for (let impairTimer = 500; impairTimer <= 600; impairTimer += 100) {
+      for (let impairTimer = 500; impairTimer &lt;= 600; impairTimer += 100) {
         const intervalEearMoving = setInterval(function () {
           dotsThree.style.marginTop = "224px";
         }, impairTimer);
@@ -168,18 +229,19 @@ document.querySelector("body").addEventListener("click", (event) => {
       clearInterval(intervalDotMOving);
     }, 2000);
   }
-  //
+
   function cleartext() {
     document.querySelector("#form").reset();
   }
-  //
+
+  //Transformation of lowerCase to UpperCase
   let finalInputVal;
   finalInputVal = inputVal.toLowerCase();
 
   //CONDITION
   //1)if user use several keyword "oui" + catgory key word like "Scolarité"
   if (
-    event.target.matches("#submitMessage") &&
+    event.target.matches("#submitMessage") &amp;&amp;
     //YES
     (finalInputVal.includes("oui") ||
       finalInputVal.includes("ok") ||
@@ -209,71 +271,109 @@ document.querySelector("body").addEventListener("click", (event) => {
       finalInputVal.includes("évidemment") ||
       finalInputVal.includes("en effet") ||
       finalInputVal.includes("naturellement") ||
-      finalInputVal.includes("bien évidemment")) &&
-    //HOBBIES
-    (finalInputVal.includes("hobbies") ||
-      finalInputVal.includes("centre d'intérêt") ||
-      finalInputVal.includes("centre d'intérêts") ||
-      finalInputVal.includes("centres d'intérêts") ||
-      finalInputVal.includes("centres d'intérêt") ||
-      finalInputVal.includes("loisir") ||
-      finalInputVal.includes("loisirs") ||
-      finalInputVal.includes("passe temps") ||
-      finalInputVal.includes("passes temps") ||
-      finalInputVal.includes("passe-temps") ||
-      finalInputVal.includes("passes-temps") ||
-      finalInputVal.includes("temps-libre") ||
-      finalInputVal.includes("temps-libres") ||
-      finalInputVal.includes("passion") ||
-      finalInputVal.includes("passions") ||
-      finalInputVal.includes("détente") ||
-      finalInputVal.includes("détentes") ||
-      finalInputVal.includes("détent") ||
-      finalInputVal.includes("détens") ||
-      finalInputVal.includes("relaxe") ||
-      finalInputVal.includes("relaxes") ||
-      finalInputVal.includes("délasser") ||
-      finalInputVal.includes("délasse") ||
-      finalInputVal.includes("délasses") ||
-      finalInputVal.includes("s'amuse") ||
-      finalInputVal.includes("s'amuses") ||
-      finalInputVal.includes("temps-libre") ||
-      finalInputVal.includes("temps-libres") ||
-      finalInputVal.includes("en dehors du travail") ||
-      finalInputVal.includes("distrait") ||
-      finalInputVal.includes("distractions") ||
-      finalInputVal.includes("distraction") ||
-      finalInputVal.includes("divertit") ||
-      finalInputVal.includes("divertis") ||
-      finalInputVal.includes("diverti") ||
-      finalInputVal.includes("divertissement") ||
-      finalInputVal.includes("divertissements") ||
-      finalInputVal.includes("s'occuper") ||
-      finalInputVal.includes("s'occupe") ||
-      finalInputVal.includes("s'occupes") ||
-      finalInputVal.includes("occupation") ||
-      finalInputVal.includes("occupations") ||
-      finalInputVal.includes("repos") ||
-      finalInputVal.includes("sport") ||
-      finalInputVal.includes("sports") ||
-      finalInputVal.includes("instrument") ||
-      finalInputVal.includes("instruments") ||
-      finalInputVal.includes("danses") ||
-      finalInputVal.includes("danse") ||
-      finalInputVal.includes("association") ||
-      finalInputVal.includes("associations"))
+      finalInputVal.includes("bien évidemment")) &amp;&amp;
+    //PROFESSIONAL EXPERIENCES
+    (finalInputVal.includes("expériences") ||
+      finalInputVal.includes("expérience") ||
+      finalInputVal.includes("travaillé") ||
+      finalInputVal.includes("travaillés") ||
+      finalInputVal.includes("travailés") ||
+      finalInputVal.includes("travailé") ||
+      finalInputVal.includes("professionnelles") ||
+      finalInputVal.includes("professionnelle") ||
+      finalInputVal.includes("professionelle") ||
+      finalInputVal.includes("professionnele") ||
+      finalInputVal.includes("profesionelle") ||
+      finalInputVal.includes("professionele") ||
+      finalInputVal.includes("professionelles") ||
+      finalInputVal.includes("professionneles") ||
+      finalInputVal.includes("profesionelles") ||
+      finalInputVal.includes("professioneles") ||
+      finalInputVal.includes("accomplissement ") ||
+      finalInputVal.includes("accomplissements") ||
+      finalInputVal.includes("accomplissemment") ||
+      finalInputVal.includes("accomplissemments") ||
+      finalInputVal.includes("accomplisemment") ||
+      finalInputVal.includes("accomplisemments") ||
+      finalInputVal.includes("acomplisemment") ||
+      finalInputVal.includes("acomplisemments") ||
+      finalInputVal.includes("acomplissement") ||
+      finalInputVal.includes("acomplissements") ||
+      finalInputVal.includes("acomplissemments") ||
+      finalInputVal.includes("acomplissemment") ||
+      finalInputVal.includes("activité professionnelle") ||
+      finalInputVal.includes("activité professionnelles") ||
+      finalInputVal.includes("activités professionnelle") ||
+      finalInputVal.includes("activités professionnelles") ||
+      finalInputVal.includes("accomplissement") ||
+      finalInputVal.includes("accomplissements") ||
+      finalInputVal.includes("accomplissemment") ||
+      finalInputVal.includes("accomplissemments") ||
+      finalInputVal.includes("expérience") ||
+      finalInputVal.includes("expériences") ||
+      finalInputVal.includes("profession") ||
+      finalInputVal.includes("professions") ||
+      finalInputVal.includes("profesion") ||
+      finalInputVal.includes("profesions") ||
+      finalInputVal.includes("poste") ||
+      finalInputVal.includes("postes") ||
+      finalInputVal.includes("métier") ||
+      finalInputVal.includes("métiers") ||
+      finalInputVal.includes("fonction") ||
+      finalInputVal.includes("fonctions") ||
+      finalInputVal.includes("travail") ||
+      finalInputVal.includes("travails") ||
+      finalInputVal.includes("emploi") ||
+      finalInputVal.includes("emplois") ||
+      finalInputVal.includes("boulot") ||
+      finalInputVal.includes("boulots") ||
+      finalInputVal.includes("job") ||
+      finalInputVal.includes("jobs") ||
+      finalInputVal.includes("gagne pain") ||
+      finalInputVal.includes("gagne pains") ||
+      finalInputVal.includes("gagnes-pain") ||
+      finalInputVal.includes("gagnes-pains") ||
+      finalInputVal.includes("stage") ||
+      finalInputVal.includes("stages") ||
+      finalInputVal.includes("carrières") ||
+      finalInputVal.includes("carrière") ||
+      finalInputVal.includes("carière") ||
+      finalInputVal.includes("carières") ||
+      finalInputVal.includes("carièrres") ||
+      finalInputVal.includes("carièrre") ||
+      finalInputVal.includes("fonction") ||
+      finalInputVal.includes("fonctions") ||
+      finalInputVal.includes("positions") ||
+      finalInputVal.includes("position") ||
+      finalInputVal.includes("place") ||
+      finalInputVal.includes("places") ||
+      finalInputVal.includes("entreprise") ||
+      finalInputVal.includes("entreprises") ||
+      finalInputVal.includes("domaines") ||
+      finalInputVal.includes("domaine") ||
+      finalInputVal.includes("dommaines") ||
+      finalInputVal.includes("dommaine") ||
+      finalInputVal.includes("charge") ||
+      finalInputVal.includes("charge") ||
+      finalInputVal.includes("chargés") ||
+      finalInputVal.includes("chargé") ||
+      finalInputVal.includes("startup") ||
+      finalInputVal.includes("startups"))
   ) {
-    let compteurHobbiesAndYesInt = Number(
+    let compteurProfessionalExperiencesAndYesInt = Number(
       document
-        .querySelectorAll(".genericHobbiesAndYes")
-        [genericHobbiesAndYes].attributes[0].textContent.slice(13)
+        .querySelectorAll(".genericProfessionalExperienceAndYes")
+        [genericProfessionalExperienceAndYes].attributes[0].textContent.slice(
+          28
+        )
     );
     //
-    compteurHobbies = compteurHobbiesAndYesInt;
+    compteurProfessionalExperiences = compteurProfessionalExperiencesAndYesInt;
     //
     let yesAndCatAnswer = document.querySelector(
-      `#yesAndCatAnswer${compteurHobbies}`
+      `#yesAndCatAnswer${compteurProfessionalExperiences}`
     );
+
     let genericYes = document.querySelectorAll(".genericYes").length - 1;
     let inputVal = document.querySelector("#userAnswers").value;
     //
@@ -281,7 +381,7 @@ document.querySelector("body").addEventListener("click", (event) => {
     let firstNoButton = document.querySelectorAll(".noEvent")[0];
     let noEventButton;
     let yesEventButton;
-    //retreive of the counter value:
+
     compteur4 = Number(
       document
         .querySelectorAll(".genericYes")
@@ -289,7 +389,7 @@ document.querySelector("body").addEventListener("click", (event) => {
     );
 
     let yesAns = document.querySelector(`#yesAns${compteur4}`);
-    //If we click on the first yes button we push it to the left and make the no button invisible
+
     if (!inputVal) {
       if (document.querySelector(".yes")) {
         yesAns.classList.add("invisible");
@@ -345,7 +445,7 @@ document.querySelector("body").addEventListener("click", (event) => {
         yesAndCatAnswer.style.paddingRight = "13px";
         yesAndCatAnswer.style.marginLeft = "126px";
         yesAndCatAnswer.style.marginBottom = "18px";
-        yesAndCatAnswer.innerHTML = `<p class="font">${inputVal}</p>`;
+        yesAndCatAnswer.innerHTML = `&lt;p class="font">${inputVal}&lt;/p>`;
 
         firstNoButton.classList.remove("no");
         firstYesButton.classList.remove("yes");
@@ -370,7 +470,7 @@ document.querySelector("body").addEventListener("click", (event) => {
               ].attributes[1].textContent.slice(8)}`
           );
 
-          yesAndCatAnswer.innerHTML = `<p class="font">${inputVal}</p>`;
+          yesAndCatAnswer.innerHTML = `&lt;p class="font">${inputVal}&lt;/p>`;
           yesAndCatAnswer.style.marginTop = "6px";
           yesAndCatAnswer.style.border = `2px solid #dbdeea`;
           yesAndCatAnswer.style.backgroundColor = "#dbdeea";
@@ -390,7 +490,7 @@ document.querySelector("body").addEventListener("click", (event) => {
     //5_i make the element which is initially invisible => visible and if the user choose scolarity show him what is inside scolarityDetails array
     setTimeout(function () {
       let experienceDetailsSub = document.querySelector(
-        `#experienceDetailsSub${compteurHobbies}`
+        `#experienceDetailsSub${compteurProfessionalExperiences}`
       );
       experienceDetailsSub.classList.remove("invisible");
       experienceDetailsSub.style.marginTop = "6px"; //-84px
@@ -401,7 +501,7 @@ document.querySelector("body").addEventListener("click", (event) => {
       experienceDetailsSub.style.paddingRight = "13px";
       experienceDetailsSub.style.marginLeft = "126px";
       experienceDetailsSub.style.marginBottom = "18px";
-      experienceDetailsSub.innerHTML = `<p class="font">${hobbiesDetails[0]}</p>`;
+      experienceDetailsSub.innerHTML = `&lt;p class="font">${professionalExperiencesDetails[0]}&lt;/p>`;
     }, 1500);
 
     setTimeout(function () {
@@ -422,12 +522,14 @@ document.querySelector("body").addEventListener("click", (event) => {
       setTimeout(function () {
         //request to the DOM of the user response html element
         let otherExperiencesRequest = document.querySelector(
-          `#experiencesSub${compteurHobbies}`
+          `#experiencesSub${compteurProfessionalExperiences}`
         );
         let yesQuestion = document.querySelector(
-          `#yesButton${compteurHobbies}`
+          `#yesButton${compteurProfessionalExperiences}`
         );
-        let noQuestion = document.querySelector(`#noButton${compteurHobbies}`);
+        let noQuestion = document.querySelector(
+          `#noButton${compteurProfessionalExperiences}`
+        );
 
         setTimeout(function () {
           //after 7500ms move the answer to the top so they can be space for the following questions
@@ -444,97 +546,134 @@ document.querySelector("body").addEventListener("click", (event) => {
         otherExperiencesRequest.style.paddingRight = "13px";
         otherExperiencesRequest.style.marginLeft = "126px";
         otherExperiencesRequest.style.marginBottom = "18px";
-        otherExperiencesRequest.innerHTML = `<p class="font">${questions7[1]}</p>`;
+        otherExperiencesRequest.innerHTML = `&lt;p class="font">${questions10[1]}&lt;/p>`;
       }, 5000);
     }
     chooseAnOtherExperience();
-    // return;
+    //
+    return;
   }
   //2)if user use on of the category keyword (here relative to Scolarity)
   else if (
-    event.target.matches("button[class='genericHobbies']>p") ||
-    (event.target.matches("#submitMessage") &&
-      (finalInputVal.includes("hobbies") ||
-        finalInputVal.includes("centre d'intérêt") ||
-        finalInputVal.includes("centre d'intérêts") ||
-        finalInputVal.includes("centres d'intérêts") ||
-        finalInputVal.includes("centres d'intérêt") ||
-        finalInputVal.includes("loisir") ||
-        finalInputVal.includes("loisirs") ||
-        finalInputVal.includes("passe temps") ||
-        finalInputVal.includes("passes temps") ||
-        finalInputVal.includes("passe-temps") ||
-        finalInputVal.includes("passes-temps") ||
-        finalInputVal.includes("temps-libre") ||
-        finalInputVal.includes("temps-libres") ||
-        finalInputVal.includes("passion") ||
-        finalInputVal.includes("passions") ||
-        finalInputVal.includes("détente") ||
-        finalInputVal.includes("détentes") ||
-        finalInputVal.includes("détent") ||
-        finalInputVal.includes("détens") ||
-        finalInputVal.includes("relaxe") ||
-        finalInputVal.includes("relaxes") ||
-        finalInputVal.includes("délasser") ||
-        finalInputVal.includes("délasse") ||
-        finalInputVal.includes("délasses") ||
-        finalInputVal.includes("s'amuse") ||
-        finalInputVal.includes("s'amuses") ||
-        finalInputVal.includes("temps-libre") ||
-        finalInputVal.includes("temps-libres") ||
-        finalInputVal.includes("en dehors du travail") ||
-        finalInputVal.includes("distrait") ||
-        finalInputVal.includes("distractions") ||
-        finalInputVal.includes("distraction") ||
-        finalInputVal.includes("divertit") ||
-        finalInputVal.includes("divertis") ||
-        finalInputVal.includes("diverti") ||
-        finalInputVal.includes("divertissement") ||
-        finalInputVal.includes("divertissements") ||
-        finalInputVal.includes("s'occuper") ||
-        finalInputVal.includes("s'occupe") ||
-        finalInputVal.includes("s'occupes") ||
-        finalInputVal.includes("occupation") ||
-        finalInputVal.includes("occupations") ||
-        finalInputVal.includes("repos") ||
-        finalInputVal.includes("sport") ||
-        finalInputVal.includes("sports") ||
-        finalInputVal.includes("instrument") ||
-        finalInputVal.includes("instruments") ||
-        finalInputVal.includes("danses") ||
-        finalInputVal.includes("danse") ||
-        finalInputVal.includes("danses") ||
-        finalInputVal.includes("association") ||
-        finalInputVal.includes("associations")))
+    event.target.matches("button[class='genericProfessionalExperience']>p") ||
+    (event.target.matches("#submitMessage") &amp;&amp;
+      (finalInputVal.includes("expériences") ||
+        finalInputVal.includes("expérience") ||
+        finalInputVal.includes("travaillé") ||
+        finalInputVal.includes("travaillés") ||
+        finalInputVal.includes("travailés") ||
+        finalInputVal.includes("travailé") ||
+        finalInputVal.includes("professionnelles") ||
+        finalInputVal.includes("professionnelle") ||
+        finalInputVal.includes("professionelle") ||
+        finalInputVal.includes("professionnele") ||
+        finalInputVal.includes("profesionelle") ||
+        finalInputVal.includes("professionele") ||
+        finalInputVal.includes("professionelles") ||
+        finalInputVal.includes("professionneles") ||
+        finalInputVal.includes("profesionelles") ||
+        finalInputVal.includes("professioneles") ||
+        finalInputVal.includes("accomplissement ") ||
+        finalInputVal.includes("accomplissements") ||
+        finalInputVal.includes("accomplissemment") ||
+        finalInputVal.includes("accomplissemments") ||
+        finalInputVal.includes("accomplisemment") ||
+        finalInputVal.includes("accomplisemments") ||
+        finalInputVal.includes("acomplisemment") ||
+        finalInputVal.includes("acomplisemments") ||
+        finalInputVal.includes("acomplissement") ||
+        finalInputVal.includes("acomplissements") ||
+        finalInputVal.includes("acomplissemments") ||
+        finalInputVal.includes("acomplissemment") ||
+        finalInputVal.includes("activité professionnelle") ||
+        finalInputVal.includes("activité professionnelles") ||
+        finalInputVal.includes("activités professionnelle") ||
+        finalInputVal.includes("activités professionnelles") ||
+        finalInputVal.includes("accomplissement") ||
+        finalInputVal.includes("accomplissements") ||
+        finalInputVal.includes("accomplissemment") ||
+        finalInputVal.includes("accomplissemments") ||
+        finalInputVal.includes("expérience") ||
+        finalInputVal.includes("expériences") ||
+        finalInputVal.includes("profession") ||
+        finalInputVal.includes("professions") ||
+        finalInputVal.includes("profesion") ||
+        finalInputVal.includes("profesions") ||
+        finalInputVal.includes("poste") ||
+        finalInputVal.includes("postes") ||
+        finalInputVal.includes("métier") ||
+        finalInputVal.includes("métiers") ||
+        finalInputVal.includes("fonction") ||
+        finalInputVal.includes("fonctions") ||
+        finalInputVal.includes("travail") ||
+        finalInputVal.includes("travails") ||
+        finalInputVal.includes("emploi") ||
+        finalInputVal.includes("emplois") ||
+        finalInputVal.includes("boulot") ||
+        finalInputVal.includes("boulots") ||
+        finalInputVal.includes("job") ||
+        finalInputVal.includes("jobs") ||
+        finalInputVal.includes("gagne pain") ||
+        finalInputVal.includes("gagne pains") ||
+        finalInputVal.includes("gagnes-pain") ||
+        finalInputVal.includes("gagnes-pains") ||
+        finalInputVal.includes("stage") ||
+        finalInputVal.includes("stages") ||
+        finalInputVal.includes("carrières") ||
+        finalInputVal.includes("carrière") ||
+        finalInputVal.includes("carière") ||
+        finalInputVal.includes("carières") ||
+        finalInputVal.includes("carièrres") ||
+        finalInputVal.includes("carièrre") ||
+        finalInputVal.includes("fonction") ||
+        finalInputVal.includes("fonctions") ||
+        finalInputVal.includes("positions") ||
+        finalInputVal.includes("position") ||
+        finalInputVal.includes("place") ||
+        finalInputVal.includes("places") ||
+        finalInputVal.includes("entreprise") ||
+        finalInputVal.includes("entreprises") ||
+        finalInputVal.includes("domaines") ||
+        finalInputVal.includes("domaine") ||
+        finalInputVal.includes("dommaines") ||
+        finalInputVal.includes("dommaine") ||
+        finalInputVal.includes("charge") ||
+        finalInputVal.includes("charge") ||
+        finalInputVal.includes("chargés") ||
+        finalInputVal.includes("chargé") ||
+        finalInputVal.includes("startup") ||
+        finalInputVal.includes("startups")))
   ) {
     {
       document
-        .querySelectorAll(".genericHobbies")
-        [genericHobbies].attributes[1].textContent.slice(7)
-        ? (compteur6 = Number(
+        .querySelectorAll(".genericProfessionalExperience")
+        [genericProfessionalExperience].attributes[1].textContent.slice(22)
+        ? (compteur3 = Number(
             document
-              .querySelectorAll(".genericHobbies")
-              [genericHobbies].attributes[1].textContent.slice(7)
+              .querySelectorAll(".genericProfessionalExperience")
+              [genericProfessionalExperience].attributes[1].textContent.slice(
+                22
+              )
           ))
-        : (compteur6 = Number(
-            event.target.parentElement.attributes[1].textContent.slice(7)
+        : (compteur3 = Number(
+            event.target.parentElement.attributes[1].textContent.slice(22)
           ));
     }
-    // INSERTION OF USER INPUT
     let categorieAnswer = document.querySelector(
-      `#categoriesAnswer${compteur6}`
+      `#categoriesAnswer${compteur3}`
     );
-    let hobbies = document.querySelector(`#hobbies${compteur6}`);
-    //
+    let professionalExperience = document.querySelector(
+      `#professionalExperience${compteur3}`
+    );
+
     {
       !inputVal
-        ? ((hobbies.style.marginLeft = "254px"),
+        ? ((professionalExperience.style.marginLeft = "254px"),
           categorieAnswer.classList.add("invisible"))
-        : ((categorieAnswer.innerHTML = `<p class="font">${inputVal}</p>`),
-          hobbies.classList.add("invisible"));
+        : ((categorieAnswer.innerHTML = `&lt;p class="font">${inputVal}&lt;/p>`),
+          professionalExperience.classList.add("invisible"));
     }
-    //
-    categorieAnswer.innerHTML = `<p class="font">${inputVal}</p>`;
+
     categorieAnswer.style.marginTop = "6px"; //-84px
     categorieAnswer.style.border = `2px solid #dbdeea`;
     categorieAnswer.style.backgroundColor = "#dbdeea";
@@ -549,16 +688,13 @@ document.querySelector("body").addEventListener("click", (event) => {
       cleartext();
     }, 95);
     //1_dom request
-    let scolarity = document.querySelector(`#scolarity${compteur6}`);
-    let professionalExperience = document.querySelector(
-      `#professionalExperience${compteur6}`
-    );
-
-    let skills = document.querySelector(`#skills${compteur6}`);
-    let languages = document.querySelector(`#languages${compteur6}`);
+    let scolarity = document.querySelector(`#scolarity${compteur3}`);
+    let hobbies = document.querySelector(`#hobbies${compteur3}`);
+    let skills = document.querySelector(`#skills${compteur3}`);
+    let languages = document.querySelector(`#languages${compteur3}`);
 
     //2_make the other experiences categories invisibles
-    professionalExperience.classList.add("invisible");
+    hobbies.classList.add("invisible");
     skills.classList.add("invisible");
     scolarity.classList.add("invisible");
     languages.classList.add("invisible");
@@ -583,18 +719,18 @@ document.querySelector("body").addEventListener("click", (event) => {
 
       // creating objects
       const firstGroupeOfDots = new Chargement(
-        document.querySelector(`.categoriesChargingDots${compteur6}`),
-        document.querySelector(`.categoriesDots${compteur6}`),
-        document.querySelector(`.categoriesDotsOne${compteur6}`),
-        document.querySelector(`.categoriesDotsTwo${compteur6}`),
-        document.querySelector(`.categoriesDotsThree${compteur6}`)
+        document.querySelector(`.categoriesChargingDots${compteur3}`),
+        document.querySelector(`.categoriesDots${compteur3}`),
+        document.querySelector(`.categoriesDotsOne${compteur3}`),
+        document.querySelector(`.categoriesDotsTwo${compteur3}`),
+        document.querySelector(`.categoriesDotsThree${compteur3}`)
       );
       const secondeGroupeOfDots = new Chargement(
-        document.querySelector(`.categoriesChargingDots3${compteur6}`),
-        document.querySelector(`.categoriesDots3${compteur6}`),
-        document.querySelector(`.categoriesDotsOne3${compteur6}`),
-        document.querySelector(`.categoriesDotsTwo3${compteur6}`),
-        document.querySelector(`.categoriesDotsThree3${compteur6}`)
+        document.querySelector(`.categoriesChargingDots3${compteur3}`),
+        document.querySelector(`.categoriesDots3${compteur3}`),
+        document.querySelector(`.categoriesDotsOne3${compteur3}`),
+        document.querySelector(`.categoriesDotsTwo3${compteur3}`),
+        document.querySelector(`.categoriesDotsThree3${compteur3}`)
       );
 
       function firstDotsValues() {
@@ -661,7 +797,7 @@ document.querySelector("body").addEventListener("click", (event) => {
       //Then make the dots move back to top
       const intervalDotMOving = setInterval(function () {
         //first dot
-        for (let impairTimer = 200; impairTimer <= 300; impairTimer += 100) {
+        for (let impairTimer = 200; impairTimer &lt;= 300; impairTimer += 100) {
           const intervalEearMoving = setInterval(function () {
             dotsOne.style.marginTop = "214px";
           }, impairTimer);
@@ -669,7 +805,7 @@ document.querySelector("body").addEventListener("click", (event) => {
             clearInterval(intervalEearMoving);
           }, 300);
         }
-        for (let pairTimer = 300; pairTimer <= 400; pairTimer += 100) {
+        for (let pairTimer = 300; pairTimer &lt;= 400; pairTimer += 100) {
           const intervalSecondEarMoving = setInterval(function () {
             dotsOne.style.marginTop = "224px";
             dotsTwo.style.marginTop = "214px";
@@ -678,7 +814,7 @@ document.querySelector("body").addEventListener("click", (event) => {
             clearInterval(intervalSecondEarMoving);
           }, 400);
         }
-        for (let impairTimer = 400; impairTimer <= 500; impairTimer += 100) {
+        for (let impairTimer = 400; impairTimer &lt;= 500; impairTimer += 100) {
           const intervalEearMoving = setInterval(function () {
             dotsTwo.style.marginTop = "224px";
             dotsThree.style.marginTop = "214px";
@@ -687,7 +823,7 @@ document.querySelector("body").addEventListener("click", (event) => {
             clearInterval(intervalEearMoving);
           }, 500);
         }
-        for (let impairTimer = 500; impairTimer <= 600; impairTimer += 100) {
+        for (let impairTimer = 500; impairTimer &lt;= 600; impairTimer += 100) {
           const intervalEearMoving = setInterval(function () {
             dotsThree.style.marginTop = "224px";
           }, impairTimer);
@@ -706,14 +842,17 @@ document.querySelector("body").addEventListener("click", (event) => {
         clearInterval(intervalDotMOving);
       }, 2000);
     }
+    // //
     makeDotsMove();
 
+    // //4_i retreive the html element to the DOM where i want to push my scolarity details
     let experienceDetails = document.querySelector(
-      `#experienceDetails${compteur6}`
+      `#experienceDetails${compteur3}`
     );
     //5_i make the element which is initially invisible => visible and if the user choose scolarity show him what is inside scolarityDetails array
     setTimeout(function () {
       experienceDetails.classList.remove("invisible");
+      experienceDetails.style.marginTop = "-84px";
       experienceDetails.style.marginTop = "-84px";
       experienceDetails.style.border = `2px solid#dbdeea`;
       // (experienceDetails.style.backgroundColor = "#dbdeea"),
@@ -722,7 +861,7 @@ document.querySelector("body").addEventListener("click", (event) => {
       experienceDetails.style.paddingLeft = "22px";
       experienceDetails.style.paddingRight = "13px";
       experienceDetails.style.marginLeft = "126px";
-      experienceDetails.innerHTML = `<p class="font">${hobbiesDetails[0]}</p>`;
+      experienceDetails.innerHTML = professionalExperiencesDetails[0];
     }, 1500);
 
     setTimeout(function () {
@@ -743,10 +882,10 @@ document.querySelector("body").addEventListener("click", (event) => {
       setTimeout(function () {
         //request to the DOM of the user response html element
         let otherExperiencesRequest = document.querySelector(
-          `#experiences${compteur6}`
+          `#experiences${compteur3}`
         );
-        let yesQuestion = document.querySelector(`#yesButton${compteur6}`);
-        let noQuestion = document.querySelector(`#noButton${compteur6}`);
+        let yesQuestion = document.querySelector(`#yesButton${compteur3}`);
+        let noQuestion = document.querySelector(`#noButton${compteur3}`);
 
         setTimeout(function () {
           //after 7500ms move the answer to the top so they can be space for the following questions
@@ -763,7 +902,7 @@ document.querySelector("body").addEventListener("click", (event) => {
         otherExperiencesRequest.style.paddingRight = "13px";
         otherExperiencesRequest.style.marginLeft = "126px";
         otherExperiencesRequest.style.marginBottom = "18px";
-        otherExperiencesRequest.innerHTML = `<p class="font">${questions7[1]}</p>`;
+        otherExperiencesRequest.innerHTML = `&lt;p class="font">${questions10[1]}&lt;/p>`;
       }, 5000);
     }
     chooseAnOtherExperience();
@@ -771,3 +910,26 @@ document.querySelector("body").addEventListener("click", (event) => {
     //
   }
 });
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#compteur">compteur</a></li><li><a href="global.html#compteur2">compteur2</a></li><li><a href="global.html#compteur3">compteur3</a></li><li><a href="global.html#compteur5">compteur5</a></li><li><a href="global.html#compteur6">compteur6</a></li><li><a href="global.html#compteurx">compteurx</a></li><li><a href="global.html#compteurYesPlusCat">compteurYesPlusCat</a></li><li><a href="global.html#enterSubmitCounter">enterSubmitCounter</a></li><li><a href="global.html#errorCompteurs">errorCompteurs</a></li><li><a href="global.html#errorCounterOne">errorCounterOne</a></li><li><a href="global.html#experienceDetailsTexte2">experienceDetailsTexte2</a></li><li><a href="global.html#experienceDetailsTexte9">experienceDetailsTexte9</a></li><li><a href="global.html#functionMakeDotsMoveCounter">functionMakeDotsMoveCounter</a></li><li><a href="global.html#hobbiesDetails">hobbiesDetails</a></li><li><a href="global.html#languagesDetails">languagesDetails</a></li><li><a href="global.html#makeDotsMoves">makeDotsMoves</a></li><li><a href="global.html#otherExperienceQuestion">otherExperienceQuestion</a></li><li><a href="global.html#otherExperiencesCategories">otherExperiencesCategories</a></li><li><a href="global.html#otherExperiencesCategories1">otherExperiencesCategories1</a></li><li><a href="global.html#professionalExperiencesDetails">professionalExperiencesDetails</a></li><li><a href="global.html#questions99">questions99</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Wed Dec 01 2021 17:53:56 GMT+0100 (heure normale d’Europe centrale)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

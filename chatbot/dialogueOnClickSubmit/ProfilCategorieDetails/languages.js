@@ -1,3 +1,7 @@
+/**
+ * languages details
+ * @type {Array}
+ */
 let languagesDetails = [
   [
     `Je peux tenir une conversation en <b>Anglais</b> et maitrise l'<b>Anglais professionnel</b>.`,

@@ -1,5 +1,15 @@
+/**
+ * @type {number}
+ */
 let errorCompteurs = 1;
+/**
+ * @type {number}
+ */
 let errorCounterOne = 1;
+/**
+ * global variable to remove because exist in double (otherExperiencesCategories and otherExperiencesCategories1)
+ * @type {Array}
+ */
 let otherExperiencesCategories1 = [
   "<p>Scolarité</p>",
   "<p>Hobbies</p>",

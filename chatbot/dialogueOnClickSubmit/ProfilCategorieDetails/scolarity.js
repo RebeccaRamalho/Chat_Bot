@@ -1,13 +1,29 @@
+/**
+ * lscolarity details
+ * @type {Array}
+ */
 let questions99 = [
   [`Quelles expériences souhaitez-vous découvrir?`],
   [`Souhaitez-vous découvrir une autre expérience?`],
 ];
+/**
+ * scolarity variable to refacto into a string 
+ * @type {Array}
+ */
 let experienceDetailsTexte2 = [
   [
     `En<b>2018</b> J'ai obtenu une licence en philosophie et un certificat en sociologie qui m'ont permis de structurer ma réflexion par l'exercice de la dissertation et de développer ma capacité d'introspection et d'ouverture au monde.<br> En <b>2020 Social builder</b> puis <b>Simplon</b> en <b>2021</b> m'ont donné l'opportunité de développer des compétences dédiées à la <b>programmation web</b>.<br> J'ai par ces expériences pu développer des compétences tels que entre autres le maquettage d'une application, la capacité à coder en Js natif et via le <b>framework React</b>, la capacité à développer la partie <b>front-end</b> et <b>back-end</b> d'une application, la capacité à faire de la veille et à documenter mon code ou encore à vulgariser et à expliquer mon code.`,
   ],
 ];
+/**
+ * scolarity counter
+ * @type {number}
+ */
 let compteur2 = 1;
+/**
+ * scolarity counter number 2
+ * @type {number}
+ */
 let compteurx = 1;
 
 document.querySelector("body").addEventListener("click", (event) => {

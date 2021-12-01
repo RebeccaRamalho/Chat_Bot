@@ -1,4 +1,32 @@
-/**
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: dialogueOnPressSubmit/index.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: dialogueOnPressSubmit/index.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
  *
  * @type {number}
  */
@@ -20,7 +48,6 @@ let compteur5;
  * @param {number} compteur5
  * @param {number} compteurLanguages
  * @param {number} compteurHobbies
- * the function make the dots dom element move dynamically depending of a timer
  */
 function makeDotsMoves(
   compteurx,
@@ -165,7 +192,7 @@ function makeDotsMoves(
 
   const intervalDotMOving = setInterval(function () {
     //first dot
-    for (let impairTimer = 200; impairTimer <= 300; impairTimer += 100) {
+    for (let impairTimer = 200; impairTimer &lt;= 300; impairTimer += 100) {
       const intervalEearMoving = setInterval(function () {
         dotsOne.style.marginTop = "214px";
       }, impairTimer);
@@ -173,7 +200,7 @@ function makeDotsMoves(
         clearInterval(intervalEearMoving);
       }, 300);
     }
-    for (let pairTimer = 300; pairTimer <= 400; pairTimer += 100) {
+    for (let pairTimer = 300; pairTimer &lt;= 400; pairTimer += 100) {
       const intervalSecondEarMoving = setInterval(function () {
         dotsOne.style.marginTop = "224px";
         dotsTwo.style.marginTop = "214px";
@@ -182,7 +209,7 @@ function makeDotsMoves(
         clearInterval(intervalSecondEarMoving);
       }, 400);
     }
-    for (let impairTimer = 400; impairTimer <= 500; impairTimer += 100) {
+    for (let impairTimer = 400; impairTimer &lt;= 500; impairTimer += 100) {
       const intervalEearMoving = setInterval(function () {
         dotsTwo.style.marginTop = "224px";
         dotsThree.style.marginTop = "214px";
@@ -191,7 +218,7 @@ function makeDotsMoves(
         clearInterval(intervalEearMoving);
       }, 500);
     }
-    for (let impairTimer = 500; impairTimer <= 600; impairTimer += 100) {
+    for (let impairTimer = 500; impairTimer &lt;= 600; impairTimer += 100) {
       const intervalEearMoving = setInterval(function () {
         dotsThree.style.marginTop = "224px";
       }, impairTimer);
@@ -226,7 +253,7 @@ function animateCategories() {
   let yesAns = document.querySelector(`#yesAns${enterSubmitCounter}`);
 
   //If we click on the first yes button we push it to the left and make the no button invisible
-  if (yesEventButton && !inputVal) {
+  if (yesEventButton &amp;&amp; !inputVal) {
     //we move the yes button to the left
     yesEventButton.style.marginLeft = "350px";
     //we make the no button invisible
@@ -234,13 +261,13 @@ function animateCategories() {
     //we make the div of the keyboard answer invisible
     yesAns.classList.add("invisible");
     //we remove the class yes so that the following yesEvent we'll be targered into the other yes button
-    if (document.querySelector(".yes") && document.querySelector(".no")) {
+    if (document.querySelector(".yes") &amp;&amp; document.querySelector(".no")) {
       yesEventButton = document.querySelector(".yes");
 
       firstNoButton.classList.remove("no");
       firstYesButton.classList.remove("yes");
     }
-  } else if (firstYesButton && inputVal) {
+  } else if (firstYesButton &amp;&amp; inputVal) {
     //s'il y'a au moins deux yesButton
     if (
       document.querySelectorAll(".genericYes")[
@@ -301,7 +328,7 @@ function animateCategories() {
     yesEventButton.classList.add("invisible");
     noEventButton.classList.add("invisible");
 
-    yesAns.innerHTML = `<p class="font">${inputVal}</p>`;
+    yesAns.innerHTML = `&lt;p class="font">${inputVal}&lt;/p>`;
     yesAns.style.marginTop = "6px";
     yesAns.style.border = `2px solid #dbdeea`;
     yesAns.style.backgroundColor = "#dbdeea";
@@ -367,7 +394,7 @@ function animateCategories() {
     //Then make the dots move back to top
     const intervalDotMOving = setInterval(function () {
       //first dot
-      for (let timer = 200; timer <= 300; timer += 100) {
+      for (let timer = 200; timer &lt;= 300; timer += 100) {
         const intervalEearMoving = setInterval(function () {
           dotsOne.style.marginTop = "214px";
         }, timer);
@@ -375,7 +402,7 @@ function animateCategories() {
           clearInterval(intervalEearMoving);
         }, 300);
       }
-      for (let timer = 300; timer <= 400; timer += 100) {
+      for (let timer = 300; timer &lt;= 400; timer += 100) {
         const intervalSecondEarMoving = setInterval(function () {
           dotsOne.style.marginTop = "224px";
         }, timer);
@@ -384,7 +411,7 @@ function animateCategories() {
         }, 400);
       }
       //second dot
-      for (let timer = 300; timer <= 400; timer += 100) {
+      for (let timer = 300; timer &lt;= 400; timer += 100) {
         const intervalEearMoving = setInterval(function () {
           dotsTwo.style.marginTop = "214px";
         }, timer);
@@ -392,7 +419,7 @@ function animateCategories() {
           clearInterval(intervalEearMoving);
         }, 400);
       }
-      for (let timer = 400; timer <= 500; timer += 100) {
+      for (let timer = 400; timer &lt;= 500; timer += 100) {
         const intervalEearMoving = setInterval(function () {
           dotsTwo.style.marginTop = "224px";
         }, timer);
@@ -401,7 +428,7 @@ function animateCategories() {
         }, 500);
       }
       //third dot
-      for (let timer = 400; timer <= 500; timer += 100) {
+      for (let timer = 400; timer &lt;= 500; timer += 100) {
         const intervalEearMoving = setInterval(function () {
           dotsThree.style.marginTop = "214px";
         }, timer);
@@ -409,7 +436,7 @@ function animateCategories() {
           clearInterval(intervalEearMoving);
         }, 500);
       }
-      for (let timer = 500; timer <= 600; timer += 100) {
+      for (let timer = 500; timer &lt;= 600; timer += 100) {
         const intervalEearMoving = setInterval(function () {
           dotsThree.style.marginTop = "224px";
         }, timer);
@@ -442,7 +469,7 @@ function animateCategories() {
     let skills = document.querySelector(`#skills${enterSubmitCounter}`);
     let languages = document.querySelector(`#languages${enterSubmitCounter}`);
 
-    experiences.innerHTML = `<p>Merci 😊...Quelle catégorie de mon profil souhaiteriez-vous découvrir?</div></p>`;
+    experiences.innerHTML = `&lt;p>Merci 😊...Quelle catégorie de mon profil souhaiteriez-vous découvrir?&lt;/div>&lt;/p>`;
     experiences.style.visibility = "visible";
     experiences.style.border = `2px solid#dbdeea`;
     experiences.style.width = "229px";
@@ -549,15 +576,6 @@ function animateCategories() {
     nowChooseAnExperience();
   }, 4000);
 }
-/**
- * 
- * @param {number} compteurx 
- * @param {number} compteur2 
- * @param {number} compteur3 
- * @param {number} compteur5 
- * @param {number} compteurLanguages 
- * @param {number} compteurHobbies 
- */
 function AskIfWantToSeeAnOtherExperience(
   compteurx,
   compteur2,
@@ -602,7 +620,7 @@ function AskIfWantToSeeAnOtherExperience(
     otherExperiencesRequest.style.paddingRight = "13px";
     otherExperiencesRequest.style.marginLeft = "126px";
     otherExperiencesRequest.style.marginBottom = "18px";
-    otherExperiencesRequest.innerHTML = `<p class="font">${questions99[1]}</p>`;
+    otherExperiencesRequest.innerHTML = `&lt;p class="font">${questions99[1]}&lt;/p>`;
   }, 5000);
 }
 
@@ -626,7 +644,7 @@ function botAnsweringToInputVal(e) {
 
   //OUI + CATEGORIE
   if (
-    e.code == "Enter" &&
+    e.code == "Enter" &amp;&amp;
     (finalInputVal.includes("oui") ||
       finalInputVal.includes("ok") ||
       finalInputVal.includes("okay") ||
@@ -655,7 +673,7 @@ function botAnsweringToInputVal(e) {
       finalInputVal.includes("évidemment") ||
       finalInputVal.includes("en effet") ||
       finalInputVal.includes("naturellement") ||
-      finalInputVal.includes("bien évidemment")) &&
+      finalInputVal.includes("bien évidemment")) &amp;&amp;
     //SCOLARITÉ
     (finalInputVal.includes("scolarité") ||
       finalInputVal.includes("scolarité") ||
@@ -985,40 +1003,40 @@ function botAnsweringToInputVal(e) {
       "beforeend",
 
       `
-            <div id="yesAndCatAnswer${compteurYesPlusCat}"></div>
+            &lt;div id="yesAndCatAnswer${compteurYesPlusCat}">&lt;/div>
 
-            <div class="yesPlusCategoryChargingDots${compteurYesPlusCat}">
-                  <div class="yesPlusCategoryDots${compteurYesPlusCat} dotsOneYesPlusCategory${compteurYesPlusCat}"></div>
-                  <div class="yesPlusCategoryDots${compteurYesPlusCat} dotsTwoYesPlusCategory${compteurYesPlusCat}"></div>
-                  <div class="yesPlusCategoryDots${compteurYesPlusCat} dotsThreeYesPlusCategory${compteurYesPlusCat}"></div>
-            </div>
+            &lt;div class="yesPlusCategoryChargingDots${compteurYesPlusCat}">
+                  &lt;div class="yesPlusCategoryDots${compteurYesPlusCat} dotsOneYesPlusCategory${compteurYesPlusCat}">&lt;/div>
+                  &lt;div class="yesPlusCategoryDots${compteurYesPlusCat} dotsTwoYesPlusCategory${compteurYesPlusCat}">&lt;/div>
+                  &lt;div class="yesPlusCategoryDots${compteurYesPlusCat} dotsThreeYesPlusCategory${compteurYesPlusCat}">&lt;/div>
+            &lt;/div>
 
-            <p id="hobbiesAndYes${compteurYesPlusCat}" class="genericHobbiesAndYes"></p>
-            <p id="languagesAndYes${compteurYesPlusCat}" class="genericLanguagesAndYes"></p>
-            <p id="scolariyAndYes${compteurYesPlusCat}" class="genericscolariyAndYes"></p>
-            <p id="skillsAndYes${compteurYesPlusCat}" class="genericSkillsAndYes"></p>
-            <p id="professionalExperienceAndYes${compteurYesPlusCat}" class="genericProfessionalExperienceAndYes"></p>
+            &lt;p id="hobbiesAndYes${compteurYesPlusCat}" class="genericHobbiesAndYes">&lt;/p>
+            &lt;p id="languagesAndYes${compteurYesPlusCat}" class="genericLanguagesAndYes">&lt;/p>
+            &lt;p id="scolariyAndYes${compteurYesPlusCat}" class="genericscolariyAndYes">&lt;/p>
+            &lt;p id="skillsAndYes${compteurYesPlusCat}" class="genericSkillsAndYes">&lt;/p>
+            &lt;p id="professionalExperienceAndYes${compteurYesPlusCat}" class="genericProfessionalExperienceAndYes">&lt;/p>
                
 
-            <div id="experienceDetailsSub${compteurYesPlusCat}" class="invisible" ></div>
+            &lt;div id="experienceDetailsSub${compteurYesPlusCat}" class="invisible" >&lt;/div>
 
-            <!------>
+            &lt;!------>
 
-            <div class="yesPlusCategoryChargingDots2${compteurYesPlusCat}">
-                  <div class="yesPlusCategoryDots2${compteurYesPlusCat} dotsOneYesPlusCategory2${compteurYesPlusCat}"></div>
-                  <div class="yesPlusCategoryDots2${compteurYesPlusCat} dotsTwoYesPlusCategory2${compteurYesPlusCat}"></div>
-                  <div class="yesPlusCategoryDots2${compteurYesPlusCat} dotsThreeYesPlusCategory2${compteurYesPlusCat}"></div>
-            </div>
+            &lt;div class="yesPlusCategoryChargingDots2${compteurYesPlusCat}">
+                  &lt;div class="yesPlusCategoryDots2${compteurYesPlusCat} dotsOneYesPlusCategory2${compteurYesPlusCat}">&lt;/div>
+                  &lt;div class="yesPlusCategoryDots2${compteurYesPlusCat} dotsTwoYesPlusCategory2${compteurYesPlusCat}">&lt;/div>
+                  &lt;div class="yesPlusCategoryDots2${compteurYesPlusCat} dotsThreeYesPlusCategory2${compteurYesPlusCat}">&lt;/div>
+            &lt;/div>
 
-            <!------>
+            &lt;!------>
 
-            <div id="experiencesSub${compteurYesPlusCat}" class="invisible"></div>
+            &lt;div id="experiencesSub${compteurYesPlusCat}" class="invisible">&lt;/div>
 
-            <button type="button"  id="yesButton${compteurYesPlusCat}" class="yesEvent invisible genericYes">Oui</button>
-            <button type="button"  id="noButton${compteurYesPlusCat}" class="noEvent invisible genericNo">Non</button>
+            &lt;button type="button"  id="yesButton${compteurYesPlusCat}" class="yesEvent invisible genericYes">Oui&lt;/button>
+            &lt;button type="button"  id="noButton${compteurYesPlusCat}" class="noEvent invisible genericNo">Non&lt;/button>
             
 
-          </div>
+          &lt;/div>
             `
     );
     let yes =
@@ -1107,7 +1125,7 @@ function botAnsweringToInputVal(e) {
       );
 
       compteurx = compteurxAndYesInt;
-      experienceDetails = `J'aime passer mon temps libre à apprendre de nouvelle chose que ce soit par la <b>lecture</b> ou par le <b>dessin</b> que je pratique depuis mon enfance`;
+      experienceDetails = `J'aime passer mon temps libre à apprendre de nouvelle chose que ce soit par la &lt;b>lecture&lt;/b> ou par le &lt;b>dessin&lt;/b> que je pratique depuis mon enfance`;
 
       //LANGUAGES
     } else if (
@@ -1133,7 +1151,7 @@ function botAnsweringToInputVal(e) {
       );
 
       compteurx = compteurLanguagesAndYesInt;
-      experienceDetails = `Je peux tenir une conversation en <b>Anglais</b> et maitrise l'<b>Anglais professionnel</b>.`;
+      experienceDetails = `Je peux tenir une conversation en &lt;b>Anglais&lt;/b> et maitrise l'&lt;b>Anglais professionnel&lt;/b>.`;
       //SKILLS
     } else if (
       finalInputVal.includes("compétences") ||
@@ -1264,7 +1282,7 @@ function botAnsweringToInputVal(e) {
 
       compteurx = compteurSkillsAndYesInt;
       experienceDetails =
-        "-Je sais développer un site de bout en bout (côté front-end comme côté back-end) avec le langage <b>Javascript<b/>,l'écosystème de <b>Node.js</b> et la librairie React.<br/>-Je sais concevoir et manipuler une base de donnée via les outils <b>MySQL<b/> et les <b>ORM Sequelize et Mongoose.<b/><br/> -Je sais gérer mes projets via le gestionnaire de version <b>GIT</b> et via <b>GITHUB</b>";
+        "-Je sais développer un site de bout en bout (côté front-end comme côté back-end) avec le langage &lt;b>Javascript&lt;b/>,l'écosystème de &lt;b>Node.js&lt;/b> et la librairie React.&lt;br/>-Je sais concevoir et manipuler une base de donnée via les outils &lt;b>MySQL&lt;b/> et les &lt;b>ORM Sequelize et Mongoose.&lt;b/>&lt;br/> -Je sais gérer mes projets via le gestionnaire de version &lt;b>GIT&lt;/b> et via &lt;b>GITHUB&lt;/b>";
 
       //PROFESSIONAL EXPERIENCES
     } else if (
@@ -1370,7 +1388,7 @@ function botAnsweringToInputVal(e) {
       compteurx = compteurProfessionalExperiencesAndYesInt;
       //
       experienceDetails =
-        "<br><b>De de Janvier à Mars 2020</b> j'ai été fille Au pair auprès d'une famille à Londres. J'ai effectué comme principales tâches: les soins quotidiens à un enfant atteint d'épilepsie. <br><b> Mars à Mars 2020</b> Femme de chambre à Hôtel Hyatt à Londres -Tâches principales: nettoyage des chambres de l'hôtel. <br><b>De Mai à Juin 2021</b> Développeuse web et web mobile, à Association Hand-of hope, -Tâches principales: réalisation au cours d'un stage d'une interface dynamique.";
+        "&lt;br>&lt;b>De de Janvier à Mars 2020&lt;/b> j'ai été fille Au pair auprès d'une famille à Londres. J'ai effectué comme principales tâches: les soins quotidiens à un enfant atteint d'épilepsie. &lt;br>&lt;b> Mars à Mars 2020&lt;/b> Femme de chambre à Hôtel Hyatt à Londres -Tâches principales: nettoyage des chambres de l'hôtel. &lt;br>&lt;b>De Mai à Juin 2021&lt;/b> Développeuse web et web mobile, à Association Hand-of hope, -Tâches principales: réalisation au cours d'un stage d'une interface dynamique.";
     }
     //SCOLARITY
     else if (
@@ -1443,7 +1461,7 @@ function botAnsweringToInputVal(e) {
       );
       //
       compteurx = compteurScolarityAndYesInt;
-      experienceDetails = `En<b>2018</b> J'ai obtenu une licence en philosophie et un certificat en sociologie qui m'ont permis de structurer ma réflexion par l'exercice de la dissertation et de développer ma capacité d'introspection et d'ouverture au monde.<br> En <b>2020 Social builder</b> puis <b>Simplon</b> en <b>2021</b> m'ont donné l'opportunité de développer des compétences dédiées à la <b>programmation web</b>.<br> J'ai par ces expériences pu développer des compétences tels que entre autres le maquettage d'une application, la capacité à coder en Js natif et via le <b>framework React</b>, la capacité à développer la partie <b>front-end</b> et <b>back-end</b> d'une application, la capacité à faire de la veille et à documenter mon code ou encore à vulgariser et à expliquer mon code.`;
+      experienceDetails = `En&lt;b>2018&lt;/b> J'ai obtenu une licence en philosophie et un certificat en sociologie qui m'ont permis de structurer ma réflexion par l'exercice de la dissertation et de développer ma capacité d'introspection et d'ouverture au monde.&lt;br> En &lt;b>2020 Social builder&lt;/b> puis &lt;b>Simplon&lt;/b> en &lt;b>2021&lt;/b> m'ont donné l'opportunité de développer des compétences dédiées à la &lt;b>programmation web&lt;/b>.&lt;br> J'ai par ces expériences pu développer des compétences tels que entre autres le maquettage d'une application, la capacité à coder en Js natif et via le &lt;b>framework React&lt;/b>, la capacité à développer la partie &lt;b>front-end&lt;/b> et &lt;b>back-end&lt;/b> d'une application, la capacité à faire de la veille et à documenter mon code ou encore à vulgariser et à expliquer mon code.`;
     }
     //2_
     let yesAndCatAnswer = document.querySelector(
@@ -1479,7 +1497,7 @@ function botAnsweringToInputVal(e) {
 
     let yesAns = document.querySelector(`#yesAns${compteur4}`);
     //If we click on the first yes button we push it to the left and make the no button invisible
-    if (yesEventButton && !inputVal) {
+    if (yesEventButton &amp;&amp; !inputVal) {
       //we move the yes button to the left
       yesEventButton.style.marginLeft = "350px";
       //we make the no button invisible
@@ -1492,12 +1510,12 @@ function botAnsweringToInputVal(e) {
         firstYesButton.classList.remove("yes");
       }
       //
-    } else if (firstYesButton && inputVal) {
+    } else if (firstYesButton &amp;&amp; inputVal) {
       //if there is an input we make the yes et no button invisble
       yesEventButton.classList.add("invisible");
       noEventButton.classList.add("invisible");
 
-      yesAndCatAnswer.innerHTML = `<p class="font">${inputVal}</p>`;
+      yesAndCatAnswer.innerHTML = `&lt;p class="font">${inputVal}&lt;/p>`;
       yesAndCatAnswer.style.marginTop = "6px";
       yesAndCatAnswer.style.border = `2px solid #dbdeea`;
       yesAndCatAnswer.style.backgroundColor = "#dbdeea";
@@ -1529,7 +1547,7 @@ function botAnsweringToInputVal(e) {
       experienceDetailsSub.style.paddingRight = "13px";
       experienceDetailsSub.style.marginLeft = "126px";
       experienceDetailsSub.style.marginBottom = "18px";
-      experienceDetailsSub.innerHTML = `<p class="font">${experienceDetails}</p>`;
+      experienceDetailsSub.innerHTML = `&lt;p class="font">${experienceDetails}&lt;/p>`;
     }, 1500);
     setTimeout(function () {
       scrollToTheBottom();
@@ -1563,7 +1581,7 @@ function botAnsweringToInputVal(e) {
     return;
   } //YES (without a specific category answer)
   else if (
-    e.code == "Enter" &&
+    e.code == "Enter" &amp;&amp;
     (finalInputVal.includes("oui") ||
       finalInputVal.includes("ok") ||
       finalInputVal.includes("okay") ||
@@ -1599,59 +1617,59 @@ function botAnsweringToInputVal(e) {
     otherExperienceChoice.insertAdjacentHTML(
       "beforeend",
       `
-            <div id="yesAns${compteurYesPlusCat}"></div>
+            &lt;div id="yesAns${compteurYesPlusCat}">&lt;/div>
 
-            <div class="chargingDots${compteurYesPlusCat}">
-              <div class="dots${compteurYesPlusCat} dotsOne${compteurYesPlusCat}"></div>
-              <div class="dots${compteurYesPlusCat} dotsTwo${compteurYesPlusCat}"></div>
-              <div class="dots${compteurYesPlusCat} dotsThree${compteurYesPlusCat}"></div>
-            </div>
+            &lt;div class="chargingDots${compteurYesPlusCat}">
+              &lt;div class="dots${compteurYesPlusCat} dotsOne${compteurYesPlusCat}">&lt;/div>
+              &lt;div class="dots${compteurYesPlusCat} dotsTwo${compteurYesPlusCat}">&lt;/div>
+              &lt;div class="dots${compteurYesPlusCat} dotsThree${compteurYesPlusCat}">&lt;/div>
+            &lt;/div>
 
-            <div id="experiencesQuestion${compteurYesPlusCat}" class="answerExperienceQuestion font"></div>
+            &lt;div id="experiencesQuestion${compteurYesPlusCat}" class="answerExperienceQuestion font">&lt;/div>
 
-            <div id="categoriesAnswer${compteurYesPlusCat}"></div>
+            &lt;div id="categoriesAnswer${compteurYesPlusCat}">&lt;/div>
 
-            <div id="curriculumCategories${compteurYesPlusCat}">
+            &lt;div id="curriculumCategories${compteurYesPlusCat}">
 
-              <div id="firstRow2">
-                  <button type="button" id="scolarity${compteurYesPlusCat}" class="genericScolarity invisible">
-                  </button>
-                  <button type="button" id="professionalExperience${compteurYesPlusCat}" class="genericProfessionalExperience invisible">
-                  </button>
-              </div>
+              &lt;div id="firstRow2">
+                  &lt;button type="button" id="scolarity${compteurYesPlusCat}" class="genericScolarity invisible">
+                  &lt;/button>
+                  &lt;button type="button" id="professionalExperience${compteurYesPlusCat}" class="genericProfessionalExperience invisible">
+                  &lt;/button>
+              &lt;/div>
 
-              <div id="secondRow2">
-                  <button type="button" id="hobbies${compteurYesPlusCat}" class="genericHobbies invisible">
-                  </button>
-                  <button type="button" id="skills${compteurYesPlusCat}" class="genericSkills invisible">
-                  </button>
-              </div>
+              &lt;div id="secondRow2">
+                  &lt;button type="button" id="hobbies${compteurYesPlusCat}" class="genericHobbies invisible">
+                  &lt;/button>
+                  &lt;button type="button" id="skills${compteurYesPlusCat}" class="genericSkills invisible">
+                  &lt;/button>
+              &lt;/div>
 
-              <button type="button" id="languages${compteurYesPlusCat}" class="genericLanguages invisible"></button>
+              &lt;button type="button" id="languages${compteurYesPlusCat}" class="genericLanguages invisible">&lt;/button>
 
-              <div class="categoriesChargingDots${compteurYesPlusCat}">
-                  <div class="categoriesDots${compteurYesPlusCat} categoriesDotsOne${compteurYesPlusCat} "></div>
-                  <div class="categoriesDots${compteurYesPlusCat} categoriesDotsTwo${compteurYesPlusCat} "></div>
-                  <div class="categoriesDots${compteurYesPlusCat} categoriesDotsThree${compteurYesPlusCat} "></div>
-              </div>
+              &lt;div class="categoriesChargingDots${compteurYesPlusCat}">
+                  &lt;div class="categoriesDots${compteurYesPlusCat} categoriesDotsOne${compteurYesPlusCat} ">&lt;/div>
+                  &lt;div class="categoriesDots${compteurYesPlusCat} categoriesDotsTwo${compteurYesPlusCat} ">&lt;/div>
+                  &lt;div class="categoriesDots${compteurYesPlusCat} categoriesDotsThree${compteurYesPlusCat} ">&lt;/div>
+              &lt;/div>
 
-             <div id="experienceDetails${compteurYesPlusCat}" class="invisible font" ></div>
+             &lt;div id="experienceDetails${compteurYesPlusCat}" class="invisible font" >&lt;/div>
 
-            </div>
-            <!------>
+            &lt;/div>
+            &lt;!------>
 
-            <div class="categoriesChargingDots3${compteurYesPlusCat}">
-              <div class="categoriesDots3${compteurYesPlusCat} categoriesDotsOne3${compteurYesPlusCat} "></div>
-              <div class="categoriesDots3${compteurYesPlusCat} categoriesDotsTwo3${compteurYesPlusCat} "></div>
-              <div class="categoriesDots3${compteurYesPlusCat} categoriesDotsThree3${compteurYesPlusCat} "></div>
-            </div>
+            &lt;div class="categoriesChargingDots3${compteurYesPlusCat}">
+              &lt;div class="categoriesDots3${compteurYesPlusCat} categoriesDotsOne3${compteurYesPlusCat} ">&lt;/div>
+              &lt;div class="categoriesDots3${compteurYesPlusCat} categoriesDotsTwo3${compteurYesPlusCat} ">&lt;/div>
+              &lt;div class="categoriesDots3${compteurYesPlusCat} categoriesDotsThree3${compteurYesPlusCat} ">&lt;/div>
+            &lt;/div>
 
-            <!------>
+            &lt;!------>
 
-            <div id="experiences${compteurYesPlusCat}" class="invisible font"></div>
+            &lt;div id="experiences${compteurYesPlusCat}" class="invisible font">&lt;/div>
 
-            <button type="button"  id="yesButton${compteurYesPlusCat}" class="yesEvent invisible genericYes">Oui</button>
-            <button type="button"  id="noButton${compteurYesPlusCat}" class="noEvent invisible genericNo">Non</button>
+            &lt;button type="button"  id="yesButton${compteurYesPlusCat}" class="yesEvent invisible genericYes">Oui&lt;/button>
+            &lt;button type="button"  id="noButton${compteurYesPlusCat}" class="noEvent invisible genericNo">Non&lt;/button>
            
             `
     );
@@ -1688,7 +1706,7 @@ function botAnsweringToInputVal(e) {
     }, 200);
     //SCOLARITY (without yes)
   } else if (
-    e.code == "Enter" &&
+    e.code == "Enter" &amp;&amp;
     (finalInputVal.includes("scolarité") ||
       finalInputVal.includes("scolarité") ||
       finalInputVal.includes("scolarités") ||
@@ -1771,7 +1789,7 @@ function botAnsweringToInputVal(e) {
       !inputVal
         ? ((scolarity.style.marginLeft = "254px"),
           categorieAnswer.classList.add("invisible"))
-        : ((categorieAnswer.innerHTML = `<p class="font">${inputVal}</p>`),
+        : ((categorieAnswer.innerHTML = `&lt;p class="font">${inputVal}&lt;/p>`),
           scolarity.classList.add("invisible"));
     }
 
@@ -1816,7 +1834,7 @@ function botAnsweringToInputVal(e) {
       experienceDetails.style.paddingLeft = "22px";
       experienceDetails.style.paddingRight = "13px";
       experienceDetails.style.marginLeft = "126px";
-      experienceDetails.innerHTML = `<p>${experienceDetailsTexte2[0]}</p>`;
+      experienceDetails.innerHTML = `&lt;p>${experienceDetailsTexte2[0]}&lt;/p>`;
     }, 1500);
 
     setTimeout(function () {
@@ -1835,7 +1853,7 @@ function botAnsweringToInputVal(e) {
 
     //PROFESSIONAL EXPERIENCES (without yes)
   } else if (
-    e.code == "Enter" &&
+    e.code == "Enter" &amp;&amp;
     (finalInputVal.includes("expériences") ||
       finalInputVal.includes("expérience") ||
       finalInputVal.includes("travaillé") ||
@@ -1952,7 +1970,7 @@ function botAnsweringToInputVal(e) {
       !inputVal
         ? ((professionalExperience.style.marginLeft = "254px"),
           categorieAnswer.classList.add("invisible"))
-        : ((categorieAnswer.innerHTML = `<p class="font">${inputVal}</p>`),
+        : ((categorieAnswer.innerHTML = `&lt;p class="font">${inputVal}&lt;/p>`),
           professionalExperience.classList.add("invisible"));
     }
 
@@ -1996,7 +2014,7 @@ function botAnsweringToInputVal(e) {
       experienceDetails.style.paddingLeft = "22px";
       experienceDetails.style.paddingRight = "13px";
       experienceDetails.style.marginLeft = "126px";
-      experienceDetails.innerHTML = `<p class="font">${professionalExperiencesDetails[0]}</p>`;
+      experienceDetails.innerHTML = `&lt;p class="font">${professionalExperiencesDetails[0]}&lt;/p>`;
     }, 1500);
 
     setTimeout(function () {
@@ -2007,7 +2025,7 @@ function botAnsweringToInputVal(e) {
 
     //SKILLS (without yes)
   } else if (
-    e.code == "Enter" &&
+    e.code == "Enter" &amp;&amp;
     (finalInputVal.includes("compétences") ||
       finalInputVal.includes("compétence") ||
       finalInputVal.includes("competences") ||
@@ -2149,7 +2167,7 @@ function botAnsweringToInputVal(e) {
       !inputVal
         ? ((skills.style.marginLeft = "254px"),
           categorieAnswer.classList.add("invisible"))
-        : ((categorieAnswer.innerHTML = `<p class="font">${inputVal}</p>`),
+        : ((categorieAnswer.innerHTML = `&lt;p class="font">${inputVal}&lt;/p>`),
           skills.classList.add("invisible"));
     }
     categorieAnswer.style.marginTop = "6px"; //-84px
@@ -2194,7 +2212,7 @@ function botAnsweringToInputVal(e) {
       experienceDetails.style.paddingLeft = "22px";
       experienceDetails.style.paddingRight = "13px";
       experienceDetails.style.marginLeft = "126px";
-      experienceDetails.innerHTML = `<p class="font">${experienceDetailsTexte9[0]}</p>`;
+      experienceDetails.innerHTML = `&lt;p class="font">${experienceDetailsTexte9[0]}&lt;/p>`;
     }, 1500);
 
     setTimeout(function () {
@@ -2205,7 +2223,7 @@ function botAnsweringToInputVal(e) {
 
     //LANGUAGES (without yes)
   } else if (
-    e.code == "Enter" &&
+    e.code == "Enter" &amp;&amp;
     (finalInputVal.includes("langues") ||
       finalInputVal.includes("parler") ||
       finalInputVal.includes("parle") ||
@@ -2242,7 +2260,7 @@ function botAnsweringToInputVal(e) {
       !inputVal
         ? ((languages.style.marginLeft = "254px"),
           categorieAnswer.classList.add("invisible"))
-        : ((categorieAnswer.innerHTML = `<p class="font">${inputVal}</p>`),
+        : ((categorieAnswer.innerHTML = `&lt;p class="font">${inputVal}&lt;/p>`),
           languages.classList.add("invisible"));
     }
 
@@ -2309,7 +2327,7 @@ function botAnsweringToInputVal(e) {
 
     //HOBBIES (without yes)
   } else if (
-    e.code == "Enter" &&
+    e.code == "Enter" &amp;&amp;
     (finalInputVal.includes("hobbies") ||
       finalInputVal.includes("centre d'intérêt") ||
       finalInputVal.includes("centre d'intérêts") ||
@@ -2390,11 +2408,11 @@ function botAnsweringToInputVal(e) {
       !inputVal
         ? ((hobbies.style.marginLeft = "254px"),
           categorieAnswer.classList.add("invisible"))
-        : ((categorieAnswer.innerHTML = `<p class="font">${inputVal}</p>`),
+        : ((categorieAnswer.innerHTML = `&lt;p class="font">${inputVal}&lt;/p>`),
           hobbies.classList.add("invisible"));
     }
     //
-    categorieAnswer.innerHTML = `<p class="font">${inputVal}</p>`;
+    categorieAnswer.innerHTML = `&lt;p class="font">${inputVal}&lt;/p>`;
     categorieAnswer.style.marginTop = "6px"; //-84px
     categorieAnswer.style.border = `2px solid #dbdeea`;
     categorieAnswer.style.backgroundColor = "#dbdeea";
@@ -2439,7 +2457,7 @@ function botAnsweringToInputVal(e) {
       experienceDetails.style.paddingLeft = "22px";
       experienceDetails.style.paddingRight = "13px";
       experienceDetails.style.marginLeft = "126px";
-      experienceDetails.innerHTML = `<p class="font">${hobbiesDetails[0]}</p>`;
+      experienceDetails.innerHTML = `&lt;p class="font">${hobbiesDetails[0]}&lt;/p>`;
     }, 1500);
 
     setTimeout(function () {
@@ -2458,19 +2476,19 @@ function botAnsweringToInputVal(e) {
   }
   //NO
   if (
-    e.code == "Enter" &&
+    e.code == "Enter" &amp;&amp;
     (finalInputVal.includes("non") || finalInputVal.includes("n'ai"))
   ) {
     otherExperienceChoice.insertAdjacentHTML(
       "beforeend",
       `
-      <div class="noInputAnswer"></div>
-      <div class="noChargingDots">
-          <div class="noDots noDotsOne"></div>
-          <div class="noDots noDotsTwo"></div>
-          <div class="noDots noDotsThree"></div>
-      </div>
-      <div class="goodByeMessage font"></div>`
+      &lt;div class="noInputAnswer">&lt;/div>
+      &lt;div class="noChargingDots">
+          &lt;div class="noDots noDotsOne">&lt;/div>
+          &lt;div class="noDots noDotsTwo">&lt;/div>
+          &lt;div class="noDots noDotsThree">&lt;/div>
+      &lt;/div>
+      &lt;div class="goodByeMessage font">&lt;/div>`
     );
 
     let noInputAnswer = document.querySelector(".noInputAnswer");
@@ -2501,7 +2519,7 @@ function botAnsweringToInputVal(e) {
     // document.querySelector(".yes").classList.add("invisible");
     // document.querySelector(".no").classList.add("invisible");
 
-    noInputAnswer.innerHTML = `<p class="font">${inputVal}</p>`;
+    noInputAnswer.innerHTML = `&lt;p class="font">${inputVal}&lt;/p>`;
     noInputAnswer.style.marginTop = "6px";
     noInputAnswer.style.border = `2px solid #dbdeea`;
     noInputAnswer.style.backgroundColor = "#dbdeea";
@@ -2520,7 +2538,7 @@ function botAnsweringToInputVal(e) {
     }, 1000);
 
     setTimeout(function () {
-      goodByeMessage.innerHTML = `<p>Vous pouvez me contacter par mail à l'adresse: kanurebecca0@gmail.com ou par téléphone au: 07.82.43.32.22. À bientôt!<p>`;
+      goodByeMessage.innerHTML = `&lt;p>Vous pouvez me contacter par mail à l'adresse: kanurebecca0@gmail.com ou par téléphone au: 07.82.43.32.22. À bientôt!&lt;p>`;
       goodByeMessage.style.border = `2px solid #dbdeea`;
       goodByeMessage.style.width = "229px";
       goodByeMessage.style.borderRadius = "6px";
@@ -2534,3 +2552,26 @@ function botAnsweringToInputVal(e) {
     }, 3001);
   }
 }
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#compteur">compteur</a></li><li><a href="global.html#compteur2">compteur2</a></li><li><a href="global.html#compteur3">compteur3</a></li><li><a href="global.html#compteur5">compteur5</a></li><li><a href="global.html#compteur6">compteur6</a></li><li><a href="global.html#compteurx">compteurx</a></li><li><a href="global.html#compteurYesPlusCat">compteurYesPlusCat</a></li><li><a href="global.html#enterSubmitCounter">enterSubmitCounter</a></li><li><a href="global.html#errorCompteurs">errorCompteurs</a></li><li><a href="global.html#errorCounterOne">errorCounterOne</a></li><li><a href="global.html#experienceDetailsTexte2">experienceDetailsTexte2</a></li><li><a href="global.html#experienceDetailsTexte9">experienceDetailsTexte9</a></li><li><a href="global.html#functionMakeDotsMoveCounter">functionMakeDotsMoveCounter</a></li><li><a href="global.html#hobbiesDetails">hobbiesDetails</a></li><li><a href="global.html#languagesDetails">languagesDetails</a></li><li><a href="global.html#makeDotsMoves">makeDotsMoves</a></li><li><a href="global.html#otherExperienceQuestion">otherExperienceQuestion</a></li><li><a href="global.html#otherExperiencesCategories">otherExperiencesCategories</a></li><li><a href="global.html#otherExperiencesCategories1">otherExperiencesCategories1</a></li><li><a href="global.html#professionalExperiencesDetails">professionalExperiencesDetails</a></li><li><a href="global.html#questions99">questions99</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Wed Dec 01 2021 17:53:56 GMT+0100 (heure normale d’Europe centrale)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

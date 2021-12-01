@@ -1,10 +1,38 @@
-/**
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: dialogueOnClickSubmit/ProfilCategorieDetails/hobbies.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: dialogueOnClickSubmit/ProfilCategorieDetails/hobbies.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
  * hobbies details (to refacto into a string)
  * @type {Array}
  */
 let hobbiesDetails = [
   [
-    `J'aime passer mon temps libre à apprendre de nouvelle chose que ce soit par la <b>lecture</b> ou par le <b>dessin</b> que je pratique depuis mon enfance`,
+    `J'aime passer mon temps libre à apprendre de nouvelle chose que ce soit par la &lt;b>lecture&lt;/b> ou par le &lt;b>dessin&lt;/b> que je pratique depuis mon enfance`,
   ],
 ];
 /**
@@ -123,7 +151,7 @@ document.querySelector("body").addEventListener("click", (event) => {
     //Then make the dots move back to top
     const intervalDotMOving = setInterval(function () {
       //first dot
-      for (let impairTimer = 200; impairTimer <= 300; impairTimer += 100) {
+      for (let impairTimer = 200; impairTimer &lt;= 300; impairTimer += 100) {
         const intervalEearMoving = setInterval(function () {
           dotsOne.style.marginTop = "214px";
         }, impairTimer);
@@ -131,7 +159,7 @@ document.querySelector("body").addEventListener("click", (event) => {
           clearInterval(intervalEearMoving);
         }, 300);
       }
-      for (let pairTimer = 300; pairTimer <= 400; pairTimer += 100) {
+      for (let pairTimer = 300; pairTimer &lt;= 400; pairTimer += 100) {
         const intervalSecondEarMoving = setInterval(function () {
           dotsOne.style.marginTop = "224px";
           dotsTwo.style.marginTop = "214px";
@@ -140,7 +168,7 @@ document.querySelector("body").addEventListener("click", (event) => {
           clearInterval(intervalSecondEarMoving);
         }, 400);
       }
-      for (let impairTimer = 400; impairTimer <= 500; impairTimer += 100) {
+      for (let impairTimer = 400; impairTimer &lt;= 500; impairTimer += 100) {
         const intervalEearMoving = setInterval(function () {
           dotsTwo.style.marginTop = "224px";
           dotsThree.style.marginTop = "214px";
@@ -149,7 +177,7 @@ document.querySelector("body").addEventListener("click", (event) => {
           clearInterval(intervalEearMoving);
         }, 500);
       }
-      for (let impairTimer = 500; impairTimer <= 600; impairTimer += 100) {
+      for (let impairTimer = 500; impairTimer &lt;= 600; impairTimer += 100) {
         const intervalEearMoving = setInterval(function () {
           dotsThree.style.marginTop = "224px";
         }, impairTimer);
@@ -179,7 +207,7 @@ document.querySelector("body").addEventListener("click", (event) => {
   //CONDITION
   //1)if user use several keyword "oui" + catgory key word like "Scolarité"
   if (
-    event.target.matches("#submitMessage") &&
+    event.target.matches("#submitMessage") &amp;&amp;
     //YES
     (finalInputVal.includes("oui") ||
       finalInputVal.includes("ok") ||
@@ -209,7 +237,7 @@ document.querySelector("body").addEventListener("click", (event) => {
       finalInputVal.includes("évidemment") ||
       finalInputVal.includes("en effet") ||
       finalInputVal.includes("naturellement") ||
-      finalInputVal.includes("bien évidemment")) &&
+      finalInputVal.includes("bien évidemment")) &amp;&amp;
     //HOBBIES
     (finalInputVal.includes("hobbies") ||
       finalInputVal.includes("centre d'intérêt") ||
@@ -345,7 +373,7 @@ document.querySelector("body").addEventListener("click", (event) => {
         yesAndCatAnswer.style.paddingRight = "13px";
         yesAndCatAnswer.style.marginLeft = "126px";
         yesAndCatAnswer.style.marginBottom = "18px";
-        yesAndCatAnswer.innerHTML = `<p class="font">${inputVal}</p>`;
+        yesAndCatAnswer.innerHTML = `&lt;p class="font">${inputVal}&lt;/p>`;
 
         firstNoButton.classList.remove("no");
         firstYesButton.classList.remove("yes");
@@ -370,7 +398,7 @@ document.querySelector("body").addEventListener("click", (event) => {
               ].attributes[1].textContent.slice(8)}`
           );
 
-          yesAndCatAnswer.innerHTML = `<p class="font">${inputVal}</p>`;
+          yesAndCatAnswer.innerHTML = `&lt;p class="font">${inputVal}&lt;/p>`;
           yesAndCatAnswer.style.marginTop = "6px";
           yesAndCatAnswer.style.border = `2px solid #dbdeea`;
           yesAndCatAnswer.style.backgroundColor = "#dbdeea";
@@ -401,7 +429,7 @@ document.querySelector("body").addEventListener("click", (event) => {
       experienceDetailsSub.style.paddingRight = "13px";
       experienceDetailsSub.style.marginLeft = "126px";
       experienceDetailsSub.style.marginBottom = "18px";
-      experienceDetailsSub.innerHTML = `<p class="font">${hobbiesDetails[0]}</p>`;
+      experienceDetailsSub.innerHTML = `&lt;p class="font">${hobbiesDetails[0]}&lt;/p>`;
     }, 1500);
 
     setTimeout(function () {
@@ -444,7 +472,7 @@ document.querySelector("body").addEventListener("click", (event) => {
         otherExperiencesRequest.style.paddingRight = "13px";
         otherExperiencesRequest.style.marginLeft = "126px";
         otherExperiencesRequest.style.marginBottom = "18px";
-        otherExperiencesRequest.innerHTML = `<p class="font">${questions7[1]}</p>`;
+        otherExperiencesRequest.innerHTML = `&lt;p class="font">${questions7[1]}&lt;/p>`;
       }, 5000);
     }
     chooseAnOtherExperience();
@@ -453,7 +481,7 @@ document.querySelector("body").addEventListener("click", (event) => {
   //2)if user use on of the category keyword (here relative to Scolarity)
   else if (
     event.target.matches("button[class='genericHobbies']>p") ||
-    (event.target.matches("#submitMessage") &&
+    (event.target.matches("#submitMessage") &amp;&amp;
       (finalInputVal.includes("hobbies") ||
         finalInputVal.includes("centre d'intérêt") ||
         finalInputVal.includes("centre d'intérêts") ||
@@ -530,11 +558,11 @@ document.querySelector("body").addEventListener("click", (event) => {
       !inputVal
         ? ((hobbies.style.marginLeft = "254px"),
           categorieAnswer.classList.add("invisible"))
-        : ((categorieAnswer.innerHTML = `<p class="font">${inputVal}</p>`),
+        : ((categorieAnswer.innerHTML = `&lt;p class="font">${inputVal}&lt;/p>`),
           hobbies.classList.add("invisible"));
     }
     //
-    categorieAnswer.innerHTML = `<p class="font">${inputVal}</p>`;
+    categorieAnswer.innerHTML = `&lt;p class="font">${inputVal}&lt;/p>`;
     categorieAnswer.style.marginTop = "6px"; //-84px
     categorieAnswer.style.border = `2px solid #dbdeea`;
     categorieAnswer.style.backgroundColor = "#dbdeea";
@@ -661,7 +689,7 @@ document.querySelector("body").addEventListener("click", (event) => {
       //Then make the dots move back to top
       const intervalDotMOving = setInterval(function () {
         //first dot
-        for (let impairTimer = 200; impairTimer <= 300; impairTimer += 100) {
+        for (let impairTimer = 200; impairTimer &lt;= 300; impairTimer += 100) {
           const intervalEearMoving = setInterval(function () {
             dotsOne.style.marginTop = "214px";
           }, impairTimer);
@@ -669,7 +697,7 @@ document.querySelector("body").addEventListener("click", (event) => {
             clearInterval(intervalEearMoving);
           }, 300);
         }
-        for (let pairTimer = 300; pairTimer <= 400; pairTimer += 100) {
+        for (let pairTimer = 300; pairTimer &lt;= 400; pairTimer += 100) {
           const intervalSecondEarMoving = setInterval(function () {
             dotsOne.style.marginTop = "224px";
             dotsTwo.style.marginTop = "214px";
@@ -678,7 +706,7 @@ document.querySelector("body").addEventListener("click", (event) => {
             clearInterval(intervalSecondEarMoving);
           }, 400);
         }
-        for (let impairTimer = 400; impairTimer <= 500; impairTimer += 100) {
+        for (let impairTimer = 400; impairTimer &lt;= 500; impairTimer += 100) {
           const intervalEearMoving = setInterval(function () {
             dotsTwo.style.marginTop = "224px";
             dotsThree.style.marginTop = "214px";
@@ -687,7 +715,7 @@ document.querySelector("body").addEventListener("click", (event) => {
             clearInterval(intervalEearMoving);
           }, 500);
         }
-        for (let impairTimer = 500; impairTimer <= 600; impairTimer += 100) {
+        for (let impairTimer = 500; impairTimer &lt;= 600; impairTimer += 100) {
           const intervalEearMoving = setInterval(function () {
             dotsThree.style.marginTop = "224px";
           }, impairTimer);
@@ -722,7 +750,7 @@ document.querySelector("body").addEventListener("click", (event) => {
       experienceDetails.style.paddingLeft = "22px";
       experienceDetails.style.paddingRight = "13px";
       experienceDetails.style.marginLeft = "126px";
-      experienceDetails.innerHTML = `<p class="font">${hobbiesDetails[0]}</p>`;
+      experienceDetails.innerHTML = `&lt;p class="font">${hobbiesDetails[0]}&lt;/p>`;
     }, 1500);
 
     setTimeout(function () {
@@ -763,7 +791,7 @@ document.querySelector("body").addEventListener("click", (event) => {
         otherExperiencesRequest.style.paddingRight = "13px";
         otherExperiencesRequest.style.marginLeft = "126px";
         otherExperiencesRequest.style.marginBottom = "18px";
-        otherExperiencesRequest.innerHTML = `<p class="font">${questions7[1]}</p>`;
+        otherExperiencesRequest.innerHTML = `&lt;p class="font">${questions7[1]}&lt;/p>`;
       }, 5000);
     }
     chooseAnOtherExperience();
@@ -771,3 +799,26 @@ document.querySelector("body").addEventListener("click", (event) => {
     //
   }
 });
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#compteur">compteur</a></li><li><a href="global.html#compteur2">compteur2</a></li><li><a href="global.html#compteur3">compteur3</a></li><li><a href="global.html#compteur5">compteur5</a></li><li><a href="global.html#compteur6">compteur6</a></li><li><a href="global.html#compteurx">compteurx</a></li><li><a href="global.html#compteurYesPlusCat">compteurYesPlusCat</a></li><li><a href="global.html#enterSubmitCounter">enterSubmitCounter</a></li><li><a href="global.html#errorCompteurs">errorCompteurs</a></li><li><a href="global.html#errorCounterOne">errorCounterOne</a></li><li><a href="global.html#experienceDetailsTexte2">experienceDetailsTexte2</a></li><li><a href="global.html#experienceDetailsTexte9">experienceDetailsTexte9</a></li><li><a href="global.html#functionMakeDotsMoveCounter">functionMakeDotsMoveCounter</a></li><li><a href="global.html#hobbiesDetails">hobbiesDetails</a></li><li><a href="global.html#languagesDetails">languagesDetails</a></li><li><a href="global.html#makeDotsMoves">makeDotsMoves</a></li><li><a href="global.html#otherExperienceQuestion">otherExperienceQuestion</a></li><li><a href="global.html#otherExperiencesCategories">otherExperiencesCategories</a></li><li><a href="global.html#otherExperiencesCategories1">otherExperiencesCategories1</a></li><li><a href="global.html#professionalExperiencesDetails">professionalExperiencesDetails</a></li><li><a href="global.html#questions99">questions99</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Wed Dec 01 2021 17:53:56 GMT+0100 (heure normale d’Europe centrale)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

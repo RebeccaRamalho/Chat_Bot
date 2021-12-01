@@ -1,52 +1,81 @@
-/**
- * professional experiences details
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: dialogueOnClickSubmit/ProfilCategorieDetails/skills.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: dialogueOnClickSubmit/ProfilCategorieDetails/skills.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * languages details
  * @type {Array}
  */
-let professionalExperiencesDetails = [
+let experienceDetailsTexte9 = [
   [
-    "<br><b>De de Janvier à Mars 2020</b> j'ai été fille Au pair auprès d'une famille à Londres. J'ai effectué comme principales tâches: les soins quotidiens à un enfant atteint d'épilepsie. <br><b> En Mars 2020 (1mois)</b> Femme de chambre à Hôtel Hyatt à Londres -Tâches principales: nettoyage des chambres de l'hôtel. <br><b>De Mai à Juin 2021</b> Développeuse web et web mobile, à Association Hand-of hope, -Tâches principales: réalisation au cours d'un stage d'une applications fullstack.",
+    "-Je sais développer un site de bout en bout (côté front-end comme côté back-end) avec le langage &lt;b>Javascript&lt;b/>,l'écosystème de &lt;b>Node.js&lt;/b> et la librairie React.&lt;br/>-Je sais concevoir et manipuler une base de donnée via les outils &lt;b>MySQL&lt;b/> et les &lt;b>ORM Sequelize et Mongoose.&lt;b/>&lt;br/> -Je sais gérer mes projets via le gestionnaire de version &lt;b>GIT&lt;/b> et via &lt;b>GITHUB&lt;/b>",
+    ,
   ],
 ];
+/**
+ * skills counter
+ * @type {number}
+ */
+let compteur3 = 1;
 
 document.querySelector("body").addEventListener("click", (event) => {
-  let questions10 = [
-    ["Quelles expériences souhaitez-vous découvrir?"],
-    ["Souhaitez-vous découvrir une autre expérience?"],
+  let questions9 = [
+    [`Quelles expériences souhaitez-vous découvrir?`],
+    [`Souhaitez-vous découvrir une autre expérience?`],
   ];
-
-  let compteur3 = 1;
-  let compteurProfessionalExperiences = 1;
+  // let compteur3 = 1;
+  let compteurCompetence = 1;
   let yes = ["oui", "OUI"];
   let inputVal = document.querySelector("#userAnswers").value;
   let emptyString = "";
   let otherExperienceChoice = document.querySelector("#otherExperienceChoice");
-
-  let genericProfessionalExperience =
-    document.querySelectorAll(".genericProfessionalExperience").length - 1;
-  let genericProfessionalExperienceAndYesButtonAll = document.querySelectorAll(
-    ".genericProfessionalExperienceAndYes"
+  let categorieAnswer = document.querySelector("#categoriesAnswer");
+  let genericSkills = document.querySelectorAll(".genericSkills").length - 1;
+  let genericSkillsAndYesButtonAll = document.querySelectorAll(
+    ".genericSkillsAndYes"
   );
-  let genericProfessionalExperienceAndYes =
-    document.querySelectorAll(".genericProfessionalExperienceAndYes").length -
-    1;
+  let genericSkillsAndYes =
+    document.querySelectorAll(".genericSkillsAndYes").length - 1;
   let functionMakeDotsMoveCounter = 0;
 
+  //
   function scrollToTheBottom() {
     const chatBotContainer = document.querySelector("#chatBotContainer");
     chatBotContainer.scrollTop = chatBotContainer.scrollHeight;
   }
   //
-  //
   function makeDotsMoves() {
-    let compteurProfessionalExperiencesAndYesInt = Number(
+    let compteurSkillsAndYesInt = Number(
       document
-        .querySelectorAll(".genericProfessionalExperienceAndYes")
-        [genericProfessionalExperienceAndYes].attributes[0].textContent.slice(
-          28
-        )
+        .querySelectorAll(".genericSkillsAndYes")
+        [genericSkillsAndYes].attributes[0].textContent.slice(12)
     );
 
-    compteurProfessionalExperiences = compteurProfessionalExperiencesAndYesInt;
+    compteurCompetence = compteurSkillsAndYesInt;
 
     //test
     // constructor function
@@ -61,37 +90,21 @@ document.querySelector("body").addEventListener("click", (event) => {
     // creating objects
     const firstGroupeOfDots = new Chargement(
       document.querySelector(
-        `.yesPlusCategoryChargingDots${compteurProfessionalExperiences}`
+        `.yesPlusCategoryChargingDots${compteurCompetence}`
       ),
-      document.querySelector(
-        `.yesPlusCategoryDots${compteurProfessionalExperiences}`
-      ),
-      document.querySelector(
-        `.dotsOneYesPlusCategory${compteurProfessionalExperiences}`
-      ),
-      document.querySelector(
-        `.dotsTwoYesPlusCategory${compteurProfessionalExperiences}`
-      ),
-      document.querySelector(
-        `.dotsThreeYesPlusCategory${compteurProfessionalExperiences}`
-      )
+      document.querySelector(`.yesPlusCategoryDots${compteurCompetence}`),
+      document.querySelector(`.dotsOneYesPlusCategory${compteurCompetence}`),
+      document.querySelector(`.dotsTwoYesPlusCategory${compteurCompetence}`),
+      document.querySelector(`.dotsThreeYesPlusCategory${compteurCompetence}`)
     );
     const secondeGroupeOfDots = new Chargement(
       document.querySelector(
-        `.yesPlusCategoryChargingDots2${compteurProfessionalExperiences}`
+        `.yesPlusCategoryChargingDots2${compteurCompetence}`
       ),
-      document.querySelector(
-        `.yesPlusCategoryDots2${compteurProfessionalExperiences}`
-      ),
-      document.querySelector(
-        `.dotsOneYesPlusCategory2${compteurProfessionalExperiences}`
-      ),
-      document.querySelector(
-        `.dotsTwoYesPlusCategory2${compteurProfessionalExperiences}`
-      ),
-      document.querySelector(
-        `.dotsThreeYesPlusCategory2${compteurProfessionalExperiences}`
-      )
+      document.querySelector(`.yesPlusCategoryDots2${compteurCompetence}`),
+      document.querySelector(`.dotsOneYesPlusCategory2${compteurCompetence}`),
+      document.querySelector(`.dotsTwoYesPlusCategory2${compteurCompetence}`),
+      document.querySelector(`.dotsThreeYesPlusCategory2${compteurCompetence}`)
     );
 
     //à chaque appel de fonction on incrémente d'un
@@ -156,7 +169,7 @@ document.querySelector("body").addEventListener("click", (event) => {
     //Then make the dots move back to top
     const intervalDotMOving = setInterval(function () {
       //first dot
-      for (let impairTimer = 200; impairTimer <= 300; impairTimer += 100) {
+      for (let impairTimer = 200; impairTimer &lt;= 300; impairTimer += 100) {
         const intervalEearMoving = setInterval(function () {
           dotsOne.style.marginTop = "214px";
         }, impairTimer);
@@ -164,7 +177,7 @@ document.querySelector("body").addEventListener("click", (event) => {
           clearInterval(intervalEearMoving);
         }, 300);
       }
-      for (let pairTimer = 300; pairTimer <= 400; pairTimer += 100) {
+      for (let pairTimer = 300; pairTimer &lt;= 400; pairTimer += 100) {
         const intervalSecondEarMoving = setInterval(function () {
           dotsOne.style.marginTop = "224px";
           dotsTwo.style.marginTop = "214px";
@@ -173,7 +186,7 @@ document.querySelector("body").addEventListener("click", (event) => {
           clearInterval(intervalSecondEarMoving);
         }, 400);
       }
-      for (let impairTimer = 400; impairTimer <= 500; impairTimer += 100) {
+      for (let impairTimer = 400; impairTimer &lt;= 500; impairTimer += 100) {
         const intervalEearMoving = setInterval(function () {
           dotsTwo.style.marginTop = "224px";
           dotsThree.style.marginTop = "214px";
@@ -182,7 +195,7 @@ document.querySelector("body").addEventListener("click", (event) => {
           clearInterval(intervalEearMoving);
         }, 500);
       }
-      for (let impairTimer = 500; impairTimer <= 600; impairTimer += 100) {
+      for (let impairTimer = 500; impairTimer &lt;= 600; impairTimer += 100) {
         const intervalEearMoving = setInterval(function () {
           dotsThree.style.marginTop = "224px";
         }, impairTimer);
@@ -201,19 +214,18 @@ document.querySelector("body").addEventListener("click", (event) => {
       clearInterval(intervalDotMOving);
     }, 2000);
   }
-
+  //
   function cleartext() {
     document.querySelector("#form").reset();
   }
-
-  //Transformation of lowerCase to UpperCase
+  //transformation of UpperCase into LowerCase
   let finalInputVal;
   finalInputVal = inputVal.toLowerCase();
 
   //CONDITION
   //1)if user use several keyword "oui" + catgory key word like "Scolarité"
   if (
-    event.target.matches("#submitMessage") &&
+    event.target.matches("#submitMessage") &amp;&amp;
     //YES
     (finalInputVal.includes("oui") ||
       finalInputVal.includes("ok") ||
@@ -243,109 +255,134 @@ document.querySelector("body").addEventListener("click", (event) => {
       finalInputVal.includes("évidemment") ||
       finalInputVal.includes("en effet") ||
       finalInputVal.includes("naturellement") ||
-      finalInputVal.includes("bien évidemment")) &&
-    //PROFESSIONAL EXPERIENCES
-    (finalInputVal.includes("expériences") ||
-      finalInputVal.includes("expérience") ||
-      finalInputVal.includes("travaillé") ||
-      finalInputVal.includes("travaillés") ||
-      finalInputVal.includes("travailés") ||
-      finalInputVal.includes("travailé") ||
-      finalInputVal.includes("professionnelles") ||
-      finalInputVal.includes("professionnelle") ||
-      finalInputVal.includes("professionelle") ||
-      finalInputVal.includes("professionnele") ||
-      finalInputVal.includes("profesionelle") ||
-      finalInputVal.includes("professionele") ||
-      finalInputVal.includes("professionelles") ||
-      finalInputVal.includes("professionneles") ||
-      finalInputVal.includes("profesionelles") ||
-      finalInputVal.includes("professioneles") ||
-      finalInputVal.includes("accomplissement ") ||
-      finalInputVal.includes("accomplissements") ||
-      finalInputVal.includes("accomplissemment") ||
-      finalInputVal.includes("accomplissemments") ||
-      finalInputVal.includes("accomplisemment") ||
-      finalInputVal.includes("accomplisemments") ||
-      finalInputVal.includes("acomplisemment") ||
-      finalInputVal.includes("acomplisemments") ||
-      finalInputVal.includes("acomplissement") ||
-      finalInputVal.includes("acomplissements") ||
-      finalInputVal.includes("acomplissemments") ||
-      finalInputVal.includes("acomplissemment") ||
-      finalInputVal.includes("activité professionnelle") ||
-      finalInputVal.includes("activité professionnelles") ||
-      finalInputVal.includes("activités professionnelle") ||
-      finalInputVal.includes("activités professionnelles") ||
-      finalInputVal.includes("accomplissement") ||
-      finalInputVal.includes("accomplissements") ||
-      finalInputVal.includes("accomplissemment") ||
-      finalInputVal.includes("accomplissemments") ||
-      finalInputVal.includes("expérience") ||
-      finalInputVal.includes("expériences") ||
-      finalInputVal.includes("profession") ||
-      finalInputVal.includes("professions") ||
-      finalInputVal.includes("profesion") ||
-      finalInputVal.includes("profesions") ||
-      finalInputVal.includes("poste") ||
-      finalInputVal.includes("postes") ||
-      finalInputVal.includes("métier") ||
-      finalInputVal.includes("métiers") ||
-      finalInputVal.includes("fonction") ||
-      finalInputVal.includes("fonctions") ||
-      finalInputVal.includes("travail") ||
-      finalInputVal.includes("travails") ||
-      finalInputVal.includes("emploi") ||
-      finalInputVal.includes("emplois") ||
-      finalInputVal.includes("boulot") ||
-      finalInputVal.includes("boulots") ||
-      finalInputVal.includes("job") ||
-      finalInputVal.includes("jobs") ||
-      finalInputVal.includes("gagne pain") ||
-      finalInputVal.includes("gagne pains") ||
-      finalInputVal.includes("gagnes-pain") ||
-      finalInputVal.includes("gagnes-pains") ||
-      finalInputVal.includes("stage") ||
-      finalInputVal.includes("stages") ||
-      finalInputVal.includes("carrières") ||
-      finalInputVal.includes("carrière") ||
-      finalInputVal.includes("carière") ||
-      finalInputVal.includes("carières") ||
-      finalInputVal.includes("carièrres") ||
-      finalInputVal.includes("carièrre") ||
-      finalInputVal.includes("fonction") ||
-      finalInputVal.includes("fonctions") ||
-      finalInputVal.includes("positions") ||
-      finalInputVal.includes("position") ||
-      finalInputVal.includes("place") ||
-      finalInputVal.includes("places") ||
-      finalInputVal.includes("entreprise") ||
-      finalInputVal.includes("entreprises") ||
-      finalInputVal.includes("domaines") ||
-      finalInputVal.includes("domaine") ||
-      finalInputVal.includes("dommaines") ||
-      finalInputVal.includes("dommaine") ||
-      finalInputVal.includes("charge") ||
-      finalInputVal.includes("charge") ||
-      finalInputVal.includes("chargés") ||
-      finalInputVal.includes("chargé") ||
-      finalInputVal.includes("startup") ||
-      finalInputVal.includes("startups"))
+      finalInputVal.includes("bien évidemment")) &amp;&amp;
+    //SKILLS
+    (finalInputVal.includes("compétences") ||
+      finalInputVal.includes("compétence") ||
+      finalInputVal.includes("competences") ||
+      finalInputVal.includes("competence") ||
+      finalInputVal.includes("aptitude") ||
+      finalInputVal.includes("aptitudes") ||
+      finalInputVal.includes("faire") ||
+      finalInputVal.includes("faires") ||
+      finalInputVal.includes("savoir faires") ||
+      finalInputVal.includes("savoir faire") ||
+      finalInputVal.includes("savoir-faires") ||
+      finalInputVal.includes("savoir-faire") ||
+      finalInputVal.includes("capacité") ||
+      finalInputVal.includes("capacités") ||
+      finalInputVal.includes("qualification") ||
+      finalInputVal.includes("qualifications") ||
+      finalInputVal.includes("connaissance") ||
+      finalInputVal.includes("connaissances") ||
+      finalInputVal.includes("connaisances") ||
+      finalInputVal.includes("connaisance") ||
+      finalInputVal.includes("conaissance") ||
+      finalInputVal.includes("conaissances") ||
+      finalInputVal.includes("connaissances") ||
+      finalInputVal.includes("faire") ||
+      finalInputVal.includes("habilité") ||
+      finalInputVal.includes("habilités") ||
+      finalInputVal.includes("habillités") ||
+      finalInputVal.includes("habillité") ||
+      finalInputVal.includes("expértise") ||
+      finalInputVal.includes("expértises") ||
+      finalInputVal.includes("soft skills") ||
+      finalInputVal.includes("hard skills") ||
+      finalInputVal.includes("soft-skills") ||
+      finalInputVal.includes("hard-skills") ||
+      finalInputVal.includes("savoir-être") ||
+      finalInputVal.includes("savoir-êtres") ||
+      finalInputVal.includes("savoir être") ||
+      finalInputVal.includes("savoir êtres") ||
+      finalInputVal.includes("qualité") ||
+      finalInputVal.includes("qualités") ||
+      finalInputVal.includes("spécialité") ||
+      finalInputVal.includes("spécialités") ||
+      finalInputVal.includes("notions") ||
+      finalInputVal.includes("notion") ||
+      finalInputVal.includes("techniques") ||
+      finalInputVal.includes("technique") ||
+      finalInputVal.includes("technicité") ||
+      finalInputVal.includes("languages") ||
+      finalInputVal.includes("language") ||
+      finalInputVal.includes("stack") ||
+      finalInputVal.includes("stacks") ||
+      finalInputVal.includes("javascript") ||
+      finalInputVal.includes("react") ||
+      finalInputVal.includes("node") ||
+      finalInputVal.includes("express") ||
+      finalInputVal.includes("css") ||
+      finalInputVal.includes("site") ||
+      finalInputVal.includes("base de donnée") ||
+      finalInputVal.includes("sass") ||
+      finalInputVal.includes("mvc") ||
+      finalInputVal.includes("jwt") ||
+      finalInputVal.includes("back") ||
+      finalInputVal.includes("front") ||
+      finalInputVal.includes("architecture") ||
+      finalInputVal.includes("natif") ||
+      finalInputVal.includes("native") ||
+      finalInputVal.includes("sql") ||
+      finalInputVal.includes("mysql") ||
+      finalInputVal.includes("vanilla") ||
+      finalInputVal.includes("design") ||
+      finalInputVal.includes("pattern") ||
+      finalInputVal.includes("soft skills") ||
+      finalInputVal.includes("qualité") ||
+      finalInputVal.includes("agilité") ||
+      finalInputVal.includes("agile") ||
+      finalInputVal.includes("agiles") ||
+      finalInputVal.includes("librairies") ||
+      finalInputVal.includes("librairie") ||
+      finalInputVal.includes("library") ||
+      finalInputVal.includes("framework") ||
+      finalInputVal.includes("os") ||
+      finalInputVal.includes("système d'exploitation") ||
+      finalInputVal.includes("système d'exploitations") ||
+      finalInputVal.includes("systeme d'exploitation") ||
+      finalInputVal.includes("systeme d'exploitations") ||
+      finalInputVal.includes("workflow") ||
+      finalInputVal.includes("développement") ||
+      finalInputVal.includes("web") ||
+      finalInputVal.includes("axios") ||
+      finalInputVal.includes("linux") ||
+      finalInputVal.includes("mac") ||
+      finalInputVal.includes("postman") ||
+      finalInputVal.includes("slack") ||
+      finalInputVal.includes("discord") ||
+      finalInputVal.includes("cli") ||
+      finalInputVal.includes("command line interface") ||
+      finalInputVal.includes("trello") ||
+      finalInputVal.includes("méthodes agiles") ||
+      finalInputVal.includes("méthodes agile") ||
+      finalInputVal.includes("es5") ||
+      finalInputVal.includes("es6") ||
+      finalInputVal.includes("github") ||
+      finalInputVal.includes("ide") ||
+      finalInputVal.includes("visual code") ||
+      finalInputVal.includes("sublime text") ||
+      finalInputVal.includes("gestionnaire de base de donnée") ||
+      finalInputVal.includes("gestionaire de base de donnée") ||
+      finalInputVal.includes("gestionnaire de base de données") ||
+      finalInputVal.includes("gestionaire de base de données") ||
+      finalInputVal.includes("gestionnaire de base de donée") ||
+      finalInputVal.includes("gestionaire de base de donnée") ||
+      finalInputVal.includes("gestionnaire de base de donées") ||
+      finalInputVal.includes("gestionaire de base de données") ||
+      finalInputVal.includes("environnement de développement intégré"))
   ) {
-    let compteurProfessionalExperiencesAndYesInt = Number(
+    let compteurSkillsAndYesInt = Number(
       document
-        .querySelectorAll(".genericProfessionalExperienceAndYes")
-        [genericProfessionalExperienceAndYes].attributes[0].textContent.slice(
-          28
-        )
-    );
-    //
-    compteurProfessionalExperiences = compteurProfessionalExperiencesAndYesInt;
-    //
-    let yesAndCatAnswer = document.querySelector(
-      `#yesAndCatAnswer${compteurProfessionalExperiences}`
+        .querySelectorAll(".genericSkillsAndYes")
+        [genericSkillsAndYes].attributes[0].textContent.slice(12)
     );
 
+    compteurCompetence = compteurSkillsAndYesInt;
+
+    let yesAndCatAnswer = document.querySelector(
+      `#yesAndCatAnswer${compteurCompetence}`
+    );
     let genericYes = document.querySelectorAll(".genericYes").length - 1;
     let inputVal = document.querySelector("#userAnswers").value;
     //
@@ -361,7 +398,6 @@ document.querySelector("body").addEventListener("click", (event) => {
     );
 
     let yesAns = document.querySelector(`#yesAns${compteur4}`);
-
     if (!inputVal) {
       if (document.querySelector(".yes")) {
         yesAns.classList.add("invisible");
@@ -417,7 +453,7 @@ document.querySelector("body").addEventListener("click", (event) => {
         yesAndCatAnswer.style.paddingRight = "13px";
         yesAndCatAnswer.style.marginLeft = "126px";
         yesAndCatAnswer.style.marginBottom = "18px";
-        yesAndCatAnswer.innerHTML = `<p class="font">${inputVal}</p>`;
+        yesAndCatAnswer.innerHTML = `&lt;p class="font">${inputVal}&lt;/p>`;
 
         firstNoButton.classList.remove("no");
         firstYesButton.classList.remove("yes");
@@ -442,7 +478,7 @@ document.querySelector("body").addEventListener("click", (event) => {
               ].attributes[1].textContent.slice(8)}`
           );
 
-          yesAndCatAnswer.innerHTML = `<p class="font">${inputVal}</p>`;
+          yesAndCatAnswer.innerHTML = `&lt;p class="font">${inputVal}&lt;/p>`;
           yesAndCatAnswer.style.marginTop = "6px";
           yesAndCatAnswer.style.border = `2px solid #dbdeea`;
           yesAndCatAnswer.style.backgroundColor = "#dbdeea";
@@ -462,7 +498,7 @@ document.querySelector("body").addEventListener("click", (event) => {
     //5_i make the element which is initially invisible => visible and if the user choose scolarity show him what is inside scolarityDetails array
     setTimeout(function () {
       let experienceDetailsSub = document.querySelector(
-        `#experienceDetailsSub${compteurProfessionalExperiences}`
+        `#experienceDetailsSub${compteurCompetence}`
       );
       experienceDetailsSub.classList.remove("invisible");
       experienceDetailsSub.style.marginTop = "6px"; //-84px
@@ -473,7 +509,7 @@ document.querySelector("body").addEventListener("click", (event) => {
       experienceDetailsSub.style.paddingRight = "13px";
       experienceDetailsSub.style.marginLeft = "126px";
       experienceDetailsSub.style.marginBottom = "18px";
-      experienceDetailsSub.innerHTML = `<p class="font">${professionalExperiencesDetails[0]}</p>`;
+      experienceDetailsSub.innerHTML = `&lt;p class="font">${experienceDetailsTexte9[0]}&lt;/p>`;
     }, 1500);
 
     setTimeout(function () {
@@ -494,13 +530,13 @@ document.querySelector("body").addEventListener("click", (event) => {
       setTimeout(function () {
         //request to the DOM of the user response html element
         let otherExperiencesRequest = document.querySelector(
-          `#experiencesSub${compteurProfessionalExperiences}`
+          `#experiencesSub${compteurCompetence}`
         );
         let yesQuestion = document.querySelector(
-          `#yesButton${compteurProfessionalExperiences}`
+          `#yesButton${compteurCompetence}`
         );
         let noQuestion = document.querySelector(
-          `#noButton${compteurProfessionalExperiences}`
+          `#noButton${compteurCompetence}`
         );
 
         setTimeout(function () {
@@ -518,7 +554,7 @@ document.querySelector("body").addEventListener("click", (event) => {
         otherExperiencesRequest.style.paddingRight = "13px";
         otherExperiencesRequest.style.marginLeft = "126px";
         otherExperiencesRequest.style.marginBottom = "18px";
-        otherExperiencesRequest.innerHTML = `<p class="font">${questions10[1]}</p>`;
+        otherExperiencesRequest.innerHTML = `&lt;p class="font">${questions9[1]}&lt;/p>`;
       }, 5000);
     }
     chooseAnOtherExperience();
@@ -527,125 +563,148 @@ document.querySelector("body").addEventListener("click", (event) => {
   }
   //2)if user use on of the category keyword (here relative to Scolarity)
   else if (
-    event.target.matches("button[class='genericProfessionalExperience']>p") ||
-    (event.target.matches("#submitMessage") &&
-      (finalInputVal.includes("expériences") ||
-        finalInputVal.includes("expérience") ||
-        finalInputVal.includes("travaillé") ||
-        finalInputVal.includes("travaillés") ||
-        finalInputVal.includes("travailés") ||
-        finalInputVal.includes("travailé") ||
-        finalInputVal.includes("professionnelles") ||
-        finalInputVal.includes("professionnelle") ||
-        finalInputVal.includes("professionelle") ||
-        finalInputVal.includes("professionnele") ||
-        finalInputVal.includes("profesionelle") ||
-        finalInputVal.includes("professionele") ||
-        finalInputVal.includes("professionelles") ||
-        finalInputVal.includes("professionneles") ||
-        finalInputVal.includes("profesionelles") ||
-        finalInputVal.includes("professioneles") ||
-        finalInputVal.includes("accomplissement ") ||
-        finalInputVal.includes("accomplissements") ||
-        finalInputVal.includes("accomplissemment") ||
-        finalInputVal.includes("accomplissemments") ||
-        finalInputVal.includes("accomplisemment") ||
-        finalInputVal.includes("accomplisemments") ||
-        finalInputVal.includes("acomplisemment") ||
-        finalInputVal.includes("acomplisemments") ||
-        finalInputVal.includes("acomplissement") ||
-        finalInputVal.includes("acomplissements") ||
-        finalInputVal.includes("acomplissemments") ||
-        finalInputVal.includes("acomplissemment") ||
-        finalInputVal.includes("activité professionnelle") ||
-        finalInputVal.includes("activité professionnelles") ||
-        finalInputVal.includes("activités professionnelle") ||
-        finalInputVal.includes("activités professionnelles") ||
-        finalInputVal.includes("accomplissement") ||
-        finalInputVal.includes("accomplissements") ||
-        finalInputVal.includes("accomplissemment") ||
-        finalInputVal.includes("accomplissemments") ||
-        finalInputVal.includes("expérience") ||
-        finalInputVal.includes("expériences") ||
-        finalInputVal.includes("profession") ||
-        finalInputVal.includes("professions") ||
-        finalInputVal.includes("profesion") ||
-        finalInputVal.includes("profesions") ||
-        finalInputVal.includes("poste") ||
-        finalInputVal.includes("postes") ||
-        finalInputVal.includes("métier") ||
-        finalInputVal.includes("métiers") ||
-        finalInputVal.includes("fonction") ||
-        finalInputVal.includes("fonctions") ||
-        finalInputVal.includes("travail") ||
-        finalInputVal.includes("travails") ||
-        finalInputVal.includes("emploi") ||
-        finalInputVal.includes("emplois") ||
-        finalInputVal.includes("boulot") ||
-        finalInputVal.includes("boulots") ||
-        finalInputVal.includes("job") ||
-        finalInputVal.includes("jobs") ||
-        finalInputVal.includes("gagne pain") ||
-        finalInputVal.includes("gagne pains") ||
-        finalInputVal.includes("gagnes-pain") ||
-        finalInputVal.includes("gagnes-pains") ||
-        finalInputVal.includes("stage") ||
-        finalInputVal.includes("stages") ||
-        finalInputVal.includes("carrières") ||
-        finalInputVal.includes("carrière") ||
-        finalInputVal.includes("carière") ||
-        finalInputVal.includes("carières") ||
-        finalInputVal.includes("carièrres") ||
-        finalInputVal.includes("carièrre") ||
-        finalInputVal.includes("fonction") ||
-        finalInputVal.includes("fonctions") ||
-        finalInputVal.includes("positions") ||
-        finalInputVal.includes("position") ||
-        finalInputVal.includes("place") ||
-        finalInputVal.includes("places") ||
-        finalInputVal.includes("entreprise") ||
-        finalInputVal.includes("entreprises") ||
-        finalInputVal.includes("domaines") ||
-        finalInputVal.includes("domaine") ||
-        finalInputVal.includes("dommaines") ||
-        finalInputVal.includes("dommaine") ||
-        finalInputVal.includes("charge") ||
-        finalInputVal.includes("charge") ||
-        finalInputVal.includes("chargés") ||
-        finalInputVal.includes("chargé") ||
-        finalInputVal.includes("startup") ||
-        finalInputVal.includes("startups")))
+    event.target.matches("button[class='genericSkills']>p") ||
+    (event.target.matches("#submitMessage") &amp;&amp;
+      (finalInputVal.includes("compétences") ||
+        finalInputVal.includes("compétence") ||
+        finalInputVal.includes("competences") ||
+        finalInputVal.includes("competence") ||
+        finalInputVal.includes("aptitude") ||
+        finalInputVal.includes("aptitudes") ||
+        finalInputVal.includes("faire") ||
+        finalInputVal.includes("faires") ||
+        finalInputVal.includes("savoir faires") ||
+        finalInputVal.includes("savoir faire") ||
+        finalInputVal.includes("savoir-faires") ||
+        finalInputVal.includes("savoir-faire") ||
+        finalInputVal.includes("capacité") ||
+        finalInputVal.includes("capacités") ||
+        finalInputVal.includes("qualification") ||
+        finalInputVal.includes("qualifications") ||
+        finalInputVal.includes("connaissance") ||
+        finalInputVal.includes("connaissances") ||
+        finalInputVal.includes("connaisances") ||
+        finalInputVal.includes("connaisance") ||
+        finalInputVal.includes("conaissance") ||
+        finalInputVal.includes("conaissances") ||
+        finalInputVal.includes("connaissances") ||
+        finalInputVal.includes("faire") ||
+        finalInputVal.includes("habilité") ||
+        finalInputVal.includes("habilités") ||
+        finalInputVal.includes("habillités") ||
+        finalInputVal.includes("habillité") ||
+        finalInputVal.includes("expértise") ||
+        finalInputVal.includes("expértises") ||
+        finalInputVal.includes("soft skills") ||
+        finalInputVal.includes("hard skills") ||
+        finalInputVal.includes("soft-skills") ||
+        finalInputVal.includes("hard-skills") ||
+        finalInputVal.includes("savoir-être") ||
+        finalInputVal.includes("savoir-êtres") ||
+        finalInputVal.includes("savoir être") ||
+        finalInputVal.includes("savoir êtres") ||
+        finalInputVal.includes("qualité") ||
+        finalInputVal.includes("qualités") ||
+        finalInputVal.includes("spécialité") ||
+        finalInputVal.includes("spécialités") ||
+        finalInputVal.includes("notions") ||
+        finalInputVal.includes("notion") ||
+        finalInputVal.includes("techniques") ||
+        finalInputVal.includes("technique") ||
+        finalInputVal.includes("technicité") ||
+        finalInputVal.includes("languages") ||
+        finalInputVal.includes("language") ||
+        finalInputVal.includes("stack") ||
+        finalInputVal.includes("stacks") ||
+        finalInputVal.includes("javascript") ||
+        finalInputVal.includes("react") ||
+        finalInputVal.includes("node") ||
+        finalInputVal.includes("express") ||
+        finalInputVal.includes("css") ||
+        finalInputVal.includes("site") ||
+        finalInputVal.includes("base de donnée") ||
+        finalInputVal.includes("sass") ||
+        finalInputVal.includes("mvc") ||
+        finalInputVal.includes("jwt") ||
+        finalInputVal.includes("back") ||
+        finalInputVal.includes("front") ||
+        finalInputVal.includes("architecture") ||
+        finalInputVal.includes("natif") ||
+        finalInputVal.includes("native") ||
+        finalInputVal.includes("sql") ||
+        finalInputVal.includes("mysql") ||
+        finalInputVal.includes("vanilla") ||
+        finalInputVal.includes("design") ||
+        finalInputVal.includes("pattern") ||
+        finalInputVal.includes("soft skills") ||
+        finalInputVal.includes("qualité") ||
+        finalInputVal.includes("agilité") ||
+        finalInputVal.includes("agile") ||
+        finalInputVal.includes("agiles") ||
+        finalInputVal.includes("librairies") ||
+        finalInputVal.includes("librairie") ||
+        finalInputVal.includes("library") ||
+        finalInputVal.includes("framework") ||
+        finalInputVal.includes("os") ||
+        finalInputVal.includes("système d'exploitation") ||
+        finalInputVal.includes("système d'exploitations") ||
+        finalInputVal.includes("systeme d'exploitation") ||
+        finalInputVal.includes("systeme d'exploitations") ||
+        finalInputVal.includes("workflow") ||
+        finalInputVal.includes("développement") ||
+        finalInputVal.includes("web") ||
+        finalInputVal.includes("axios") ||
+        finalInputVal.includes("linux") ||
+        finalInputVal.includes("mac") ||
+        finalInputVal.includes("postman") ||
+        finalInputVal.includes("slack") ||
+        finalInputVal.includes("discord") ||
+        finalInputVal.includes("cli") ||
+        finalInputVal.includes("command line interface") ||
+        finalInputVal.includes("trello") ||
+        finalInputVal.includes("méthodes agiles") ||
+        finalInputVal.includes("méthodes agile") ||
+        finalInputVal.includes("es5") ||
+        finalInputVal.includes("es6") ||
+        finalInputVal.includes("github") ||
+        finalInputVal.includes("ide") ||
+        finalInputVal.includes("visual code") ||
+        finalInputVal.includes("sublime text") ||
+        finalInputVal.includes("gestionnaire de base de donnée") ||
+        finalInputVal.includes("gestionaire de base de donnée") ||
+        finalInputVal.includes("gestionnaire de base de données") ||
+        finalInputVal.includes("gestionaire de base de données") ||
+        finalInputVal.includes("gestionnaire de base de donée") ||
+        finalInputVal.includes("gestionaire de base de donnée") ||
+        finalInputVal.includes("gestionnaire de base de donées") ||
+        finalInputVal.includes("gestionaire de base de données") ||
+        finalInputVal.includes("environnement de développement intégré")))
   ) {
     {
       document
-        .querySelectorAll(".genericProfessionalExperience")
-        [genericProfessionalExperience].attributes[1].textContent.slice(22)
+        .querySelectorAll(".genericSkills")
+        [genericSkills].attributes[1].textContent.slice(6)
         ? (compteur3 = Number(
             document
-              .querySelectorAll(".genericProfessionalExperience")
-              [genericProfessionalExperience].attributes[1].textContent.slice(
-                22
-              )
+              .querySelectorAll(".genericSkills")
+              [genericSkills].attributes[1].textContent.slice(6)
           ))
         : (compteur3 = Number(
-            event.target.parentElement.attributes[1].textContent.slice(22)
+            event.target.parentElement.attributes[1].textContent.slice(6)
           ));
     }
     let categorieAnswer = document.querySelector(
       `#categoriesAnswer${compteur3}`
     );
-    let professionalExperience = document.querySelector(
-      `#professionalExperience${compteur3}`
-    );
+    let skills = document.querySelector(`#skills${compteur3}`);
 
     {
       !inputVal
-        ? ((professionalExperience.style.marginLeft = "254px"),
+        ? ((skills.style.marginLeft = "254px"),
           categorieAnswer.classList.add("invisible"))
-        : ((categorieAnswer.innerHTML = `<p class="font">${inputVal}</p>`),
-          professionalExperience.classList.add("invisible"));
+        : ((categorieAnswer.innerHTML = `&lt;p class="font">${inputVal}&lt;/p>`),
+          skills.classList.add("invisible"));
     }
-
     categorieAnswer.style.marginTop = "6px"; //-84px
     categorieAnswer.style.border = `2px solid #dbdeea`;
     categorieAnswer.style.backgroundColor = "#dbdeea";
@@ -655,21 +714,24 @@ document.querySelector("body").addEventListener("click", (event) => {
     categorieAnswer.style.paddingRight = "13px";
     categorieAnswer.style.marginLeft = "126px";
     categorieAnswer.style.marginBottom = "18px";
-    ///
+
     setTimeout(function () {
       cleartext();
     }, 95);
     //1_dom request
     let scolarity = document.querySelector(`#scolarity${compteur3}`);
+    let professionalExperience = document.querySelector(
+      `#professionalExperience${compteur3}`
+    );
     let hobbies = document.querySelector(`#hobbies${compteur3}`);
-    let skills = document.querySelector(`#skills${compteur3}`);
     let languages = document.querySelector(`#languages${compteur3}`);
 
     //2_make the other experiences categories invisibles
+    professionalExperience.classList.add("invisible");
     hobbies.classList.add("invisible");
-    skills.classList.add("invisible");
     scolarity.classList.add("invisible");
     languages.classList.add("invisible");
+    //2_push the scolarity categories to the right
 
     //3_dots chargements
     function makeDotsMove() {
@@ -704,6 +766,18 @@ document.querySelector("body").addEventListener("click", (event) => {
         document.querySelector(`.categoriesDotsTwo3${compteur3}`),
         document.querySelector(`.categoriesDotsThree3${compteur3}`)
       );
+      // const thirdGroupeOfDots = new Chargement(
+      //   document.querySelector(`.categoriesChargingDots3${compteur3}`),
+      //   document.querySelector(`.categoriesDots3${compteur3}`),
+      //   document.querySelector(`.categoriesDotsOne3${compteur3}`),
+      //   document.querySelector(`.categoriesDotsTwo3${compteur3}`),
+      //   document.querySelector(`.categoriesDotsThree3${compteur3}`)
+      // );
+
+      //à chaque appel de fonction on incrémente d'un
+      //lorsque le compteur est un chiffre pair
+      //alors les boutons de chargements prennent la valeur de firstGroupeOfDots
+      //sinon les boutons de chargements prennent a valeur de secondeGroupeOfDots
 
       function firstDotsValues() {
         chargingDotsThree = firstGroupeOfDots.chargingDotsThree;
@@ -769,7 +843,7 @@ document.querySelector("body").addEventListener("click", (event) => {
       //Then make the dots move back to top
       const intervalDotMOving = setInterval(function () {
         //first dot
-        for (let impairTimer = 200; impairTimer <= 300; impairTimer += 100) {
+        for (let impairTimer = 200; impairTimer &lt;= 300; impairTimer += 100) {
           const intervalEearMoving = setInterval(function () {
             dotsOne.style.marginTop = "214px";
           }, impairTimer);
@@ -777,7 +851,7 @@ document.querySelector("body").addEventListener("click", (event) => {
             clearInterval(intervalEearMoving);
           }, 300);
         }
-        for (let pairTimer = 300; pairTimer <= 400; pairTimer += 100) {
+        for (let pairTimer = 300; pairTimer &lt;= 400; pairTimer += 100) {
           const intervalSecondEarMoving = setInterval(function () {
             dotsOne.style.marginTop = "224px";
             dotsTwo.style.marginTop = "214px";
@@ -786,7 +860,7 @@ document.querySelector("body").addEventListener("click", (event) => {
             clearInterval(intervalSecondEarMoving);
           }, 400);
         }
-        for (let impairTimer = 400; impairTimer <= 500; impairTimer += 100) {
+        for (let impairTimer = 400; impairTimer &lt;= 500; impairTimer += 100) {
           const intervalEearMoving = setInterval(function () {
             dotsTwo.style.marginTop = "224px";
             dotsThree.style.marginTop = "214px";
@@ -795,7 +869,7 @@ document.querySelector("body").addEventListener("click", (event) => {
             clearInterval(intervalEearMoving);
           }, 500);
         }
-        for (let impairTimer = 500; impairTimer <= 600; impairTimer += 100) {
+        for (let impairTimer = 500; impairTimer &lt;= 600; impairTimer += 100) {
           const intervalEearMoving = setInterval(function () {
             dotsThree.style.marginTop = "224px";
           }, impairTimer);
@@ -825,7 +899,6 @@ document.querySelector("body").addEventListener("click", (event) => {
     setTimeout(function () {
       experienceDetails.classList.remove("invisible");
       experienceDetails.style.marginTop = "-84px";
-      experienceDetails.style.marginTop = "-84px";
       experienceDetails.style.border = `2px solid#dbdeea`;
       // (experienceDetails.style.backgroundColor = "#dbdeea"),
       experienceDetails.style.width = "229px";
@@ -833,7 +906,7 @@ document.querySelector("body").addEventListener("click", (event) => {
       experienceDetails.style.paddingLeft = "22px";
       experienceDetails.style.paddingRight = "13px";
       experienceDetails.style.marginLeft = "126px";
-      experienceDetails.innerHTML = professionalExperiencesDetails[0];
+      experienceDetails.innerHTML = `&lt;p class="font">${experienceDetailsTexte9[0]}&lt;/p>`;
     }, 1500);
 
     setTimeout(function () {
@@ -874,11 +947,32 @@ document.querySelector("body").addEventListener("click", (event) => {
         otherExperiencesRequest.style.paddingRight = "13px";
         otherExperiencesRequest.style.marginLeft = "126px";
         otherExperiencesRequest.style.marginBottom = "18px";
-        otherExperiencesRequest.innerHTML = `<p class="font">${questions10[1]}</p>`;
+        otherExperiencesRequest.innerHTML = `&lt;p class="font">${questions9[1]}&lt;/p>`;
       }, 5000);
     }
     chooseAnOtherExperience();
-
-    //
   }
 });
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#compteur">compteur</a></li><li><a href="global.html#compteur2">compteur2</a></li><li><a href="global.html#compteur3">compteur3</a></li><li><a href="global.html#compteur5">compteur5</a></li><li><a href="global.html#compteur6">compteur6</a></li><li><a href="global.html#compteurx">compteurx</a></li><li><a href="global.html#compteurYesPlusCat">compteurYesPlusCat</a></li><li><a href="global.html#enterSubmitCounter">enterSubmitCounter</a></li><li><a href="global.html#errorCompteurs">errorCompteurs</a></li><li><a href="global.html#errorCounterOne">errorCounterOne</a></li><li><a href="global.html#experienceDetailsTexte2">experienceDetailsTexte2</a></li><li><a href="global.html#experienceDetailsTexte9">experienceDetailsTexte9</a></li><li><a href="global.html#functionMakeDotsMoveCounter">functionMakeDotsMoveCounter</a></li><li><a href="global.html#hobbiesDetails">hobbiesDetails</a></li><li><a href="global.html#languagesDetails">languagesDetails</a></li><li><a href="global.html#makeDotsMoves">makeDotsMoves</a></li><li><a href="global.html#otherExperienceQuestion">otherExperienceQuestion</a></li><li><a href="global.html#otherExperiencesCategories">otherExperiencesCategories</a></li><li><a href="global.html#otherExperiencesCategories1">otherExperiencesCategories1</a></li><li><a href="global.html#professionalExperiencesDetails">professionalExperiencesDetails</a></li><li><a href="global.html#questions99">questions99</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Wed Dec 01 2021 17:53:56 GMT+0100 (heure normale d’Europe centrale)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

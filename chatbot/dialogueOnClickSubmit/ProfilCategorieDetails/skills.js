@@ -1,9 +1,17 @@
+/**
+ * languages details
+ * @type {Array}
+ */
 let experienceDetailsTexte9 = [
   [
     "-Je sais développer un site de bout en bout (côté front-end comme côté back-end) avec le langage <b>Javascript<b/>,l'écosystème de <b>Node.js</b> et la librairie React.<br/>-Je sais concevoir et manipuler une base de donnée via les outils <b>MySQL<b/> et les <b>ORM Sequelize et Mongoose.<b/><br/> -Je sais gérer mes projets via le gestionnaire de version <b>GIT</b> et via <b>GITHUB</b>",
     ,
   ],
 ];
+/**
+ * skills counter
+ * @type {number}
+ */
 let compteur3 = 1;
 
 document.querySelector("body").addEventListener("click", (event) => {
