@@ -14,7 +14,7 @@
 
 ## 📖 Description
 
-This a chatbot made in **Vanilla javascript** that can answer my Cv questions.
+This is a chatbot made in **Vanilla javascript** that can answer my Cv questions.
 
 #### 🔬 Technologies
 
@@ -40,6 +40,10 @@ This a chatbot made in **Vanilla javascript** that can answer my Cv questions.
 2. Initialisation of a package.json
 
             npm init
+
+3. Installation of modules
+
+            npm i jsdoc
 
 #### 🔨 Conception of the chatbot
 
