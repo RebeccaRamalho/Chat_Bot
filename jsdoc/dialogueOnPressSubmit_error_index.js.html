@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: dialogueOnClickSubmit/error/index.js</title>
+    <title>JSDoc: Source: dialogueOnPressSubmit/error/index.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: dialogueOnClickSubmit/error/index.js</h1>
+    <h1 class="page-title">Source: dialogueOnPressSubmit/error/index.js</h1>
 
     
 
@@ -27,58 +27,47 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * @type {number}
+ * 
+ * @param {number} errorCounterOneEnterSubmit 
+ * the function make the dots dom element move dynamically depending of a timer
  */
-let errorCompteurs = 1;
-/**
- * @type {number}
- */
-let errorCounterOne = 1;
-/**
- * global variable to remove because exist in double (otherExperiencesCategories and otherExperiencesCategories1)
- * @type {Array}
- */
-let otherExperiencesCategories1 = [
-  "&lt;p>Scolarité&lt;/p>",
-  "&lt;p>Hobbies&lt;/p>",
-  "&lt;p>Compétences&lt;/p>",
-  "&lt;p>Expériences professionelles&lt;/p>",
-  "&lt;p>Langues&lt;/p>",
-];
-function makeDotsMove(errorCounterOne) {
+function makeDotsMove(errorCounterOneEnterSubmit) {
   //Parent Div
   let chargingDotsThree = document.querySelector(
-    `.errorCategoriesChargingDots${errorCounterOne}`
+    `.errorCategoriesChargingDots${errorCounterOneEnterSubmit}`
   );
   //Same class for all dot div
-  let dots = document.querySelector(`.errorCategoriesDots${errorCounterOne}`);
+  let dots = document.querySelector(
+    `.errorCategoriesDots${errorCounterOneEnterSubmit}`
+  );
   //Different class for every dot div
   let dotsOne = document.querySelector(
-    `.errorCategoriesDotsOne${errorCounterOne}`
+    `.errorCategoriesDotsOne${errorCounterOneEnterSubmit}`
   );
   let dotsTwo = document.querySelector(
-    `.errorCategoriesDotsTwo${errorCounterOne}`
+    `.errorCategoriesDotsTwo${errorCounterOneEnterSubmit}`
   );
   let dotsThree = document.querySelector(
-    `.errorCategoriesDotsThree${errorCounterOne}`
+    `.errorCategoriesDotsThree${errorCounterOneEnterSubmit}`
   );
-
+  //when the user click on the button yes make the 3 dots move x time and during 3 secondes
   chargingDotsThree.style.marginTop = "-214px";
   chargingDotsThree.style.display = "flex";
   chargingDotsThree.style.flexDirection = "row";
-
+  // chargingDotsThree.style.marginBottom = "10px";
   chargingDotsThree.style.marginLeft = "122px";
-
+  //
   dots.style.border = "4px solid #0e2356";
-
+  // dots.style.visibility = "hidden";
   dots.style.borderRadius = "30px";
   dots.style.marginLeft = "4px";
   dots.style.marginTop = "217px";
   dots.style.backgroundColor = "#0e2356";
 
+  //when the user clik on the button yes change the dots style from invisible to visible
   dotsOne.style.visibility = "visible";
   dotsOne.style.marginLeft = "236px";
-
+  //
   dotsTwo.style.visibility = "visible";
   dotsTwo.style.marginLeft = "236px";
   dotsTwo.style.border = "4px solid #0e2356";
@@ -86,7 +75,7 @@ function makeDotsMove(errorCounterOne) {
   dotsTwo.style.marginLeft = "4px";
   dotsTwo.style.marginTop = "217px";
   dotsTwo.style.backgroundColor = "#0e2356";
-
+  //
   dotsThree.style.visibility = "visible";
   dotsThree.style.marginLeft = "236px";
   dotsThree.style.border = "4px solid #0e2356";
@@ -95,6 +84,7 @@ function makeDotsMove(errorCounterOne) {
   dotsThree.style.marginTop = "217px";
   dotsThree.style.backgroundColor = "#0e2356";
 
+  //Then make the dots move back to top
   const intervalDotMOving = setInterval(function () {
     //first dot
     for (let impairTimer = 200; impairTimer &lt;= 300; impairTimer += 100) {
@@ -158,41 +148,55 @@ function makeDotsMove(errorCounterOne) {
     clearInterval(intervalDotMOving);
   }, 3000);
 }
-function nowChooseAnExperience(errorCounterOne) {
+function nowChooseAnExperience(errorCounterOneEnterSubmit) {
+  //
+  // setTimeout(function () {
+  //request to the DOM of the user response html element
   let experiences = document.querySelector(
-    `#experiencesQuestion${errorCounterOne}`
+    `#experiencesQuestion${errorCounterOneEnterSubmit}`
   );
   let logoAndBotTextArea = document.querySelector("#logoAndBotTextArea");
   //
-  let scolarity = document.querySelector(`#scolarity${errorCounterOne}`);
-  let professionalExperience = document.querySelector(
-    `#professionalExperience${errorCounterOne}`
+  let scolarity = document.querySelector(
+    `#scolarity${errorCounterOneEnterSubmit}`
   );
-  let hobbies = document.querySelector(`#hobbies${errorCounterOne}`);
-  let skills = document.querySelector(`#skills${errorCounterOne}`);
-  let languages = document.querySelector(`#languages${errorCounterOne}`);
+  let professionalExperience = document.querySelector(
+    `#professionalExperience${errorCounterOneEnterSubmit}`
+  );
+  let hobbies = document.querySelector(`#hobbies${errorCounterOneEnterSubmit}`);
+  let skills = document.querySelector(`#skills${errorCounterOneEnterSubmit}`);
+  let languages = document.querySelector(
+    `#languages${errorCounterOneEnterSubmit}`
+  );
 
+  //make the hmtl element i retreived visible
   experiences.style.visibility = "visible";
   experiences.style.marginTop = "7px";
-
+  //
+  // setTimeout(function () {
+  //after 500ms move the answer to the top so they can be space for the following questions
   logoAndBotTextArea.style.marginTop = "40px";
-
+  //
   scolarity.classList.remove("invisible");
   professionalExperience.classList.remove("invisible");
   hobbies.classList.remove("invisible");
   skills.classList.remove("invisible");
   languages.classList.remove("invisible");
-
+  //push the answer in the htm element after 4200s
   scolarity.innerHTML = otherExperiencesCategories1[0];
   professionalExperience.innerHTML = otherExperiencesCategories1[3];
   hobbies.innerHTML = otherExperiencesCategories1[1];
   skills.innerHTML = otherExperiencesCategories1[2];
   languages.innerHTML = otherExperiencesCategories1[4];
 }
-document.querySelector("body").addEventListener("click", (event) => {
-  // let errorCompteurs = 2;
+
+let errorCounterOneEnterSubmit = 1000;
+
+document.addEventListener("keydown", logKey);
+
+function logKey(e) {
+  var answersPlaceholder = document.querySelector("#userAnswers");
   let emptyString = "";
-  let yes = ["oui", "OUI"];
   let inputVal = document.querySelector("#userAnswers").value;
   let error = document.querySelector(".error");
   let errorParent = document.querySelector("#firstSubmitedAnswer");
@@ -200,26 +204,16 @@ document.querySelector("body").addEventListener("click", (event) => {
   let resubmitOtherExperienceChoices = document.querySelector(
     "#resubmitOtherExperienceChoices"
   );
+  let otherExperienceChoice = document.querySelector("#otherExperienceChoices");
   let noEvent;
   let yesEvent;
-  let otherExperienceChoice = document.querySelector("#otherExperienceChoices");
-  //I_First type error: the user doesn't answer yes at the first question
-  function cleartext() {
-    document.querySelector("#form").reset();
-  }
-  //
-  function scrollToTheBottom() {
-    const chatBotContainer = document.querySelector("#chatBotContainer");
-    console.log("chatbotconainer", chatBotContainer);
-    chatBotContainer.scrollTop = chatBotContainer.scrollHeight;
-  }
-  //I_input transformation into lowerCase if necessary:
+
   let finalInputVal;
-  finalInputVal = inputVal.toLowerCase();
+  finalInputVal = document.querySelector("#userAnswers").value.toLowerCase(); ///////////
   if (
-    event.target.matches("#submitMessage") &amp;&amp;
     //TOUT INPUT AYANT UN CONTENU
-    inputVal !== emptyString &amp;&amp;
+    //   inputVal !== emptyString &amp;&amp;
+    e.code == "Enter" &amp;&amp;
     //SCOLARITÉ
     !finalInputVal.includes("scolarité") &amp;&amp;
     !finalInputVal.includes("scolarités") &amp;&amp;
@@ -547,7 +541,6 @@ document.querySelector("body").addEventListener("click", (event) => {
     !finalInputVal.includes("startups") &amp;&amp;
     //YES
     !finalInputVal.includes("oui") &amp;&amp;
-    !finalInputVal.includes("oui") &amp;&amp;
     !finalInputVal.includes("ok") &amp;&amp;
     !finalInputVal.includes("okay") &amp;&amp;
     !finalInputVal.includes("ouais") &amp;&amp;
@@ -585,20 +578,22 @@ document.querySelector("body").addEventListener("click", (event) => {
     yesEvent.classList.remove("yes");
 
     if (error) {
-      //
-      errorCounterOne += 2;
-      //First error answer (main.js dom)
+      errorCounterOneEnterSubmit += 2000;
+
       error.insertAdjacentHTML(
         "beforeend",
-        `&lt;p class="errorInputVal font inputStyle">${inputVal}&lt;/p>
+        `&lt;p class="errorInputVal font inputStyle">${
+          document.querySelector("#userAnswers").value
+        }&lt;/p>
       `
       );
-      noEvent.style.marginTop = "12px";
-      noEvent.style.marginLeft = "10px";
 
       setTimeout(function () {
         scrollToTheBottom();
       }, 100);
+
+      noEvent.style.marginTop = "12px";
+      noEvent.style.marginLeft = "10px";
 
       setTimeout(function () {
         cleartext();
@@ -608,43 +603,47 @@ document.querySelector("body").addEventListener("click", (event) => {
         error.insertAdjacentHTML(
           "beforeend",
           `
-        &lt;div class="errorCategoriesChargingDots${errorCounterOne}">
-            &lt;div class="errorCategoriesDots${errorCounterOne} errorCategoriesDotsOne${errorCounterOne}">&lt;/div>
-            &lt;div class="errorCategoriesDots${errorCounterOne} errorCategoriesDotsTwo${errorCounterOne}">&lt;/div>
-            &lt;div class="errorCategoriesDots${errorCounterOne} errorCategoriesDotsThree${errorCounterOne}">&lt;/div>
+        &lt;div class="errorCategoriesChargingDots${errorCounterOneEnterSubmit}">
+
+            &lt;div class="errorCategoriesDots${errorCounterOneEnterSubmit} errorCategoriesDotsOne${errorCounterOneEnterSubmit}">&lt;/div>
+            &lt;div class="errorCategoriesDots${errorCounterOneEnterSubmit} errorCategoriesDotsTwo${errorCounterOneEnterSubmit}">&lt;/div>
+            &lt;div class="errorCategoriesDots${errorCounterOneEnterSubmit} errorCategoriesDotsThree${errorCounterOneEnterSubmit}">&lt;/div>
         &lt;/div>
+
+        &lt;div id="yesCounter${errorCounterOneEnterSubmit}" class="yesCounter invisible genericCounter">&lt;/div>
+
         `
         );
       }, 900);
 
       setTimeout(function () {
-        makeDotsMove(errorCounterOne);
-      }, 2100);
+        makeDotsMove(errorCounterOneEnterSubmit);
+      }, 905);
 
       setTimeout(function () {
         error.insertAdjacentHTML(
           "beforeend",
           ` 
-          &lt;!-------------!>
-          &lt;p class="font errorBotAnswer">Je n'ai pas compris, je souhaites vous faire découvrir mes expériences professionnelles, êtes vous intéressé?&lt;p>
+          &lt;p class="font errorBotAnswer">Je n'ai pas compris...je souhaiterais vous faire découvrir mes expériences professionnelles, êtes vous intéressé?&lt;p>
            &lt;div id="button">
-           &lt;button type="button" id="yesButton${errorCounterOne}" class="yesEvent genericYes">Oui&lt;/button>
-           &lt;button type="button" id="noButton${errorCounterOne}" class="noEvent genericNo errorButton">Non&lt;/button>
-          
+           &lt;button type="button" id="yesButton${errorCounterOneEnterSubmit}" class="yesEvent genericYes">Oui&lt;/button>
+           &lt;button type="button" id="noButton${errorCounterOneEnterSubmit}" class="noEvent genericNo errorButton">Non&lt;/button>
+           
            &lt;/div>
         `
         );
       }, 7000);
+
       setTimeout(function () {
         scrollToTheBottom();
-      }, 7005);
+      }, 9000);
 
       return;
     } else {
       if (
-        event.target.matches("#submitMessage") &amp;&amp;
+        e.code == "Enter" &amp;&amp;
         //TOUT INPUT AYANT UN CONTENU
-        inputVal !== emptyString &amp;&amp;
+        //   inputVal !== emptyString &amp;&amp;
         //SCOLARITÉ
         !finalInputVal.includes("scolarité") &amp;&amp;
         !finalInputVal.includes("scolarités") &amp;&amp;
@@ -1003,27 +1002,38 @@ document.querySelector("body").addEventListener("click", (event) => {
         //NO
         !finalInputVal.includes("non")
       ) {
-        errorCounterOne += 2;
-        // errorCompteurs += 2;
-        //1_
+        errorCounterOneEnterSubmit += 2000;
+
         otherExperienceChoice.insertAdjacentHTML(
           "beforeend",
           `          
-          &lt;p class="font inputStyle">${inputVal}&lt;/p>
+          &lt;p class="font inputStyle">${
+            document.querySelector("#userAnswers").value
+          }&lt;/p>
 
-          &lt;div class="errorCategoriesChargingDots${errorCounterOne}">
-            &lt;div class="errorCategoriesDots${errorCounterOne} errorCategoriesDotsOne${errorCounterOne}">&lt;/div>
-            &lt;div class="errorCategoriesDots${errorCounterOne} errorCategoriesDotsTwo${errorCounterOne}">&lt;/div>
-            &lt;div class="errorCategoriesDots${errorCounterOne} errorCategoriesDotsThree${errorCounterOne}">&lt;/div>
-          &lt;/div>
-          
           `
         );
 
         setTimeout(function () {
           cleartext();
         }, 1000);
-        //2_
+
+        setTimeout(function () {
+          otherExperienceChoice.insertAdjacentHTML(
+            "beforeend",
+            ` 
+          &lt;div class="errorCategoriesChargingDots${errorCounterOneEnterSubmit}">
+            &lt;div class="errorCategoriesDots${errorCounterOneEnterSubmit} errorCategoriesDotsOne${errorCounterOneEnterSubmit}">&lt;/div>
+            &lt;div class="errorCategoriesDots${errorCounterOneEnterSubmit} errorCategoriesDotsTwo${errorCounterOneEnterSubmit}">&lt;/div>
+            &lt;div class="errorCategoriesDots${errorCounterOneEnterSubmit} errorCategoriesDotsThree${errorCounterOneEnterSubmit}">&lt;/div>
+          &lt;/div>`
+          );
+        }, 900);
+
+        setTimeout(function () {
+          makeDotsMove(errorCounterOneEnterSubmit);
+        }, 905);
+
         setTimeout(function () {
           otherExperienceChoice.insertAdjacentHTML(
             "beforeend",
@@ -1033,21 +1043,21 @@ document.querySelector("body").addEventListener("click", (event) => {
 
         //3_on représente les catégories
         setTimeout(function () {
-          // errorCounterOne +=2;
+          // errorCounterOneEnterSubmit +=2;
           otherExperienceChoice.insertAdjacentHTML(
             "beforeend",
             `
 
           &lt;!------------>
 
-          &lt;div id="experiencesQuestion${errorCounterOne}" class="font secondeErrorIpnutStyle">Si vous le souhaitez, je peux vous faire découvrir une autre catégorie. Quelle autre catégorie de mon profil souhaiteriez-vous découvrir?&lt;/div>
+          &lt;div id="experiencesQuestion${errorCounterOneEnterSubmit}" class="font secondeErrorIpnutStyle">Si vous le souhaitez, je peux vous faire découvrir une autre catégorie. Quelle autre catégorie de mon profil souhaiteriez-vous découvrir?&lt;/div>
 
-          &lt;div id="categoriesAnswer${errorCounterOne}">&lt;/div>
+          &lt;div id="categoriesAnswer${errorCounterOneEnterSubmit}">&lt;/div>
 
-          &lt;div id="curriculumCategories${errorCounterOne}">
+          &lt;div id="curriculumCategories${errorCounterOneEnterSubmit}">
 
             &lt;div id="firstRow2">
-                &lt;button type="button" id="scolarity${errorCounterOne}" class="genericScolarity" style=" cursor: pointer;
+                &lt;button type="button" id="scolarity${errorCounterOneEnterSubmit}" class="genericScolarity" style=" cursor: pointer;
                 height: 40px;
                 width: 128px;
                 font-family: OpenSans-Light;
@@ -1061,7 +1071,7 @@ document.querySelector("body").addEventListener("click", (event) => {
                 margin-left: 134px;
                 ">
                 &lt;/button>
-                &lt;button type="button" id="professionalExperience${errorCounterOne}" class="genericProfessionalExperience"  style=" cursor: pointer;
+                &lt;button type="button" id="professionalExperience${errorCounterOneEnterSubmit}" class="genericProfessionalExperience" style=" cursor: pointer;
                 height: 62px;
                 width: 128px;
                 font-family: OpenSans-Light;
@@ -1079,7 +1089,7 @@ document.querySelector("body").addEventListener("click", (event) => {
             &lt;/div>
 
             &lt;div id="secondRow2">
-                &lt;button type="button" id="hobbies${errorCounterOne}" class="genericHobbies"  style=" cursor: pointer;
+                &lt;button type="button" id="hobbies${errorCounterOneEnterSubmit}" class="genericHobbies" style=" cursor: pointer;
                 height: 40px;
                 width: 128px;
                 font-family: OpenSans-Light;
@@ -1094,7 +1104,7 @@ document.querySelector("body").addEventListener("click", (event) => {
                 margin-top: -19px;
                 ">
                 &lt;/button>
-                &lt;button type="button" id="skills${errorCounterOne}" class="genericSkills"  style=" cursor: pointer;
+                &lt;button type="button" id="skills${errorCounterOneEnterSubmit}" class="genericSkills" style=" cursor: pointer;
                 height: 40px;
                 width: 128px;
                 font-family: OpenSans-Light;
@@ -1111,7 +1121,7 @@ document.querySelector("body").addEventListener("click", (event) => {
                 &lt;/button>
             &lt;/div>
 
-            &lt;button type="button" id="languages${errorCounterOne}" class="genericLanguages"  style=" cursor: pointer;
+            &lt;button type="button" id="languages${errorCounterOneEnterSubmit}" class="genericLanguages" style=" cursor: pointer;
             height: 40px;
             width: 128px;
             font-family: OpenSans-Light;
@@ -1126,13 +1136,13 @@ document.querySelector("body").addEventListener("click", (event) => {
             margin-top: -45px;
             ">&lt;/button>
 
-            &lt;div class="categoriesChargingDots${errorCounterOne}">
-              &lt;div class="categoriesDots${errorCounterOne} categoriesDotsOne${errorCounterOne}">&lt;/div>
-              &lt;div class="categoriesDots${errorCounterOne} categoriesDotsTwo${errorCounterOne}">&lt;/div>
-              &lt;div class="categoriesDots${errorCounterOne} categoriesDotsThree${errorCounterOne}">&lt;/div>
+            &lt;div class="categoriesChargingDots${errorCounterOneEnterSubmit}">
+              &lt;div class="categoriesDots${errorCounterOneEnterSubmit} categoriesDotsOne${errorCounterOneEnterSubmit}">&lt;/div>
+              &lt;div class="categoriesDots${errorCounterOneEnterSubmit} categoriesDotsTwo${errorCounterOneEnterSubmit}">&lt;/div>
+              &lt;div class="categoriesDots${errorCounterOneEnterSubmit} categoriesDotsThree${errorCounterOneEnterSubmit}">&lt;/div>
             &lt;/div>
 
-            &lt;div id="experienceDetails${errorCounterOne}" class="invisible font" >&lt;/div>
+            &lt;div id="experienceDetails${errorCounterOneEnterSubmit}" class="invisible font" >&lt;/div>
 
 
           &lt;/div>
@@ -1140,36 +1150,35 @@ document.querySelector("body").addEventListener("click", (event) => {
           &lt;!------>
 
 
-          &lt;div class="categoriesChargingDots3${errorCounterOne}">
-            &lt;div class="categoriesDots3${errorCounterOne} categoriesDotsOne3${errorCounterOne}">&lt;/div>
-            &lt;div class="categoriesDots3${errorCounterOne} categoriesDotsTwo3${errorCounterOne}">&lt;/div>
-            &lt;div class="categoriesDots3${errorCounterOne} categoriesDotsThree3${errorCounterOne}">&lt;/div>
+          &lt;div class="categoriesChargingDots3${errorCounterOneEnterSubmit}">
+            &lt;div class="categoriesDots3${errorCounterOneEnterSubmit} categoriesDotsOne3${errorCounterOneEnterSubmit}">&lt;/div>
+            &lt;div class="categoriesDots3${errorCounterOneEnterSubmit} categoriesDotsTwo3${errorCounterOneEnterSubmit}">&lt;/div>
+            &lt;div class="categoriesDots3${errorCounterOneEnterSubmit} categoriesDotsThree3${errorCounterOneEnterSubmit}">&lt;/div>
           &lt;/div>
 
           &lt;!------>
 
-          &lt;div id="experiences${errorCounterOne}" class="invisible">&lt;/div>
+          &lt;div id="experiences${errorCounterOneEnterSubmit}" class="invisible font">&lt;/div>
 
-          &lt;button type="button" id="yesButton${errorCounterOne}" class="yesEvent invisible genericYes">Oui&lt;/button>
-          &lt;button type="button" id="noButton${errorCounterOne}" class="noEvent invisible genericNo">Non&lt;/button>`
+          &lt;button type="button" id="yesButton${errorCounterOneEnterSubmit}" class="yesEvent invisible genericYes">Oui&lt;/button>
+          &lt;button type="button" id="noButton${errorCounterOneEnterSubmit}" class="noEvent invisible genericNo">Non&lt;/button>
+
+          `
           );
         }, 2000);
 
         setTimeout(function () {
-          // let yesB = document.querySelector(".yesEvent");
-          // let chatBotContainer = document.querySelector("#chatBotContainer");
-
-          makeDotsMove(errorCounterOne);
-          nowChooseAnExperience(errorCounterOne);
-        }, 2100);
-
+          nowChooseAnExperience(errorCounterOneEnterSubmit);
+        }, 2005);
         setTimeout(function () {
           scrollToTheBottom();
-        }, 3000);
+        }, 9000);
       }
     }
   }
-});
+}
+
+//  &lt;button type="button" class="genericNo noButton${errorCounterOneEnterSubmit}">Non&lt;/button>
 </code></pre>
         </article>
     </section>

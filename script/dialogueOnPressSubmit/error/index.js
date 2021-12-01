@@ -1,3 +1,8 @@
+/**
+ * 
+ * @param {number} errorCounterOneEnterSubmit 
+ * the function make the dots dom element move dynamically depending of a timer
+ */
 function makeDotsMove(errorCounterOneEnterSubmit) {
   //Parent Div
   let chargingDotsThree = document.querySelector(

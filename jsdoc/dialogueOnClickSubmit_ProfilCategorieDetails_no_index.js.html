@@ -1,3 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: dialogueOnClickSubmit/ProfilCategorieDetails/no/index.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: dialogueOnClickSubmit/ProfilCategorieDetails/no/index.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * 
+ * @param {string} inputVal 
+ * the function animate the no answers of the user
+ */
 function animateAnswer(inputVal) {
   let yesB = document.querySelector(".yesEvent");
   let noInputAnswer = document.querySelector(".noInputAnswer");
@@ -9,7 +42,7 @@ function animateAnswer(inputVal) {
     noButton = document.querySelector(".no");
     if (inputVal) {
       console.log("condition une");
-      noInputAnswer.innerHTML = `<p>${inputVal}</p>`;
+      noInputAnswer.innerHTML = `&lt;p>${inputVal}&lt;/p>`;
       noInputAnswer.style.marginTop = "6px";
       noInputAnswer.style.border = `2px solid #dbdeea`;
       noInputAnswer.style.backgroundColor = "#dbdeea";
@@ -38,7 +71,7 @@ function animateAnswer(inputVal) {
     yesButton = document.querySelector(`#yesButton${noCounter}`);
     if (inputVal) {
       console.log("condition 2");
-      noInputAnswer.innerHTML = `<p>${inputVal}</p>`;
+      noInputAnswer.innerHTML = `&lt;p>${inputVal}&lt;/p>`;
       noInputAnswer.style.marginTop = "6px";
       noInputAnswer.style.border = `2px solid #dbdeea`;
       noInputAnswer.style.backgroundColor = "#dbdeea";
@@ -102,7 +135,7 @@ function makeDotsMovess() {
 
   const intervalDotMOving = setInterval(function () {
     //first dot
-    for (let timer = 200; timer <= 300; timer += 100) {
+    for (let timer = 200; timer &lt;= 300; timer += 100) {
       const intervalEearMoving = setInterval(function () {
         dotsOne.style.marginTop = "214px";
       }, timer);
@@ -110,7 +143,7 @@ function makeDotsMovess() {
         clearInterval(intervalEearMoving);
       }, 300);
     }
-    for (let timer = 300; timer <= 400; timer += 100) {
+    for (let timer = 300; timer &lt;= 400; timer += 100) {
       const intervalSecondEarMoving = setInterval(function () {
         dotsOne.style.marginTop = "224px";
       }, timer);
@@ -119,7 +152,7 @@ function makeDotsMovess() {
       }, 400);
     }
     //second dot
-    for (let timer = 300; timer <= 400; timer += 100) {
+    for (let timer = 300; timer &lt;= 400; timer += 100) {
       const intervalEearMoving = setInterval(function () {
         dotsTwo.style.marginTop = "214px";
       }, timer);
@@ -127,7 +160,7 @@ function makeDotsMovess() {
         clearInterval(intervalEearMoving);
       }, 400);
     }
-    for (let timer = 400; timer <= 500; timer += 100) {
+    for (let timer = 400; timer &lt;= 500; timer += 100) {
       const intervalEearMoving = setInterval(function () {
         dotsTwo.style.marginTop = "224px";
       }, timer);
@@ -136,7 +169,7 @@ function makeDotsMovess() {
       }, 500);
     }
     //third dot
-    for (let timer = 400; timer <= 500; timer += 100) {
+    for (let timer = 400; timer &lt;= 500; timer += 100) {
       const intervalEearMoving = setInterval(function () {
         dotsThree.style.marginTop = "214px";
       }, timer);
@@ -144,7 +177,7 @@ function makeDotsMovess() {
         clearInterval(intervalEearMoving);
       }, 500);
     }
-    for (let timer = 500; timer <= 600; timer += 100) {
+    for (let timer = 500; timer &lt;= 600; timer += 100) {
       const intervalEearMoving = setInterval(function () {
         dotsThree.style.marginTop = "224px";
       }, timer);
@@ -184,19 +217,19 @@ document.querySelector("body").addEventListener("click", (event) => {
     event.target.matches(".noEvent") ||
     ((finalInputVal.includes("non") ||
       // finalInputVal.includes("pas") ||
-      finalInputVal.includes("n'ai")) &&
+      finalInputVal.includes("n'ai")) &amp;&amp;
       event.target.matches("#submitMessage"))
   ) {
     otherExperienceChoice.insertAdjacentHTML(
       "beforeend",
       `
-      <div class="noInputAnswer font"></div>
-      <div class="noChargingDots">
-          <div class="noDots noDotsOne"></div>
-          <div class="noDots noDotsTwo"></div>
-          <div class="noDots noDotsThree"></div>
-      </div>
-      <div class="goodByeMessage font"></div>`
+      &lt;div class="noInputAnswer font">&lt;/div>
+      &lt;div class="noChargingDots">
+          &lt;div class="noDots noDotsOne">&lt;/div>
+          &lt;div class="noDots noDotsTwo">&lt;/div>
+          &lt;div class="noDots noDotsThree">&lt;/div>
+      &lt;/div>
+      &lt;div class="goodByeMessage font">&lt;/div>`
     );
     animateAnswer(inputVal);
 
@@ -205,7 +238,7 @@ document.querySelector("body").addEventListener("click", (event) => {
     let goodByeMessage = document.querySelector(".goodByeMessage");
 
     setTimeout(function () {
-      goodByeMessage.innerHTML = `<p>Vous pouvez me contacter par mail à l'adresse: kanurebecca0@gmail.com ou par téléphone au: 07.82.43.32.22. À bientôt!<p>`;
+      goodByeMessage.innerHTML = `&lt;p>Vous pouvez me contacter par mail à l'adresse: kanurebecca0@gmail.com ou par téléphone au: 07.82.43.32.22. À bientôt!&lt;p>`;
       goodByeMessage.style.border = `2px solid#dbdeea`;
       goodByeMessage.style.width = "229px";
       goodByeMessage.style.borderRadius = "6px";
@@ -219,3 +252,26 @@ document.querySelector("body").addEventListener("click", (event) => {
     }, 3005);
   }
 });
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#animateAnswer">animateAnswer</a></li><li><a href="global.html#AskIfWantToSeeAnOtherExperience">AskIfWantToSeeAnOtherExperience</a></li><li><a href="global.html#compteur">compteur</a></li><li><a href="global.html#compteur2">compteur2</a></li><li><a href="global.html#compteur3">compteur3</a></li><li><a href="global.html#compteur5">compteur5</a></li><li><a href="global.html#compteur6">compteur6</a></li><li><a href="global.html#compteurx">compteurx</a></li><li><a href="global.html#compteurYesPlusCat">compteurYesPlusCat</a></li><li><a href="global.html#enterSubmitCounter">enterSubmitCounter</a></li><li><a href="global.html#errorCompteurs">errorCompteurs</a></li><li><a href="global.html#errorCounterOne">errorCounterOne</a></li><li><a href="global.html#experienceDetailsTexte2">experienceDetailsTexte2</a></li><li><a href="global.html#experienceDetailsTexte9">experienceDetailsTexte9</a></li><li><a href="global.html#functionMakeDotsMoveCounter">functionMakeDotsMoveCounter</a></li><li><a href="global.html#hobbiesDetails">hobbiesDetails</a></li><li><a href="global.html#languagesDetails">languagesDetails</a></li><li><a href="global.html#makeDotsMove">makeDotsMove</a></li><li><a href="global.html#makeDotsMoves">makeDotsMoves</a></li><li><a href="global.html#otherExperienceQuestion">otherExperienceQuestion</a></li><li><a href="global.html#otherExperiencesCategories">otherExperiencesCategories</a></li><li><a href="global.html#otherExperiencesCategories1">otherExperiencesCategories1</a></li><li><a href="global.html#professionalExperiencesDetails">professionalExperiencesDetails</a></li><li><a href="global.html#questions99">questions99</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Wed Dec 01 2021 18:25:43 GMT+0100 (heure normale d’Europe centrale)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

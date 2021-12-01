@@ -168,7 +168,6 @@ document.querySelector("body").addEventListener("click", (event) => {
       clearInterval(intervalDotMOving);
     }, 2000);
   }
-  //
   function cleartext() {
     document.querySelector("#form").reset();
   }

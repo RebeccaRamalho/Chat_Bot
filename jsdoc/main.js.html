@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: main.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: main.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @file main.js is the js file to the root of the project
+ * @see &lt;a href="https://github.com/RebeccaRamalho/RebeccaRamalho">Github&lt;/a>
+ */
+let rebeccaBoot = document.getElementById("rebeccaBoot");
+let chatBot = document.getElementById("chatBot");
+let container2 = document.getElementById("container2");
+let answer = document.querySelector(".answer");
+
+
+//Au clique de rebeccaBot...
+rebeccaBoot.addEventListener("click", () => {
+  //...faire appraitre le chatBot
+  container2.innerHTML = `
+&lt;div id="chatBot">
+
+            &lt;!------------BOT HEADER------------->
+
+        &lt;div id="botHeader">           
+          &lt;a href="">&lt;img src="assets/img/close(1).png" class="cross" />&lt;/a>     
+        &lt;/div>
+        
+  &lt;div id="chatBotContainer" class="scrollBar">
+    
+
+        &lt;div id="logoAndBotTextArea">
+
+            &lt;!-------REBECCA BOT------------->
+
+            &lt;div id="rebeccaBoot rebeccaBootAfterClick"> 
+
+              &lt;div class="cercle cercleAfterClick bootAfterClick">
+
+                  &lt;div class="head headAfterClick">
+
+                    &lt;!--------------ears------------->
+                    &lt;div class="firstEar firstEarAfterClick">&lt;/div>
+                    &lt;div class="secondEar secondEarAfterClick">&lt;/div>
+
+                    &lt;!--------------nose------------->
+                    &lt;div class="nose noseAfterClick">&lt;/div>
+
+                    &lt;!-------Glasses and eyes-------->
+                    &lt;div class="firstGlassesWindow firstGlassesWindowAfterClick">
+                      &lt;div class="firstEyesAfterClick">.&lt;/div>
+                    &lt;/div>
+
+                    &lt;!-------glasses frame-------->
+                    &lt;hr class="hrAfterClick" />
+                    
+
+                    &lt;div class="secondGlassesWindow secondGlassesWindowAfterClick">
+                      &lt;div class="secondEyesAfterClick">.&lt;/div> 
+                    &lt;/div>
+
+                  &lt;/div>
+              &lt;/div>
+            &lt;/div>
+
+              &lt;!-------BOT TEXT AREA------------->
+            &lt;div class="botTextArea botTextAreaAfterClick">
+                 &lt;p>Bonjour 🤓, je m'appelle Rebecca, je suis actuellement à la recherche d'une alternance en conception et développement d'applications, et je souhaites vous faire 
+                 découvrir mon profil, êtes vous intéressé?&lt;br/>
+                 &lt;p>
+            &lt;/div>
+
+        &lt;/div> 
+
+      &lt;!--------------BUTTON-------------->
+
+          &lt;!----->
+          
+       
+          &lt;!----->
+          
+          &lt;div id="button">
+                &lt;button type="button" class="yes yesEvent">Oui&lt;/button>
+                &lt;button type="button" class="no noEvent">Non&lt;/button>
+          &lt;/div>
+
+          &lt;div id="firstSubmitedAnswer" class="userSubmitedAnswer">      
+            &lt;div id="firstErrorPLaceholder" class="error">&lt;/div>
+          &lt;/div>
+ 
+    &lt;!----Choose an other experience------> 
+
+      &lt;div id="otherExperienceChoices">&lt;/div> 
+
+    
+
+  &lt;/div>
+
+      &lt;!------------USER INPUT-------------------->
+      &lt;div class="answer">
+            &lt;form id="form" onSubmit="return false;">
+              &lt;input
+                type="text"
+                id="userAnswers"
+                name="answer"
+                placeholder="Ecrivez votre réponse ici"
+                onfocus="this.value=''"
+              />
+
+          
+            &lt;/form> 
+      &lt;/div>
+
+      &lt;div class="sendLogo">
+        &lt;img src="assets/img/send(1).png" id="submitMessage"/>
+      &lt;/div>
+
+      &lt;div id="emoji">
+        &lt;div>😀&lt;/div>
+        &lt;div>😁&lt;/div>
+        &lt;div>😂&lt;/div>
+        &lt;div>🤣&lt;/div>
+        &lt;div>😃&lt;/div>
+        &lt;div>😄&lt;/div>
+        &lt;div>😅&lt;/div>
+        &lt;div>😆&lt;/div>
+        &lt;div>😉&lt;/div>
+        &lt;div>😊&lt;/div>
+        &lt;div>😋&lt;/div>
+        &lt;div>😇&lt;/div>
+        &lt;div>😊&lt;/div>
+        &lt;div>🙂&lt;/div>
+        &lt;div>🙃&lt;/div>
+        &lt;div>😉&lt;/div>
+        &lt;div>😌&lt;/div>
+        &lt;div>😍&lt;/div>
+
+        &lt;div>🥰&lt;/div>
+        &lt;div>😘&lt;/div>
+        &lt;div>😗&lt;/div>
+        &lt;div>😙&lt;/div>
+        &lt;div>😚&lt;/div>
+        &lt;div>😋&lt;/div>
+        &lt;div>😛&lt;/div>
+        &lt;div>😝&lt;/div>
+        &lt;div>😜&lt;/div>
+        &lt;div>🤪&lt;/div>
+        &lt;div>🤨&lt;/div>
+        &lt;div>🧐&lt;/div>
+        &lt;div>🤓&lt;/div>
+        &lt;div>😎&lt;/div>
+        &lt;div>🤩&lt;/div>
+        &lt;div>🥳&lt;/div>
+        &lt;div>😏&lt;/div>
+        &lt;div>😒&lt;/div>
+
+        &lt;div>😞&lt;/div>
+        &lt;div>😔&lt;/div>
+        &lt;div>😟&lt;/div>
+        &lt;div>😕&lt;/div>
+        &lt;div>😣&lt;/div>
+        &lt;div>😖&lt;/div>
+        &lt;div>😫&lt;/div>
+        &lt;div>😩&lt;/div>
+        &lt;div>🥺&lt;/div>
+        &lt;div>😢&lt;/div>
+        &lt;div>😭&lt;/div>
+        &lt;div>😤&lt;/div>
+        &lt;div>😠&lt;/div>
+        &lt;div>😡&lt;/div>
+        &lt;div>🤬&lt;/div>
+        &lt;div>😱&lt;/div>
+        &lt;div>😨&lt;/div>
+        &lt;div>😓&lt;/div>
+
+        &lt;div>🤗&lt;/div>
+        &lt;div>🤔&lt;/div>
+        &lt;div>🤭&lt;/div>
+        &lt;div>🤫&lt;/div>
+        &lt;div>🤥&lt;/div>
+        &lt;div>😶&lt;/div>
+        &lt;div>😐&lt;/div>
+        &lt;div>😑&lt;/div>
+        &lt;div>😬&lt;/div>
+        &lt;div>🥱&lt;/div>
+        &lt;div>😴&lt;/div>
+        &lt;div>🤢&lt;/div>
+        &lt;div>🤮&lt;/div>
+        &lt;div>😈&lt;/div>
+        &lt;div>💀&lt;/div>
+        &lt;div>☠️&lt;/div>
+        &lt;div>👽&lt;/div>
+        &lt;div>👾&lt;/div>
+
+        &lt;div>🤖&lt;/div>
+        &lt;div>😺&lt;/div>
+        &lt;div>😹&lt;/div>
+        &lt;div>😻&lt;/div>
+        &lt;div>🙀&lt;/div>
+        &lt;div>😿&lt;/div>
+        &lt;div>👌&lt;/div>
+        &lt;div>👏&lt;/div>
+        &lt;div>🙏&lt;/div>
+        &lt;div>🕵️‍♀️&lt;/div>
+        &lt;div>🕵🏿‍♀️&lt;/div>
+        &lt;div>👩🏾‍🔬&lt;/div>
+        &lt;div>🧑🏾‍🎨&lt;/div>
+        &lt;div>👩🏿‍🏫&lt;/div>
+        &lt;div>👩🏿‍🦱&lt;/div>
+        &lt;div>🦸&lt;/div>
+        &lt;div>🦹‍♀️&lt;/div>
+        &lt;div>💃&lt;/div>
+        &lt;div>👩‍❤️‍💋‍👨&lt;/div>
+
+        &lt;div>🐙&lt;/div>
+        &lt;div>🦕&lt;/div>
+        &lt;div>🐬&lt;/div>
+        &lt;div>🦧&lt;/div>
+        &lt;div>🦍&lt;/div>
+      &lt;/div>
+
+      &lt;div class="invisible keyCodePressedEntity">&lt;/div>
+
+&lt;/div>`;
+});
+
+//Emoji
+
+rebeccaBoot.addEventListener("click", () => {
+  const htmlEmo = Array.from(document.getElementById("emoji").children);
+  htmlEmo.forEach((element, index) => {
+    let emoInDiv = htmlEmo[index];
+    let emoInString = htmlEmo[index].textContent;
+
+    emoInDiv.addEventListener("click", function () {
+      let boxMessage = document.getElementById("userAnswers").value;
+      const tweets = boxMessage + emoInString;
+
+      document.getElementById("userAnswers").value = tweets;
+    });
+  });
+
+  const originalEmo = document.getElementById("appearEmo");
+  const EmojiId = document.getElementById("emoji");
+  let counter = 0;
+
+  originalEmo.addEventListener("click", function () {
+    counter += 1;
+    if (counter % 2) EmojiId.style.visibility = "visible";
+    else EmojiId.style.visibility = "hidden";
+  });
+});
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#animateAnswer">animateAnswer</a></li><li><a href="global.html#AskIfWantToSeeAnOtherExperience">AskIfWantToSeeAnOtherExperience</a></li><li><a href="global.html#compteur">compteur</a></li><li><a href="global.html#compteur2">compteur2</a></li><li><a href="global.html#compteur3">compteur3</a></li><li><a href="global.html#compteur5">compteur5</a></li><li><a href="global.html#compteur6">compteur6</a></li><li><a href="global.html#compteurx">compteurx</a></li><li><a href="global.html#compteurYesPlusCat">compteurYesPlusCat</a></li><li><a href="global.html#enterSubmitCounter">enterSubmitCounter</a></li><li><a href="global.html#errorCompteurs">errorCompteurs</a></li><li><a href="global.html#errorCounterOne">errorCounterOne</a></li><li><a href="global.html#experienceDetailsTexte2">experienceDetailsTexte2</a></li><li><a href="global.html#experienceDetailsTexte9">experienceDetailsTexte9</a></li><li><a href="global.html#functionMakeDotsMoveCounter">functionMakeDotsMoveCounter</a></li><li><a href="global.html#hobbiesDetails">hobbiesDetails</a></li><li><a href="global.html#languagesDetails">languagesDetails</a></li><li><a href="global.html#makeDotsMove">makeDotsMove</a></li><li><a href="global.html#makeDotsMoves">makeDotsMoves</a></li><li><a href="global.html#otherExperienceQuestion">otherExperienceQuestion</a></li><li><a href="global.html#otherExperiencesCategories">otherExperiencesCategories</a></li><li><a href="global.html#otherExperiencesCategories1">otherExperiencesCategories1</a></li><li><a href="global.html#professionalExperiencesDetails">professionalExperiencesDetails</a></li><li><a href="global.html#questions99">questions99</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Wed Dec 01 2021 18:25:43 GMT+0100 (heure normale d’Europe centrale)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

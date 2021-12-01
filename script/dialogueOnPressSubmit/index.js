@@ -14,13 +14,12 @@ let functionMakeDotsMoveCounter = 0;
  */
 let compteur5;
 /**
- * @param {number} compteurx (initial type number but the type change to a string when the user submit the category hobbies and press to enter)
- * @param {number} compteur2
- * @param {number} compteur3
- * @param {number} compteur5
+ * @param {number} compteurx (generic counter)
+ * @param {number} compteur2 (changing the name to the category name)
+ * @param {number} compteur3 (changing the name to the category name)
+ * @param {number} compteur5 (changing the name to the category name )
  * @param {number} compteurLanguages
  * @param {number} compteurHobbies
- * the function make the dots dom element move dynamically depending of a timer
  */
 function makeDotsMoves(
   compteurx,
@@ -551,10 +550,10 @@ function animateCategories() {
 }
 /**
  * 
- * @param {number} compteurx 
- * @param {number} compteur2 
- * @param {number} compteur3 
- * @param {number} compteur5 
+ * @param {number} compteurx (generic counter)
+ * @param {number} compteur2 (changing the name to the category name )
+ * @param {number} compteur3 (changing the name to the category name )
+ * @param {number} compteur5 (changing the name to the category name )
  * @param {number} compteurLanguages 
  * @param {number} compteurHobbies 
  */

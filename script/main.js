@@ -1,7 +1,12 @@
+/**
+ * @file main.js is the js file to the root of the project
+ * @see <a href="https://github.com/RebeccaRamalho/Chat_Bot">Github</a>
+ */
 let rebeccaBoot = document.getElementById("rebeccaBoot");
 let chatBot = document.getElementById("chatBot");
 let container2 = document.getElementById("container2");
 let answer = document.querySelector(".answer");
+
 
 //Au clique de rebeccaBot...
 rebeccaBoot.addEventListener("click", () => {
