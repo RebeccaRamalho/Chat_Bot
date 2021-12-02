@@ -1369,7 +1369,7 @@ function botAnsweringToInputVal(e) {
       compteurx = compteurProfessionalExperiencesAndYesInt;
       //
       experienceDetails =
-        "<br><b>De de Janvier à Mars 2020</b> j'ai été fille Au pair auprès d'une famille à Londres. J'ai effectué comme principales tâches: les soins quotidiens à un enfant atteint d'épilepsie. <br><b> Mars à Mars 2020</b> Femme de chambre à Hôtel Hyatt à Londres -Tâches principales: nettoyage des chambres de l'hôtel. <br><b>De Mai à Juin 2021</b> Développeuse web et web mobile, à Association Hand-of hope, -Tâches principales: réalisation au cours d'un stage d'une interface dynamique.";
+        "<b>-De de Janvier à Mars 2020</b> j'ai été fille Au pair auprès d'une famille à Londres. J'ai effectué comme principales tâches: les soins quotidiens à un enfant atteint d'épilepsie sévère. <br><b>-En Mars 2020</b>-Femme de chambre à Hôtel Hyatt à Londres -Tâches principales: nettoyage des chambres de l'hôtel. <br><b>-De Mai à Juin 2021</b> Développeuse web et web mobile, à Association Hand-of hope,<br/>-Tâches principales: réalisation au cours d'un stage d'une interface dynamique.";
     }
     //SCOLARITY
     else if (
