@@ -753,7 +753,7 @@ document.querySelector("body").addEventListener("click", (event) => {
       experienceDetails.style.paddingLeft = "22px";
       experienceDetails.style.paddingRight = "13px";
       experienceDetails.style.marginLeft = "126px";
-      experienceDetails.innerHTML = `<p>${experienceDetailsTexte2[0]}</p>`;
+      experienceDetails.innerHTML = `<p class="font">${experienceDetailsTexte2[0]}</p>`;
     }, 1500);
 
     setTimeout(function () {
@@ -794,7 +794,7 @@ document.querySelector("body").addEventListener("click", (event) => {
         otherExperiencesRequest.style.paddingRight = "13px";
         otherExperiencesRequest.style.marginLeft = "126px";
         otherExperiencesRequest.style.marginBottom = "18px";
-        otherExperiencesRequest.innerHTML = `<p>${questions99[1]}</p>`;
+        otherExperiencesRequest.innerHTML = `<p class="font">${questions99[1]}</p>`;
       }, 5000);
     }
     chooseAnOtherExperience();

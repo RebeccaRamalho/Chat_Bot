@@ -441,7 +441,7 @@ function animateCategories() {
     let skills = document.querySelector(`#skills${enterSubmitCounter}`);
     let languages = document.querySelector(`#languages${enterSubmitCounter}`);
 
-    experiences.innerHTML = `<p>Merci 😊...Quelle catégorie de mon profil souhaiteriez-vous découvrir?</div></p>`;
+    experiences.innerHTML = `<p class="font">Merci 😊...Quelle catégorie de mon profil souhaiteriez-vous découvrir?</div></p>`;
     experiences.style.visibility = "visible";
     experiences.style.border = `2px solid#dbdeea`;
     experiences.style.width = "229px";
@@ -1815,7 +1815,7 @@ function botAnsweringToInputVal(e) {
       experienceDetails.style.paddingLeft = "22px";
       experienceDetails.style.paddingRight = "13px";
       experienceDetails.style.marginLeft = "126px";
-      experienceDetails.innerHTML = `<p>${experienceDetailsTexte2[0]}</p>`;
+      experienceDetails.innerHTML = `<p class="font">${experienceDetailsTexte2[0]}</p>`;
     }, 1500);
 
     setTimeout(function () {

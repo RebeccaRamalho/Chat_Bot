@@ -14,7 +14,7 @@ function animateAnswer(inputVal) {
     noButton = document.querySelector(".no");
     if (inputVal) {
       console.log("condition une");
-      noInputAnswer.innerHTML = `<p>${inputVal}</p>`;
+      noInputAnswer.innerHTML = `<p class="font">${inputVal}</p>`;
       noInputAnswer.style.marginTop = "6px";
       noInputAnswer.style.border = `2px solid #dbdeea`;
       noInputAnswer.style.backgroundColor = "#dbdeea";
@@ -43,7 +43,7 @@ function animateAnswer(inputVal) {
     yesButton = document.querySelector(`#yesButton${noCounter}`);
     if (inputVal) {
       console.log("condition 2");
-      noInputAnswer.innerHTML = `<p>${inputVal}</p>`;
+      noInputAnswer.innerHTML = `<p class="font">${inputVal}</p>`;
       noInputAnswer.style.marginTop = "6px";
       noInputAnswer.style.border = `2px solid #dbdeea`;
       noInputAnswer.style.backgroundColor = "#dbdeea";
@@ -210,7 +210,7 @@ document.querySelector("body").addEventListener("click", (event) => {
     let goodByeMessage = document.querySelector(".goodByeMessage");
 
     setTimeout(function () {
-      goodByeMessage.innerHTML = `<p>Vous pouvez me contacter par mail à l'adresse: kanurebecca0@gmail.com ou par téléphone au: 07.82.43.32.22. À bientôt!<p>`;
+      goodByeMessage.innerHTML = `<p class="font">Vous pouvez me contacter par mail à l'adresse: kanurebecca0@gmail.com ou par téléphone au: 07.82.43.32.22. À bientôt!<p>`;
       goodByeMessage.style.border = `2px solid#dbdeea`;
       goodByeMessage.style.width = "229px";
       goodByeMessage.style.borderRadius = "6px";
