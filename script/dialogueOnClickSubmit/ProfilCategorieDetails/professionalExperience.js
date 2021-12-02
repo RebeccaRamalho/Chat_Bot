@@ -11,7 +11,7 @@ let professionalExperiencesDetails = [
 document.querySelector("body").addEventListener("click", (event) => {
   let questions10 = [
     ["Quelles expériences souhaitez-vous découvrir?"],
-    ["Souhaitez-vous découvrir une autre expérience?"],
+    ["Souhaitez-vous découvrir une autre catégorie de mon profil?"],
   ];
 
   let compteur3 = 1;

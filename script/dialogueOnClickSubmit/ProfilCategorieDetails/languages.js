@@ -147,7 +147,7 @@ document.querySelector("body").addEventListener("click", (event) => {
   //I_VARIABLES
   let experienceQuestion = [
     [`Quelles expériences souhaitez-vous découvrir?`],
-    [`Souhaitez-vous découvrir une autre expérience?`],
+    [`Souhaitez-vous découvrir une autre catégorie de mon profil?`],
   ];
   let compteurLanguages = 1;
   let compteurGeneric = 1;

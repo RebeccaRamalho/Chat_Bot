@@ -1036,7 +1036,7 @@ function botAnsweringToInputVal(e) {
     let compteur6 = 1;
     let questions7 = [
       [`Quelles expériences souhaitez-vous découvrir?`],
-      [`Souhaitez-vous découvrir une autre expérience?`],
+      [`Souhaitez-vous découvrir une autre catégorie de mon profil?`],
     ];
     let no;
     //HOBBIES

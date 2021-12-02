@@ -4,7 +4,7 @@
  */
 let questions99 = [
   [`Quelles expériences souhaitez-vous découvrir?`],
-  [`Souhaitez-vous découvrir une autre expérience?`],
+  [`Souhaitez-vous découvrir une autre catégorie de mon profil?`],
 ];
 /**
  * scolarity variable to refacto into a string 
