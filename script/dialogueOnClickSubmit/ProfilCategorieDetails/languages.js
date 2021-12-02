@@ -455,7 +455,7 @@ document.querySelector("body").addEventListener("click", (event) => {
     let languages = document.querySelector(`#languages${compteurLanguages}`);
     {
       !inputVal
-        ? ((languages.style.marginLeft = "254px"),
+        ? ((languages.style.marginLeft = "263px"),
           categorieAnswer.classList.add("invisible"))
         : ((categorieAnswer.innerHTML = `<p class="font">${inputVal}</p>`),
           languages.classList.add("invisible"));

@@ -502,7 +502,7 @@ function animateCategories() {
     hobbies.style.backgroundColor = "#e7e6e3";
     hobbies.style.borderRadius = "5px";
     hobbies.style.marginLeft = "137px";
-    hobbies.style.marginTop = "-21px";
+    hobbies.style.marginTop = "-12px";
     hobbies.style.paddingLeft = "3px";
     hobbies.style.paddingTop = "-15px";
     hobbies.style.fontSize = "0.8rem";
@@ -1768,7 +1768,7 @@ function botAnsweringToInputVal(e) {
     let scolarity = document.querySelector(`#scolarity${compteur2}`);
     {
       !inputVal
-        ? ((scolarity.style.marginLeft = "254px"),
+        ? ((scolarity.style.marginLeft = "264px"),
           categorieAnswer.classList.add("invisible"))
         : ((categorieAnswer.innerHTML = `<p class="font">${inputVal}</p>`),
           scolarity.classList.add("invisible"));
@@ -2146,7 +2146,7 @@ function botAnsweringToInputVal(e) {
 
     {
       !inputVal
-        ? ((skills.style.marginLeft = "254px"),
+        ? ((skills.style.marginLeft = "281px"),
           categorieAnswer.classList.add("invisible"))
         : ((categorieAnswer.innerHTML = `<p class="font">${inputVal}</p>`),
           skills.classList.add("invisible"));
@@ -2239,7 +2239,7 @@ function botAnsweringToInputVal(e) {
     let languages = document.querySelector(`#languages${compteurLanguages}`);
     {
       !inputVal
-        ? ((languages.style.marginLeft = "254px"),
+        ? ((languages.style.marginLeft = "263px"),
           categorieAnswer.classList.add("invisible"))
         : ((categorieAnswer.innerHTML = `<p class="font">${inputVal}</p>`),
           languages.classList.add("invisible"));

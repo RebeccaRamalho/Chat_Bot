@@ -338,7 +338,7 @@ function nowChooseAnExperience2() {
   hobbies.style.backgroundColor = "#e7e6e3";
   hobbies.style.borderRadius = "5px";
   hobbies.style.marginLeft = "137px";
-  hobbies.style.marginTop = "-21px";
+  hobbies.style.marginTop = "-14px";
   hobbies.style.paddingLeft = "3px";
   hobbies.style.paddingTop = "-15px";
   hobbies.style.fontSize = "0.8rem";
@@ -365,7 +365,7 @@ function nowChooseAnExperience2() {
   //languages
   languages.innerHTML = otherExperiencesCategories[4];
   languages.style.cursor = "pointer";
-  languages.style.height = "32px";
+  languages.style.height = "44px";
   languages.style.width = "131px";
   languages.style.fontFamily = "OpenSans-Light";
   languages.style.backgroundColor = "#e7e6e3";

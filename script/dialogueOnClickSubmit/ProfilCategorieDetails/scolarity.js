@@ -12,7 +12,7 @@ let questions99 = [
  */
 let experienceDetailsTexte2 = [
   [
-    `En<b>2018</b> J'ai obtenu une licence en philosophie et un certificat en sociologie qui m'ont permis de structurer ma réflexion par l'exercice de la dissertation et de développer ma capacité d'introspection et d'ouverture au monde.<br> En <b>2020 Social builder</b> puis <b>Simplon</b> en <b>2021</b> m'ont donné l'opportunité de développer des compétences dédiées à la <b>programmation web</b>.<br> J'ai par ces expériences pu développer des compétences tels que entre autres le maquettage d'une application, la capacité à coder en Js natif et via le <b>framework React</b>, la capacité à développer la partie <b>front-end</b> et <b>back-end</b> d'une application, la capacité à faire de la veille et à documenter mon code ou encore à vulgariser et à expliquer mon code.`,
+    `En<b>2018</b> J'ai obtenu une licence en philosophie et un certificat en sociologie qui m'ont permis de structurer ma réflexion par l'exercice de la dissertation et de développer ma capacité d'introspection et d'ouverture au monde.<br> En <b>2020 Social builder</b> puis <b>Simplon</b> en <b>2021</b> m'ont donné l'opportunité de développer des compétences dédiées à la <b>programmation web</b>.<br> J'ai par ces expériences pu développer des compétences tels que entre autres le maquettage d'une application, la capacité à coder une applications web de bout en bout (côté front comme côté back) grâce à l'écosystème de Node.js et à des framework tels que React.`,
   ],
 ];
 /**
@@ -568,7 +568,7 @@ document.querySelector("body").addEventListener("click", (event) => {
     let scolarity = document.querySelector(`#scolarity${compteur2}`);
     {
       !inputVal
-        ? ((scolarity.style.marginLeft = "254px"),
+        ? ((scolarity.style.marginLeft = "264px"),
           categorieAnswer.classList.add("invisible"))
         : ((categorieAnswer.innerHTML = `<p class="font">${inputVal}</p>`),
           scolarity.classList.add("invisible"));

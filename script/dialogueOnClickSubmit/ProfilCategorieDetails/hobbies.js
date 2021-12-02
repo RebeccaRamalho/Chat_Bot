@@ -4,7 +4,7 @@
  */
 let hobbiesDetails = [
   [
-    `J'aime passer mon temps libre à apprendre de nouvelle chose que ce soit par la <b>lecture</b> ou par le <b>dessin</b> que je pratique depuis mon enfance`,
+    `J'aime passer mon temps libre à apprendre de nouvelle chose par la <b>lecture</b> (j'aime les livres de découverte et les BD/Webtoon). J'aime aussi dessiner et faire de la sculpture`,
   ],
 ];
 /**
@@ -527,7 +527,7 @@ document.querySelector("body").addEventListener("click", (event) => {
     //
     {
       !inputVal
-        ? ((hobbies.style.marginLeft = "291px"),
+        ? ((hobbies.style.marginLeft = "255px"),
           categorieAnswer.classList.add("invisible"))
         : ((categorieAnswer.innerHTML = `<p class="font">${inputVal}</p>`),
           hobbies.classList.add("invisible"));
