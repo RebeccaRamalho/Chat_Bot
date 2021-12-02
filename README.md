@@ -44,7 +44,7 @@ This is a chatbot made in **Vanilla javascript** that can answer my Cv questions
 
 ### 🔨 Conception of the chatbot
 
-<img src="./assets/img/chatbot_architecture-diagram.png" alt="chatbot architecture diagram"/>
+<img src="./assets/img/chatbotArchitectureDiagram.png" alt="chatbot architecture diagram"/>
 
 ####    💬 Conversation flow
 
@@ -56,8 +56,6 @@ It is necessary to begin with a **chatbot flow**. This step will help you find t
 ## Contributors
 
 - <spam>Kanu Rebecca</spam> [<img alt="githb link" width="30px" src="./assets/img/Octocat.jpg"/>][github]
-<!--
-- <spam>Kanu Rebecca</spam> [<img alt="linkedin link" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/>][github] -->
 
 <br />
 <br />
