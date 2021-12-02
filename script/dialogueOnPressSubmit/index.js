@@ -486,7 +486,7 @@ function animateCategories() {
     professionalExperience.style.borderRadius = "5px";
     professionalExperience.style.marginRight = "-9px";
     professionalExperience.style.marginLeft = "291px";
-    professionalExperience.style.marginTop = "-51px";
+    professionalExperience.style.marginTop = "-11px";
     professionalExperience.style.paddingLeft = "3px";
     professionalExperience.style.paddingTop = "-15px";
     professionalExperience.style.fontSize = "0.8rem";
@@ -1949,7 +1949,7 @@ function botAnsweringToInputVal(e) {
 
     {
       !inputVal
-        ? ((professionalExperience.style.marginLeft = "254px"),
+        ? ((professionalExperience.style.marginLeft = "291px"),
           categorieAnswer.classList.add("invisible"))
         : ((categorieAnswer.innerHTML = `<p class="font">${inputVal}</p>`),
           professionalExperience.classList.add("invisible"));

@@ -640,7 +640,7 @@ document.querySelector("body").addEventListener("click", (event) => {
 
     {
       !inputVal
-        ? ((professionalExperience.style.marginLeft = "254px"),
+        ? ((professionalExperience.style.marginLeft = "291px"),
           categorieAnswer.classList.add("invisible"))
         : ((categorieAnswer.innerHTML = `<p class="font">${inputVal}</p>`),
           professionalExperience.classList.add("invisible"));
