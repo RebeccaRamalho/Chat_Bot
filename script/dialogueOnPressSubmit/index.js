@@ -1442,7 +1442,7 @@ function botAnsweringToInputVal(e) {
       );
       //
       compteurx = compteurScolarityAndYesInt;
-      experienceDetails = `En<b>2018</b> J'ai obtenu une licence en philosophie et un certificat en sociologie qui m'ont permis de structurer ma réflexion par l'exercice de la dissertation et de développer ma capacité d'introspection et d'ouverture au monde.<br> En <b>2020 Social builder</b> puis <b>Simplon</b> en <b>2021</b> m'ont donné l'opportunité de développer des compétences dédiées à la <b>programmation web</b>.<br> J'ai par ces expériences pu développer des compétences tels que entre autres le maquettage d'une application, la capacité à coder en Js natif et via le <b>framework React</b>, la capacité à développer la partie <b>front-end</b> et <b>back-end</b> d'une application, la capacité à faire de la veille et à documenter mon code ou encore à vulgariser et à expliquer mon code.`;
+      experienceDetails = `-En<b>2018</b> J'ai obtenu une licence en philosophie et un certificat en sociologie qui m'ont permis de structurer ma réflexion par l'exercice de la dissertation et de développer ma capacité d'introspection et d'ouverture au monde.<br>-En <b>2020 Social builder</b> puis <b>Simplon</b> en <b>2021</b> m'ont donné l'opportunité de développer des compétences dédiées à la <b>programmation web</b>.<br> J'ai par ces expériences pu développer des compétences tels que entre autres le maquettage d'une application, la capacité à développer le front end d'une application via le <b>framework React</b>, la capacité à développer la partie <b>back-end</b> d'une application grâce à Node.js, la capacité à faire de la veille et à documenter mon code.`;
     }
     //2_
     let yesAndCatAnswer = document.querySelector(
