@@ -1106,7 +1106,7 @@ function botAnsweringToInputVal(e) {
       );
 
       compteurx = compteurxAndYesInt;
-      experienceDetails = `J'aime passer mon temps libre à apprendre de nouvelle chose que ce soit par la <b>lecture</b> ou par le <b>dessin</b> que je pratique depuis mon enfance`;
+      experienceDetails = `J'aime passer mon temps libre à apprendre de nouvelle chose par la <b>lecture</b>. J'aime aussi <b>dessiner</b> et faire de la sculpture`;
 
       //LANGUAGES
     } else if (
@@ -1263,7 +1263,7 @@ function botAnsweringToInputVal(e) {
 
       compteurx = compteurSkillsAndYesInt;
       experienceDetails =
-        "-Je sais développer un site de bout en bout (côté front-end comme côté back-end) avec le langage <b>Javascript<b/>,l'écosystème de <b>Node.js</b> et la librairie React.<br/>-Je sais concevoir et manipuler une base de donnée via les outils <b>MySQL<b/> et les <b>ORM Sequelize et Mongoose.<b/><br/> -Je sais gérer mes projets via le gestionnaire de version <b>GIT</b> et via <b>GITHUB</b>";
+        "-Je sais développer un site de bout en bout (côté front-end comme côté back-end) avec le langage Javascript,l'écosystème de Node.js et la librairie React.<br/>-Je sais concevoir et manipuler une base de donnée via les outils MySQL et les ORM Sequelize et Mongoose.<br/> -Je sais gérer mes projets via le gestionnaire de version GIT et via GITHUB";
 
       //PROFESSIONAL EXPERIENCES
     } else if (
