@@ -20,8 +20,8 @@ This is a chatbot made in **Vanilla javascript** that can answer my Cv questions
 
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="html logo"/>
 <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="javascript logo"/>
-<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="css logo"/>
 <img src="https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white" alt="jest logo">
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="css logo"/>
 
 </div>
 
@@ -48,12 +48,11 @@ This is a chatbot made in **Vanilla javascript** that can answer my Cv questions
 
 <img src="./assets/img/chatbotArchitectureDiagram.png" alt="chatbot architecture diagram"/>
 
-####    💬 Conversation flow
+#### 💬 Conversation flow
 
 It is necessary to begin with a **chatbot flow**. This step will help you find the structure that will determines how the conversation will take place, taking into account the questions the chatbot would ask and the various replies that a user could provide.
 
 <img src="./assets/img/conversation_flow.png" alt="dialogue flow image"/>
-
 
 ## Contributors
 
