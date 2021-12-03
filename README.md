@@ -43,6 +43,7 @@ This is a chatbot made in **Vanilla javascript** that can answer my Cv questions
 
             npm i jsdoc
             npm i -D jest
+            npm i -D @types/jest
 
 ### 🔨 Conception of the chatbot
 
