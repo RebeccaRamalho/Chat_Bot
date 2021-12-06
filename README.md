@@ -1,4 +1,4 @@
-# <img src="./assets/img/robotic(1).png" alt="html logo"/> Chatbot
+# <img src="./assets/img/robotics(1).png" alt="html logo"/> Chatbot
 
 ---
 
