@@ -8,9 +8,7 @@ let container2 = document.getElementById("container2");
 let answer = document.querySelector(".answer");
 
 
-//Au clique de rebeccaBot...
 rebeccaBoot.addEventListener("click", () => {
-  //...faire appraitre le chatBot
   container2.innerHTML = `
 <div id="chatBot">
 

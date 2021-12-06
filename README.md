@@ -1,4 +1,4 @@
-# 🚀 Chatbot
+# <img src="./assets/img/robotic(1).png" alt="html logo"/> Chatbot
 
 ---
 
@@ -42,7 +42,6 @@ This is a chatbot made in **Vanilla javascript** that can answer my Cv questions
 3.  Installation of modules
 
             npm i jsdoc
-            npm i -D jest
             npm i -D @types/jest
 
 ### 🔨 Conception of the chatbot

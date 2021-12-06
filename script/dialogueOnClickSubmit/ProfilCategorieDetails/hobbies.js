@@ -28,12 +28,10 @@ document.querySelector("body").addEventListener("click", (event) => {
   let genericHobbiesAndYes =
     document.querySelectorAll(".genericHobbiesAndYes").length - 1;
   let functionMakeDotsMoveCounter = 0;
-  //
   function scrollToTheBottom() {
     const chatBotContainer = document.querySelector("#chatBotContainer");
     chatBotContainer.scrollTop = chatBotContainer.scrollHeight;
   }
-  //
   function makeDotsMoves() {
     let compteurHobbiesAndYesInt = Number(
       document
@@ -42,7 +40,6 @@ document.querySelector("body").addEventListener("click", (event) => {
     );
 
     compteurHobbies = compteurHobbiesAndYesInt;
-    // constructor function
     function Chargement(chargingDotsThree, dots, dotsOne, dotsTwo, dotsThree) {
       (this.chargingDotsThree = chargingDotsThree),
         (this.dots = dots),
@@ -51,7 +48,6 @@ document.querySelector("body").addEventListener("click", (event) => {
         (this.dotsThree = dotsThree);
     }
 
-    // creating objects
     const firstGroupeOfDots = new Chargement(
       document.querySelector(`.yesPlusCategoryChargingDots${compteurHobbies}`),
       document.querySelector(`.yesPlusCategoryDots${compteurHobbies}`),
@@ -87,23 +83,22 @@ document.querySelector("body").addEventListener("click", (event) => {
       functionMakeDotsMoveCounter % 2 ? firstDotsValues() : secondDotsValues();
     }
 
-    //when the user click on the button yes make the 3 dots move x time and during 3 secondes
     chargingDotsThree.style.marginTop = "-214px";
     chargingDotsThree.style.display = "flex";
     chargingDotsThree.style.flexDirection = "row";
-    // chargingDotsThree.style.marginBottom = "10px";
+
     chargingDotsThree.style.marginLeft = "122px";
-    //
+
     dots.style.border = "4px solid #0e2356";
-    // dots.style.visibility = "hidden";
+
     dots.style.borderRadius = "30px";
     dots.style.marginLeft = "4px";
     dots.style.marginTop = "217px";
     dots.style.backgroundColor = "#0e2356";
-    //when the user clik on the button yes change the dots style from invisible to visible
+
     dotsOne.style.visibility = "visible";
     dotsOne.style.marginLeft = "236px";
-    //
+
     dotsTwo.style.visibility = "visible";
     dotsTwo.style.marginLeft = "236px";
     dotsTwo.style.border = "4px solid #0e2356";
@@ -111,7 +106,7 @@ document.querySelector("body").addEventListener("click", (event) => {
     dotsTwo.style.marginLeft = "4px";
     dotsTwo.style.marginTop = "217px";
     dotsTwo.style.backgroundColor = "#0e2356";
-    //
+
     dotsThree.style.visibility = "visible";
     dotsThree.style.marginLeft = "236px";
     dotsThree.style.border = "4px solid #0e2356";
@@ -120,9 +115,7 @@ document.querySelector("body").addEventListener("click", (event) => {
     dotsThree.style.marginTop = "217px";
     dotsThree.style.backgroundColor = "#0e2356";
 
-    //Then make the dots move back to top
     const intervalDotMOving = setInterval(function () {
-      //first dot
       for (let impairTimer = 200; impairTimer <= 300; impairTimer += 100) {
         const intervalEearMoving = setInterval(function () {
           dotsOne.style.marginTop = "214px";
@@ -157,26 +150,20 @@ document.querySelector("body").addEventListener("click", (event) => {
           clearInterval(intervalEearMoving);
         }, 600);
       }
-      //
     }, 1000);
-    //After X secondes stop the dot movement and make them invisible
     setTimeout(function () {
       dotsOne.style.visibility = "hidden";
       dotsTwo.style.visibility = "hidden";
       dotsThree.style.visibility = "hidden";
-      //
       clearInterval(intervalDotMOving);
     }, 2000);
   }
   function cleartext() {
     document.querySelector("#form").reset();
   }
-  //
   let finalInputVal;
   finalInputVal = inputVal.toLowerCase();
 
-  //CONDITION
-  //1)if user use several keyword "oui" + catgory key word like "Scolarité"
   if (
     event.target.matches("#submitMessage") &&
     //YES
@@ -267,20 +254,16 @@ document.querySelector("body").addEventListener("click", (event) => {
         .querySelectorAll(".genericHobbiesAndYes")
         [genericHobbiesAndYes].attributes[0].textContent.slice(13)
     );
-    //
     compteurHobbies = compteurHobbiesAndYesInt;
-    //
     let yesAndCatAnswer = document.querySelector(
       `#yesAndCatAnswer${compteurHobbies}`
     );
     let genericYes = document.querySelectorAll(".genericYes").length - 1;
     let inputVal = document.querySelector("#userAnswers").value;
-    //
     let firstYesButton = document.querySelectorAll(".yesEvent")[0];
     let firstNoButton = document.querySelectorAll(".noEvent")[0];
     let noEventButton;
     let yesEventButton;
-    //retreive of the counter value:
     compteur4 = Number(
       document
         .querySelectorAll(".genericYes")
@@ -288,7 +271,6 @@ document.querySelector("body").addEventListener("click", (event) => {
     );
 
     let yesAns = document.querySelector(`#yesAns${compteur4}`);
-    //If we click on the first yes button we push it to the left and make the no button invisible
     if (!inputVal) {
       if (document.querySelector(".yes")) {
         yesAns.classList.add("invisible");
@@ -326,9 +308,7 @@ document.querySelector("body").addEventListener("click", (event) => {
           noEventButton.classList.add("invisible");
         }
       }
-    }
-    //InputVal
-    else {
+    } else {
       if (document.querySelector(".yes")) {
         firstYesButton.classList.add("invisible");
         firstNoButton.classList.add("invisible");
@@ -386,7 +366,6 @@ document.querySelector("body").addEventListener("click", (event) => {
       }
     }
     makeDotsMoves();
-    //5_i make the element which is initially invisible => visible and if the user choose scolarity show him what is inside scolarityDetails array
     setTimeout(function () {
       let experienceDetailsSub = document.querySelector(
         `#experienceDetailsSub${compteurHobbies}`
@@ -407,7 +386,6 @@ document.querySelector("body").addEventListener("click", (event) => {
       scrollToTheBottom();
     }, 2000);
 
-    //6_when the scolarity experience his shown, the user can choose an other experience again
     setTimeout(function () {
       makeDotsMoves();
     }, 4000);
@@ -416,10 +394,8 @@ document.querySelector("body").addEventListener("click", (event) => {
       scrollToTheBottom();
     }, 6000);
 
-    //7_
     function chooseAnOtherExperience() {
       setTimeout(function () {
-        //request to the DOM of the user response html element
         let otherExperiencesRequest = document.querySelector(
           `#experiencesSub${compteurHobbies}`
         );
@@ -429,7 +405,6 @@ document.querySelector("body").addEventListener("click", (event) => {
         let noQuestion = document.querySelector(`#noButton${compteurHobbies}`);
 
         setTimeout(function () {
-          //after 7500ms move the answer to the top so they can be space for the following questions
           yesQuestion.classList.remove("invisible");
           noQuestion.classList.remove("invisible");
         }, 200);
@@ -447,7 +422,6 @@ document.querySelector("body").addEventListener("click", (event) => {
       }, 5000);
     }
     chooseAnOtherExperience();
-    // return;
   }
   //2)if user use on of the category keyword (here relative to Scolarity)
   else if (
@@ -519,12 +493,10 @@ document.querySelector("body").addEventListener("click", (event) => {
             event.target.parentElement.attributes[1].textContent.slice(7)
           ));
     }
-    // INSERTION OF USER INPUT
     let categorieAnswer = document.querySelector(
       `#categoriesAnswer${compteur6}`
     );
     let hobbies = document.querySelector(`#hobbies${compteur6}`);
-    //
     {
       !inputVal
         ? ((hobbies.style.marginLeft = "255px"),
@@ -532,7 +504,6 @@ document.querySelector("body").addEventListener("click", (event) => {
         : ((categorieAnswer.innerHTML = `<p class="font">${inputVal}</p>`),
           hobbies.classList.add("invisible"));
     }
-    //
     categorieAnswer.innerHTML = `<p class="font">${inputVal}</p>`;
     categorieAnswer.style.marginTop = "6px"; //-84px
     categorieAnswer.style.border = `2px solid #dbdeea`;
@@ -543,11 +514,9 @@ document.querySelector("body").addEventListener("click", (event) => {
     categorieAnswer.style.paddingRight = "13px";
     categorieAnswer.style.marginLeft = "126px";
     categorieAnswer.style.marginBottom = "18px";
-    ///
     setTimeout(function () {
       cleartext();
     }, 95);
-    //1_dom request
     let scolarity = document.querySelector(`#scolarity${compteur6}`);
     let professionalExperience = document.querySelector(
       `#professionalExperience${compteur6}`
@@ -556,16 +525,12 @@ document.querySelector("body").addEventListener("click", (event) => {
     let skills = document.querySelector(`#skills${compteur6}`);
     let languages = document.querySelector(`#languages${compteur6}`);
 
-    //2_make the other experiences categories invisibles
     professionalExperience.classList.add("invisible");
     skills.classList.add("invisible");
     scolarity.classList.add("invisible");
     languages.classList.add("invisible");
 
-    //3_dots chargements
     function makeDotsMove() {
-      //test
-      // constructor function
       function Chargement(
         chargingDotsThree,
         dots,
@@ -580,7 +545,6 @@ document.querySelector("body").addEventListener("click", (event) => {
           (this.dotsThree = dotsThree);
       }
 
-      // creating objects
       const firstGroupeOfDots = new Chargement(
         document.querySelector(`.categoriesChargingDots${compteur6}`),
         document.querySelector(`.categoriesDots${compteur6}`),
@@ -618,8 +582,6 @@ document.querySelector("body").addEventListener("click", (event) => {
           : secondDotsValues();
       }
 
-      //when the user click on the button yes make the 3 dots move x time and during 3 secondes
-      // chargingDotsThree.style.marginTop = "-214px";
       {
         functionMakeDotsMoveCounter % 2
           ? (chargingDotsThree.style.marginTop = "-142px")
@@ -627,20 +589,16 @@ document.querySelector("body").addEventListener("click", (event) => {
       }
       chargingDotsThree.style.display = "flex";
       chargingDotsThree.style.flexDirection = "row";
-      // chargingDotsThree.style.marginBottom = "10px";
       chargingDotsThree.style.marginLeft = "122px";
-      //
       dots.style.border = "4px solid #0e2356";
-      // dots.style.visibility = "hidden";
       dots.style.borderRadius = "30px";
       dots.style.marginLeft = "4px";
       dots.style.marginTop = "217px";
       dots.style.backgroundColor = "#0e2356";
 
-      //when the user clik on the button yes change the dots style from invisible to visible
       dotsOne.style.visibility = "visible";
       dotsOne.style.marginLeft = "236px";
-      //
+
       dotsTwo.style.visibility = "visible";
       dotsTwo.style.marginLeft = "236px";
       dotsTwo.style.border = "4px solid #0e2356";
@@ -648,7 +606,6 @@ document.querySelector("body").addEventListener("click", (event) => {
       dotsTwo.style.marginLeft = "4px";
       dotsTwo.style.marginTop = "217px";
       dotsTwo.style.backgroundColor = "#0e2356";
-      //
       dotsThree.style.visibility = "visible";
       dotsThree.style.marginLeft = "236px";
       dotsThree.style.border = "4px solid #0e2356";
@@ -657,9 +614,7 @@ document.querySelector("body").addEventListener("click", (event) => {
       dotsThree.style.marginTop = "217px";
       dotsThree.style.backgroundColor = "#0e2356";
 
-      //Then make the dots move back to top
       const intervalDotMOving = setInterval(function () {
-        //first dot
         for (let impairTimer = 200; impairTimer <= 300; impairTimer += 100) {
           const intervalEearMoving = setInterval(function () {
             dotsOne.style.marginTop = "214px";
@@ -694,14 +649,11 @@ document.querySelector("body").addEventListener("click", (event) => {
             clearInterval(intervalEearMoving);
           }, 600);
         }
-        //
       }, 1000);
-      //After X secondes stop the dot movement and make them invisible
       setTimeout(function () {
         dotsOne.style.visibility = "hidden";
         dotsTwo.style.visibility = "hidden";
         dotsThree.style.visibility = "hidden";
-        //
         clearInterval(intervalDotMOving);
       }, 2000);
     }
@@ -710,12 +662,10 @@ document.querySelector("body").addEventListener("click", (event) => {
     let experienceDetails = document.querySelector(
       `#experienceDetails${compteur6}`
     );
-    //5_i make the element which is initially invisible => visible and if the user choose scolarity show him what is inside scolarityDetails array
     setTimeout(function () {
       experienceDetails.classList.remove("invisible");
       experienceDetails.style.marginTop = "-84px";
       experienceDetails.style.border = `2px solid#dbdeea`;
-      // (experienceDetails.style.backgroundColor = "#dbdeea"),
       experienceDetails.style.width = "229px";
       experienceDetails.style.borderRadius = "6px";
       experienceDetails.style.paddingLeft = "22px";
@@ -728,7 +678,6 @@ document.querySelector("body").addEventListener("click", (event) => {
       scrollToTheBottom();
     }, 2000);
 
-    //6_when the scolarity experience his shown, the user can choose an other experience again
     setTimeout(function () {
       makeDotsMove();
     }, 4000);
@@ -737,10 +686,8 @@ document.querySelector("body").addEventListener("click", (event) => {
       scrollToTheBottom();
     }, 6000);
 
-    //7_
     function chooseAnOtherExperience() {
       setTimeout(function () {
-        //request to the DOM of the user response html element
         let otherExperiencesRequest = document.querySelector(
           `#experiences${compteur6}`
         );
@@ -748,7 +695,6 @@ document.querySelector("body").addEventListener("click", (event) => {
         let noQuestion = document.querySelector(`#noButton${compteur6}`);
 
         setTimeout(function () {
-          //after 7500ms move the answer to the top so they can be space for the following questions
           yesQuestion.classList.remove("invisible");
           noQuestion.classList.remove("invisible");
         }, 200);
@@ -766,7 +712,5 @@ document.querySelector("body").addEventListener("click", (event) => {
       }, 5000);
     }
     chooseAnOtherExperience();
-
-    //
   }
 });

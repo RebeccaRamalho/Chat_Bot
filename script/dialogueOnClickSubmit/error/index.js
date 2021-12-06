@@ -18,13 +18,10 @@ let otherExperiencesCategories1 = [
   "<p>Langues</p>",
 ];
 function makeDotsMove(errorCounterOne) {
-  //Parent Div
   let chargingDotsThree = document.querySelector(
     `.errorCategoriesChargingDots${errorCounterOne}`
   );
-  //Same class for all dot div
   let dots = document.querySelector(`.errorCategoriesDots${errorCounterOne}`);
-  //Different class for every dot div
   let dotsOne = document.querySelector(
     `.errorCategoriesDotsOne${errorCounterOne}`
   );
@@ -119,14 +116,11 @@ function makeDotsMove(errorCounterOne) {
         clearInterval(intervalEearMoving);
       }, 600);
     }
-    //
   }, 1000);
-  //After X secondes stop the dot movement and make them invisible
   setTimeout(function () {
     dotsOne.style.visibility = "hidden";
     dotsTwo.style.visibility = "hidden";
     dotsThree.style.visibility = "hidden";
-    //
     clearInterval(intervalDotMOving);
   }, 3000);
 }
@@ -135,7 +129,6 @@ function nowChooseAnExperience(errorCounterOne) {
     `#experiencesQuestion${errorCounterOne}`
   );
   let logoAndBotTextArea = document.querySelector("#logoAndBotTextArea");
-  //
   let scolarity = document.querySelector(`#scolarity${errorCounterOne}`);
   let professionalExperience = document.querySelector(
     `#professionalExperience${errorCounterOne}`
@@ -175,17 +168,13 @@ document.querySelector("body").addEventListener("click", (event) => {
   let noEvent;
   let yesEvent;
   let otherExperienceChoice = document.querySelector("#otherExperienceChoices");
-  //I_First type error: the user doesn't answer yes at the first question
   function cleartext() {
     document.querySelector("#form").reset();
   }
-  //
   function scrollToTheBottom() {
     const chatBotContainer = document.querySelector("#chatBotContainer");
-    console.log("chatbotconainer", chatBotContainer);
     chatBotContainer.scrollTop = chatBotContainer.scrollHeight;
   }
-  //I_input transformation into lowerCase if necessary:
   let finalInputVal;
   finalInputVal = inputVal.toLowerCase();
   if (
@@ -557,9 +546,7 @@ document.querySelector("body").addEventListener("click", (event) => {
     yesEvent.classList.remove("yes");
 
     if (error) {
-      //
       errorCounterOne += 2;
-      //First error answer (main.js dom)
       error.insertAdjacentHTML(
         "beforeend",
         `<p class="errorInputVal font inputStyle">${inputVal}</p>

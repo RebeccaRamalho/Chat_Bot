@@ -4,15 +4,15 @@
  * the function make the dots dom element move dynamically depending of a timer
  */
 function makeDotsMove(errorCounterOneEnterSubmit) {
-  //Parent Div
+
   let chargingDotsThree = document.querySelector(
     `.errorCategoriesChargingDots${errorCounterOneEnterSubmit}`
   );
-  //Same class for all dot div
+
   let dots = document.querySelector(
     `.errorCategoriesDots${errorCounterOneEnterSubmit}`
   );
-  //Different class for every dot div
+
   let dotsOne = document.querySelector(
     `.errorCategoriesDotsOne${errorCounterOneEnterSubmit}`
   );
@@ -22,24 +22,23 @@ function makeDotsMove(errorCounterOneEnterSubmit) {
   let dotsThree = document.querySelector(
     `.errorCategoriesDotsThree${errorCounterOneEnterSubmit}`
   );
-  //when the user click on the button yes make the 3 dots move x time and during 3 secondes
+
   chargingDotsThree.style.marginTop = "-214px";
   chargingDotsThree.style.display = "flex";
   chargingDotsThree.style.flexDirection = "row";
-  // chargingDotsThree.style.marginBottom = "10px";
+
   chargingDotsThree.style.marginLeft = "122px";
-  //
+
   dots.style.border = "4px solid #0e2356";
-  // dots.style.visibility = "hidden";
+
   dots.style.borderRadius = "30px";
   dots.style.marginLeft = "4px";
   dots.style.marginTop = "217px";
   dots.style.backgroundColor = "#0e2356";
 
-  //when the user clik on the button yes change the dots style from invisible to visible
   dotsOne.style.visibility = "visible";
   dotsOne.style.marginLeft = "236px";
-  //
+
   dotsTwo.style.visibility = "visible";
   dotsTwo.style.marginLeft = "236px";
   dotsTwo.style.border = "4px solid #0e2356";
@@ -47,7 +46,7 @@ function makeDotsMove(errorCounterOneEnterSubmit) {
   dotsTwo.style.marginLeft = "4px";
   dotsTwo.style.marginTop = "217px";
   dotsTwo.style.backgroundColor = "#0e2356";
-  //
+
   dotsThree.style.visibility = "visible";
   dotsThree.style.marginLeft = "236px";
   dotsThree.style.border = "4px solid #0e2356";
@@ -56,7 +55,6 @@ function makeDotsMove(errorCounterOneEnterSubmit) {
   dotsThree.style.marginTop = "217px";
   dotsThree.style.backgroundColor = "#0e2356";
 
-  //Then make the dots move back to top
   const intervalDotMOving = setInterval(function () {
     //first dot
     for (let impairTimer = 200; impairTimer <= 300; impairTimer += 100) {
@@ -109,26 +107,19 @@ function makeDotsMove(errorCounterOneEnterSubmit) {
         clearInterval(intervalEearMoving);
       }, 600);
     }
-    //
   }, 1000);
-  //After X secondes stop the dot movement and make them invisible
   setTimeout(function () {
     dotsOne.style.visibility = "hidden";
     dotsTwo.style.visibility = "hidden";
     dotsThree.style.visibility = "hidden";
-    //
     clearInterval(intervalDotMOving);
   }, 3000);
 }
 function nowChooseAnExperience(errorCounterOneEnterSubmit) {
-  //
-  // setTimeout(function () {
-  //request to the DOM of the user response html element
   let experiences = document.querySelector(
     `#experiencesQuestion${errorCounterOneEnterSubmit}`
   );
   let logoAndBotTextArea = document.querySelector("#logoAndBotTextArea");
-  //
   let scolarity = document.querySelector(
     `#scolarity${errorCounterOneEnterSubmit}`
   );
@@ -141,20 +132,14 @@ function nowChooseAnExperience(errorCounterOneEnterSubmit) {
     `#languages${errorCounterOneEnterSubmit}`
   );
 
-  //make the hmtl element i retreived visible
   experiences.style.visibility = "visible";
   experiences.style.marginTop = "7px";
-  //
-  // setTimeout(function () {
-  //after 500ms move the answer to the top so they can be space for the following questions
   logoAndBotTextArea.style.marginTop = "40px";
-  //
   scolarity.classList.remove("invisible");
   professionalExperience.classList.remove("invisible");
   hobbies.classList.remove("invisible");
   skills.classList.remove("invisible");
   languages.classList.remove("invisible");
-  //push the answer in the htm element after 4200s
   scolarity.innerHTML = otherExperiencesCategories1[0];
   professionalExperience.innerHTML = otherExperiencesCategories1[3];
   hobbies.innerHTML = otherExperiencesCategories1[1];
@@ -181,7 +166,7 @@ function logKey(e) {
   let yesEvent;
 
   let finalInputVal;
-  finalInputVal = document.querySelector("#userAnswers").value.toLowerCase(); ///////////
+  finalInputVal = document.querySelector("#userAnswers").value.toLowerCase();
   if (
     //TOUT INPUT AYANT UN CONTENU
     //   inputVal !== emptyString &&
@@ -1013,9 +998,7 @@ function logKey(e) {
           );
         }, 1000);
 
-        //3_on représente les catégories
         setTimeout(function () {
-          // errorCounterOneEnterSubmit +=2;
           otherExperienceChoice.insertAdjacentHTML(
             "beforeend",
             `
@@ -1150,4 +1133,3 @@ function logKey(e) {
   }
 }
 
-//  <button type="button" class="genericNo noButton${errorCounterOneEnterSubmit}">Non</button>

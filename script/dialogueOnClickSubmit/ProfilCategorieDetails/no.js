@@ -13,7 +13,6 @@ function animateAnswer(inputVal) {
   if (document.querySelector(".no")) {
     noButton = document.querySelector(".no");
     if (inputVal) {
-      console.log("condition une");
       noInputAnswer.innerHTML = `<p class="font">${inputVal}</p>`;
       noInputAnswer.style.marginTop = "6px";
       noInputAnswer.style.border = `2px solid #dbdeea`;
@@ -42,7 +41,6 @@ function animateAnswer(inputVal) {
     noButton = document.querySelector(`#noButton${noCounter}`);
     yesButton = document.querySelector(`#yesButton${noCounter}`);
     if (inputVal) {
-      console.log("condition 2");
       noInputAnswer.innerHTML = `<p class="font">${inputVal}</p>`;
       noInputAnswer.style.marginTop = "6px";
       noInputAnswer.style.border = `2px solid #dbdeea`;

@@ -201,7 +201,6 @@ document.querySelector("body").addEventListener("click", (event) => {
   //
   function cleartext() {
     document.querySelector("#form").reset();
-    console.log("yoshi");
   }
   //Transforming the UpperCase into LowerCase
   let finalInputVal;

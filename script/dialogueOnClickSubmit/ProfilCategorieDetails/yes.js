@@ -256,7 +256,6 @@ function makeDotsMove2() {
     dotsOne.style.visibility = "hidden";
     dotsTwo.style.visibility = "hidden";
     dotsThree.style.visibility = "hidden";
-    //
     clearInterval(intervalDotMOving);
   }, 3000);
 }
@@ -266,7 +265,6 @@ function nowChooseAnExperience2() {
     `#experiencesQuestion${sendCounterSubmit}`
   );
   let logoAndBotTextArea = document.querySelector("#logoAndBotTextArea");
-  //
   let scolarity = document.querySelector(`#scolarity${sendCounterSubmit}`);
   let professionalExperience = document.querySelector(
     `#professionalExperience${sendCounterSubmit}`
@@ -391,16 +389,13 @@ document.querySelector("body").addEventListener("click", async (event) => {
     ".severalKeyWordsSecondPlaceholder"
   );
 
-  //_
   function cleartext() {
     document.querySelector("#form").reset();
   }
-  //_
   function scrollToTheBottom() {
     const chatBotContainer = document.querySelector("#chatBotContainer");
     chatBotContainer.scrollTop = chatBotContainer.scrollHeight;
   }
-  //_input transformation into lowerCase if necessary
   let finalInputVal;
   finalInputVal = inputVal.toLowerCase();
   //YES + CATEGORIES ON CLICK

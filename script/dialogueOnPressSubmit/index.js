@@ -224,15 +224,10 @@ function animateCategories() {
 
   let yesAns = document.querySelector(`#yesAns${enterSubmitCounter}`);
 
-  //If we click on the first yes button we push it to the left and make the no button invisible
   if (yesEventButton && !inputVal) {
-    //we move the yes button to the left
     yesEventButton.style.marginLeft = "350px";
-    //we make the no button invisible
     noEventButton.classList.add("invisible");
-    //we make the div of the keyboard answer invisible
     yesAns.classList.add("invisible");
-    //we remove the class yes so that the following yesEvent we'll be targered into the other yes button
     if (document.querySelector(".yes") && document.querySelector(".no")) {
       yesEventButton = document.querySelector(".yes");
 
@@ -240,25 +235,12 @@ function animateCategories() {
       firstYesButton.classList.remove("yes");
     }
   } else if (firstYesButton && inputVal) {
-    //s'il y'a au moins deux yesButton
     if (
       document.querySelectorAll(".genericYes")[
         document.querySelectorAll(".genericYes").length - 2
       ]
     ) {
-      // if (
-      //   Number(
-      //     document
-      //       .querySelectorAll(".genericYes")
-      //       [
-      //         document.querySelectorAll(".genericYes").length - 2
-      //       ].attributes[1].textContent.slice(9)[0]
-      //   ) === 3 ||
-      //   5 ||
-      //   7 ||
-      //   9 ||
-      //   1
-      // ) {
+
 
       yesEventButton = document.querySelector(
         `#yesButton${document
@@ -275,11 +257,9 @@ function animateCategories() {
           ].attributes[1].textContent.slice(8)}`
       );
 
-      console.log("noB", noEventButton);
 
       firstYesButton.classList.remove("yes");
       firstNoButton.classList.remove("no");
-      // }
     } else {
       if (document.querySelector(".yes")) {
         yesEventButton = document.querySelector(".yes");
@@ -288,14 +268,7 @@ function animateCategories() {
         firstYesButton.classList.remove("yes");
         firstNoButton.classList.remove("no");
       }
-      // else {
-      //   yesEventButton = document.querySelector(
-      //     `#yesButton${enterSubmitCounter - 2000}`
-      //   );
-      //   noEventButton = document.querySelector(
-      //     `#noButton${enterSubmitCounter - 2000}`
-      //   );
-      // }
+ 
     }
     yesEventButton.classList.add("invisible");
     noEventButton.classList.add("invisible");
@@ -310,7 +283,7 @@ function animateCategories() {
     yesAns.style.paddingRight = "13px";
     yesAns.style.marginLeft = "126px";
     yesAns.style.marginBottom = "18px";
-    //
+
     if (document.querySelector(".yes")) {
       firstNoButton.classList.remove("no");
       firstYesButton.classList.remove("yes");
@@ -318,35 +291,31 @@ function animateCategories() {
   }
 
   function makeDotsMove() {
-    //Parent div
+
     let chargingDotsThree = document.querySelector(
       `.chargingDots${enterSubmitCounter}`
     );
-    //Same class for all dot div
+
     let dots = document.querySelector(`.dots${enterSubmitCounter}`);
-    //Different class for every dot div
+
     let dotsOne = document.querySelector(`.dotsOne${enterSubmitCounter}`);
     let dotsTwo = document.querySelector(`.dotsTwo${enterSubmitCounter}`);
     let dotsThree = document.querySelector(`.dotsThree${enterSubmitCounter}`);
 
-    //when the user click on the button yes make the 3 dots move x time and during 3 secondes
     chargingDotsThree.style.marginTop = "-214px";
     chargingDotsThree.style.display = "flex";
     chargingDotsThree.style.flexDirection = "row";
-    // chargingDotsThree.style.marginBottom = "10px";
+
     chargingDotsThree.style.marginLeft = "122px";
-    //
-    dots.style.border = "4px solid #0e2356";
-    // dots.style.visibility = "hidden";
+
     dots.style.borderRadius = "30px";
     dots.style.marginLeft = "4px";
     dots.style.marginTop = "217px";
     dots.style.backgroundColor = "#0e2356";
 
-    //when the user clik on the button yes change the dots style from invisible to visible
     dotsOne.style.visibility = "visible";
     dotsOne.style.marginLeft = "236px";
-    //
+
     dotsTwo.style.visibility = "visible";
     dotsTwo.style.marginLeft = "236px";
     dotsTwo.style.border = "4px solid #0e2356";
@@ -354,7 +323,7 @@ function animateCategories() {
     dotsTwo.style.marginLeft = "4px";
     dotsTwo.style.marginTop = "217px";
     dotsTwo.style.backgroundColor = "#0e2356";
-    //
+
     dotsThree.style.visibility = "visible";
     dotsThree.style.marginLeft = "236px";
     dotsThree.style.border = "4px solid #0e2356";
@@ -363,7 +332,6 @@ function animateCategories() {
     dotsThree.style.marginTop = "217px";
     dotsThree.style.backgroundColor = "#0e2356";
 
-    //Then make the dots move back to top
     const intervalDotMOving = setInterval(function () {
       //first dot
       for (let timer = 200; timer <= 300; timer += 100) {
@@ -1265,7 +1233,6 @@ function botAnsweringToInputVal(e) {
       experienceDetails =
         "-Je sais développer un site de bout en bout (côté front-end comme côté back-end) avec le langage Javascript,l'écosystème de Node.js et la librairie React.<br/>-Je sais concevoir et manipuler une base de donnée via les outils MySQL et les ORM Sequelize et Mongoose.<br/> -Je sais gérer mes projets via le gestionnaire de version GIT et via GITHUB";
 
-      //PROFESSIONAL EXPERIENCES
     } else if (
       finalInputVal.includes("expériences") ||
       finalInputVal.includes("expérience") ||
@@ -1365,9 +1332,7 @@ function botAnsweringToInputVal(e) {
               .length - 1
           ].attributes[0].textContent.slice(28)
       );
-      //
       compteurx = compteurProfessionalExperiencesAndYesInt;
-      //
       experienceDetails =
         "<b>-De de Janvier à Mars 2020</b> j'ai été fille Au pair auprès d'une famille à Londres. J'ai effectué comme principales tâches: les soins quotidiens à un enfant atteint d'épilepsie sévère. <br><b>-En Mars 2020</b>-Femme de chambre à Hôtel Hyatt à Londres -Tâches principales: nettoyage des chambres de l'hôtel. <br><b>-De Mai à Juin 2021</b> Développeuse web et web mobile, à Association Hand-of hope,<br/>-Tâches principales: réalisation au cours d'un stage d'une interface dynamique.";
     }
@@ -1440,22 +1405,18 @@ function botAnsweringToInputVal(e) {
             document.querySelectorAll(".genericscolariyAndYes").length - 1
           ].attributes[0].textContent.slice(14)
       );
-      //
       compteurx = compteurScolarityAndYesInt;
       experienceDetails = `-En<b>2018</b> J'ai obtenu une licence en philosophie et un certificat en sociologie qui m'ont permis de structurer ma réflexion par l'exercice de la dissertation et de développer ma capacité d'introspection et d'ouverture au monde.<br>-En <b>2020 Social builder</b> puis <b>Simplon</b> en <b>2021</b> m'ont donné l'opportunité de développer des compétences dédiées à la <b>programmation web</b>.<br> J'ai par ces expériences pu développer des compétences tels que entre autres le maquettage d'une application, la capacité à développer le front end d'une application via le <b>framework React</b>, la capacité à développer la partie <b>back-end</b> d'une application grâce à Node.js, la capacité à faire de la veille et à documenter mon code.`;
     }
-    //2_
     let yesAndCatAnswer = document.querySelector(
       `#yesAndCatAnswer${compteurx}`
     );
     let genericYes = document.querySelectorAll(".genericYes").length - 1;
     let inputVal = document.querySelector("#userAnswers").value;
-    //
     let firstYesButton = document.querySelectorAll(".yesEvent")[0];
     let firstNoButton = document.querySelectorAll(".noEvent")[0];
     let noEventButton;
     let yesEventButton;
-    //retreive of the counter value:
     compteur4 = Number(
       document
         .querySelectorAll(".genericYes")
@@ -1477,22 +1438,16 @@ function botAnsweringToInputVal(e) {
     }
 
     let yesAns = document.querySelector(`#yesAns${compteur4}`);
-    //If we click on the first yes button we push it to the left and make the no button invisible
     if (yesEventButton && !inputVal) {
-      //we move the yes button to the left
       yesEventButton.style.marginLeft = "350px";
-      //we make the no button invisible
       noEventButton.classList.add("invisible");
-      //we make the div of the keyboard answer invisible
       yesAns.classList.add("invisible");
-      //we remove the class yes so that the following yesEvent we'll be targered into the other yes button
       if (document.querySelector(".yes")) {
         firstNoButton.classList.remove("no");
         firstYesButton.classList.remove("yes");
       }
       //
     } else if (firstYesButton && inputVal) {
-      //if there is an input we make the yes et no button invisble
       yesEventButton.classList.add("invisible");
       noEventButton.classList.add("invisible");
 
@@ -1512,9 +1467,7 @@ function botAnsweringToInputVal(e) {
         firstYesButton.classList.remove("yes");
       }
     }
-    //4_
     makeDotsMoves(compteurx);
-    //5_
     setTimeout(function () {
       let experienceDetailsSub = document.querySelector(
         `#experienceDetailsSub${compteurx}`
@@ -1533,7 +1486,6 @@ function botAnsweringToInputVal(e) {
     setTimeout(function () {
       scrollToTheBottom();
     }, 2000);
-    //6_
     setTimeout(function () {
       makeDotsMoves(compteurx);
     }, 4000);
@@ -1544,13 +1496,9 @@ function botAnsweringToInputVal(e) {
 
     AskIfWantToSeeAnOtherExperience(compteurx);
 
-    //SCOLARITÉ
 
-    //8_
     setTimeout(function () {
-      // scrollToTheBottom();
       cleartext();
-      // animateCategories();
     }, 100);
     setTimeout(function () {
       scrollToTheBottom();
@@ -1665,9 +1613,7 @@ function botAnsweringToInputVal(e) {
       scrollToTheBottom();
     }, 5000);
 
-    //removing of the error element and push the error on another dom element
     setTimeout(function () {
-      //push another class where there is the error class then delete the error class
       {
         document.querySelector(".error")
           ? (errorTextContent = error.textContent)
@@ -1683,7 +1629,6 @@ function botAnsweringToInputVal(e) {
           ? firstErrorPLaceholder.classList.remove("error")
           : null;
       }
-      //
     }, 200);
     //SCOLARITY (without yes)
   } else if (
@@ -1955,7 +1900,7 @@ function botAnsweringToInputVal(e) {
           professionalExperience.classList.add("invisible"));
     }
 
-    categorieAnswer.style.marginTop = "6px"; //-84px
+    categorieAnswer.style.marginTop = "6px";
     categorieAnswer.style.border = `2px solid #dbdeea`;
     categorieAnswer.style.backgroundColor = "#dbdeea";
     categorieAnswer.style.width = "229px";
@@ -2151,7 +2096,7 @@ function botAnsweringToInputVal(e) {
         : ((categorieAnswer.innerHTML = `<p class="font">${inputVal}</p>`),
           skills.classList.add("invisible"));
     }
-    categorieAnswer.style.marginTop = "6px"; //-84px
+    categorieAnswer.style.marginTop = "6px"; 
     categorieAnswer.style.border = `2px solid #dbdeea`;
     categorieAnswer.style.backgroundColor = "#dbdeea";
     categorieAnswer.style.width = "229px";
@@ -2245,7 +2190,7 @@ function botAnsweringToInputVal(e) {
           languages.classList.add("invisible"));
     }
 
-    categorieAnswer.style.marginTop = "6px"; //-84px
+    categorieAnswer.style.marginTop = "6px"; 
     categorieAnswer.style.border = `2px solid #dbdeea`;
     categorieAnswer.style.backgroundColor = "#dbdeea";
     categorieAnswer.style.width = "229px";
@@ -2254,11 +2199,10 @@ function botAnsweringToInputVal(e) {
     categorieAnswer.style.paddingRight = "13px";
     categorieAnswer.style.marginLeft = "126px";
     categorieAnswer.style.marginBottom = "18px";
-    ///
+
     setTimeout(function () {
       cleartext();
     }, 95);
-    //1_dom request
     let scolarity = document.querySelector(`#scolarity${compteurLanguages}`);
     let professionalExperience = document.querySelector(
       `#professionalExperience${compteurLanguages}`
@@ -2266,7 +2210,6 @@ function botAnsweringToInputVal(e) {
     let hobbies = document.querySelector(`#hobbies${compteurLanguages}`);
     let skills = document.querySelector(`#skills${compteurLanguages}`);
 
-    //2_make the other experiences categories invisibles
     professionalExperience.classList.add("invisible");
     skills.classList.add("invisible");
     scolarity.classList.add("invisible");
@@ -2278,7 +2221,6 @@ function botAnsweringToInputVal(e) {
     let experienceDetails = document.querySelector(
       `#experienceDetails${compteurLanguages}`
     );
-    //5_i make the element which is initially invisible => visible and if the user choose scolarity show him what is inside scolarityDetails array
     setTimeout(function () {
       experienceDetails.classList.remove("invisible");
       experienceDetails.style.marginTop = "-16px";
@@ -2295,7 +2237,6 @@ function botAnsweringToInputVal(e) {
       scrollToTheBottom();
     }, 2000);
 
-    //6_when the scolarity experience his shown, the user can choose an other experience again
     setTimeout(function () {
       makeDotsMoves(compteurx, compteurLanguages);
     }, 4000);
@@ -2379,12 +2320,11 @@ function botAnsweringToInputVal(e) {
             e.target.parentElement.attributes[1].textContent.slice(7)
           ));
     }
-    // INSERTION OF USER INPUT
     let categorieAnswer = document.querySelector(
       `#categoriesAnswer${compteurHobbies}`
     );
     let hobbies = document.querySelector(`#hobbies${compteurHobbies}`);
-    //
+
     {
       !inputVal
         ? ((hobbies.style.marginLeft = "254px"),
@@ -2392,7 +2332,7 @@ function botAnsweringToInputVal(e) {
         : ((categorieAnswer.innerHTML = `<p class="font">${inputVal}</p>`),
           hobbies.classList.add("invisible"));
     }
-    //
+
     categorieAnswer.innerHTML = `<p class="font">${inputVal}</p>`;
     categorieAnswer.style.marginTop = "6px"; //-84px
     categorieAnswer.style.border = `2px solid #dbdeea`;
@@ -2403,11 +2343,10 @@ function botAnsweringToInputVal(e) {
     categorieAnswer.style.paddingRight = "13px";
     categorieAnswer.style.marginLeft = "126px";
     categorieAnswer.style.marginBottom = "18px";
-    ///
+
     setTimeout(function () {
       cleartext();
     }, 95);
-    //1_dom request
     let scolarity = document.querySelector(`#scolarity${compteurHobbies}`);
     let professionalExperience = document.querySelector(
       `#professionalExperience${compteurHobbies}`
@@ -2416,7 +2355,6 @@ function botAnsweringToInputVal(e) {
     let skills = document.querySelector(`#skills${compteurHobbies}`);
     let languages = document.querySelector(`#languages${compteurHobbies}`);
 
-    //2_make the other experiences categories invisibles
     professionalExperience.classList.add("invisible");
     skills.classList.add("invisible");
     scolarity.classList.add("invisible");
@@ -2497,8 +2435,6 @@ function botAnsweringToInputVal(e) {
       noButton.classList.add("invisible");
     }
 
-    // document.querySelector(".yes").classList.add("invisible");
-    // document.querySelector(".no").classList.add("invisible");
 
     noInputAnswer.innerHTML = `<p class="font">${inputVal}</p>`;
     noInputAnswer.style.marginTop = "6px";
