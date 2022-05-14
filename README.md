@@ -57,7 +57,7 @@ It is necessary to begin with a **chatbot flow**. This step will help you find t
 
 ## Contributors
 
-- <spam>Kanu Rebecca</spam> [<img alt="githb link" width="30px" src="./assets/img/Octocat.jpg"/>][Image of Yaktocat]
+- <spam>Kanu Rebecca</spam> [<img alt="githb link" width="30px" src="https://octodex.github.com/images/yaktocat.png"/>]
 
 <br />
 <br />
