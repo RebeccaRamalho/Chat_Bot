@@ -57,11 +57,10 @@ It is necessary to begin with a **chatbot flow**. This step will help you find t
 
 ## Contributors
 
-- <spam>Kanu Rebecca</spam> [<img alt="githb link" width="30px" src="https://octodex.github.com/images/yaktocat.png"/>]
+- <spam>Kanu Rebecca</spam> [<img alt="githb link" width="30px" src="https://octodex.github.com/images/ Boxertocat .png"/>][github]
 
 <br />
 <br />
 
-<!-- [github]: https://github.com/RebeccaRamalho
- -->
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+[github]: https://github.com/RebeccaRamalho
+
