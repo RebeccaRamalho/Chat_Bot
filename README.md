@@ -57,7 +57,7 @@ It is necessary to begin with a **chatbot flow**. This step will help you find t
 
 ## Contributors
 
-- <spam>Kanu Rebecca</spam> [<img alt="githb link" width="50px" src="https://octodex.github.com/images/boxertocat_octodex.jpg"/>][github]
+- <spam>Kanu Rebecca</spam> [<img alt="githb link" width="80px" src="https://octodex.github.com/images/boxertocat_octodex.jpg"/>][github]
 
 <br />
 <br />
