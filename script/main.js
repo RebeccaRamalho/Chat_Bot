@@ -7,7 +7,6 @@ let chatBot = document.getElementById("chatBot");
 let container2 = document.getElementById("container2");
 let answer = document.querySelector(".answer");
 
-
 rebeccaBoot.addEventListener("click", () => {
   container2.innerHTML = `
 <div id="chatBot">
@@ -57,8 +56,9 @@ rebeccaBoot.addEventListener("click", () => {
 
               <!-------BOT TEXT AREA------------->
             <div class="botTextArea botTextAreaAfterClick">
-                 <p>Bonjour 🤓, je m'appelle Rebecca, je suis actuellement à la recherche d'une alternance en conception et développement d'applications, et je souhaites vous faire 
-                 découvrir mon profil, êtes vous intéressé?<br/>
+                 <p>Bonjour 🤓, je m'appelle Rebecca, ma passion pour le code accompagné de ma motivation m'a permis d'apprendre à créer différents types d'applications web.
+                 Stimulée par l'apprentissage, j'aimerais pousser les limites de mes connaissances grâce à votre école. 
+                 Souhaitez vous en savoir plus sur moi?<br/>
                  <p>
             </div>
 
