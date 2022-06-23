@@ -295,7 +295,7 @@ input {
   border: 2px solid #dbdeea;
   /* background-color: #dbdeea; */
   border-radius: 6px;
-  height: 131px;
+  height: 174px;
   width: 229px;
   padding-left: 22px;
   padding-right: 13px;
@@ -822,7 +822,7 @@ img {
   margin-right: 10px;
 }
 .buttonErr {
-   /* cursor: pointer;
+  /* cursor: pointer;
   height: 40px;
   width: 128px;
   font-family: OpenSans-Light;
@@ -835,5 +835,5 @@ img {
   font-size: 0.8rem;
   text-decoration: none;
   color: black;
-  text-align: center; 
+  text-align: center;
 }
