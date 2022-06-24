@@ -1334,7 +1334,7 @@ function botAnsweringToInputVal(e) {
       );
       compteurx = compteurProfessionalExperiencesAndYesInt;
       experienceDetails =
-        "<b>-De de Janvier à Mars 2020</b> j'ai été fille Au pair auprès d'une famille à Londres. J'ai effectué comme principales tâches: les soins quotidiens à un enfant atteint d'épilepsie sévère. <br><b>-En Mars 2020</b>-Femme de chambre à Hôtel Hyatt à Londres -Tâches principales: nettoyage des chambres de l'hôtel. <br><b>-De Mai à Juin 2021</b> Développeuse web et web mobile, à Association Hand-of hope,<br/>-Tâches principales: réalisation au cours d'un stage d'une interface dynamique.";
+        "<br><b>De Janvier à Mars 2020</b> j'ai été fille Au pair auprès d'une famille à Londres. J'ai effectué comme principales tâches: les soins quotidiens à un enfant atteint d'épilepsie. <br><b> En Mars 2020 (1mois)</b> Femme de chambre à Hôtel Hyatt à Londres -Tâches principales: nettoyage des chambres de l'hôtel. <br><b>De Mai à Juin 2021</b> Développeuse web et web mobile, à Association Hand-of hope <br/> -Tâches principales: réalisation au cours d'un stage d'une application fullstack. Depuis 2021 je suis en alternance auprès de la direction générale des finances.<br>-Tâches principale: refonte d'une application interne de workflow";
     }
     //SCOLARITY
     else if (
@@ -1406,7 +1406,7 @@ function botAnsweringToInputVal(e) {
           ].attributes[0].textContent.slice(14)
       );
       compteurx = compteurScolarityAndYesInt;
-      experienceDetails = `-En<b>2018</b> J'ai obtenu une licence en philosophie et un certificat en sociologie qui m'ont permis de structurer ma réflexion par l'exercice de la dissertation et de développer ma capacité d'introspection et d'ouverture au monde.<br>-En <b>2020 Social builder</b> puis <b>Simplon</b> en <b>2021</b> m'ont donné l'opportunité de développer des compétences dédiées à la <b>programmation web</b>.<br> J'ai par ces expériences pu développer des compétences tels que entre autres le maquettage d'une application, la capacité à développer le front end d'une application via le <b>framework React</b>, la capacité à développer la partie <b>back-end</b> d'une application grâce à Node.js, la capacité à faire de la veille et à documenter mon code.`;
+      experienceDetails = `-En<b>2018</b> J'ai obtenu une licence en philosophie et un certificat en sociologie qui m'ont permis de structurer ma réflexion par l'exercice de la dissertation et de développer ma capacité d'introspection et d'ouverture d'esprit.<br>-En <b>2020 Social builder</b> puis <b>Simplon</b> en <b>2021</b> m'ont donné l'opportunité de développer des compétences dédiées à la <b>programmation web</b>.<br> J'ai par ces expériences pu développer des compétences telles que entre autres le maquettage d'une application, la capacité à développer le front end d'une application via le <b>framework React</b>, la capacité à développer la partie <b>back-end</b> d'une application grâce à Node.js, la capacité à faire de la veille et à documenter mon code.<br>En<b>2021</b> J'ai commencé une année en alternance (toujours auprès de Simplon) en conception et développement d'appications.`;
     }
     let yesAndCatAnswer = document.querySelector(
       `#yesAndCatAnswer${compteurx}`
