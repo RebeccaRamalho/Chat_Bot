@@ -2455,7 +2455,7 @@ function botAnsweringToInputVal(e) {
     }, 1000);
 
     setTimeout(function () {
-      goodByeMessage.innerHTML = `<p>Vous pouvez me contacter par mail à l'adresse: kanurebecca0@gmail.com ou par téléphone au: 07.82.43.32.22. À bientôt!<p>`;
+      goodByeMessage.innerHTML = `<p>Mon github est à la page: https://github.com/RebeccaRamalho Vous pouvez me contacter par mail à l'adresse: <b>kanurebecca0@gmail.com</b> ou par téléphone au: <b>07.82.43.32.22</b> À bientôt!<p>`;
       goodByeMessage.style.border = `2px solid #dbdeea`;
       goodByeMessage.style.width = "229px";
       goodByeMessage.style.borderRadius = "6px";
