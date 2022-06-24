@@ -4,7 +4,7 @@
  */
 let experienceDetailsTexte9 = [
   [
-    "-Je sais développer un site de bout en bout (côté front-end comme côté back-end) avec le langage <b>Javascript<b/>,l'écosystème de <b>Node.js</b> et la librairie React.<br/>-Je sais concevoir et manipuler une base de donnée via les outils <b>MySQL<b/> et les <b>ORM Sequelize et Mongoose.<b/><br/> -Je sais gérer mes projets via le gestionnaire de version <b>GIT</b> et via <b>GITHUB</b>",
+    "-<b>Documenation:</b> versionning de wiki, jsdoc<br>-<b>Déploiement:</b> Apache2, Systemd<br>-<b>Test:</b> Jest, Supertest<br> -<b>Langage:</b> Javascript, Typescript<br> -<b>Outils de versionning:</b> github et git(rebase, commit, pull request, branche, issues)<br> -<b>OS:</b> Linux (ubuntu, linux mint, redhat, rocky linux)<br> -<b>Workflow:</b> Postman, slack, trello, npm, CLI, agilité<br> -<b>Librairies:</b> REACT JS, REACT native, axios <br> -<b>Base de donnée:</b> Mysql, Postgresql, MongoDB<br> -<b>Framework:</b> Express, dynacase<br> -<b>Veille:</b> Daily dev, feedly<br>",
     ,
   ],
 ];
