@@ -4,7 +4,7 @@
  */
 let professionalExperiencesDetails = [
   [
-    "<br><b>De Janvier à Mars 2020</b> j'ai été fille Au pair auprès d'une famille à Londres. J'ai effectué comme principales tâches: les soins quotidiens à un enfant atteint d'épilepsie. <br><b> En Mars 2020 (1mois)</b> Femme de chambre à Hôtel Hyatt à Londres -Tâches principales: nettoyage des chambres de l'hôtel. <br><b>De Mai à Juin 2021</b> Développeuse web et web mobile, à Association Hand-of hope <br/> -Tâches principales: réalisation au cours d'un stage d'une application fullstack. Depuis 2021 je suis en alternance auprès de la direction générale des finances.<br>-Tâches principale: refonte d'une application interne de workflow",
+    "<br><b>De Janvier à Mars 2020</b> j'ai été fille Au pair auprès d'une famille à Londres. J'ai effectué comme principales tâches: les soins quotidiens à un enfant atteint d'épilepsie. <br><b> En Mars 2020 (1mois)</b> Femme de chambre à Hôtel Hyatt à Londres -Tâches principales: nettoyage des chambres de l'hôtel. <br><b>De Mai à Juin 2021</b> Développeuse web et web mobile, à Association Hand-of hope <br/> -Tâches principales: réalisation au cours d'un stage d'une application fullstack. <b>Depuis 2021</b> je suis en alternance auprès de la direction générale des finances.<br>-Tâches principale: refonte d'une application interne de workflow",
   ],
 ];
 
