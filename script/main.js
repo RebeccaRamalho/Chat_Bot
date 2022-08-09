@@ -56,7 +56,7 @@ rebeccaBoot.addEventListener("click", () => {
 
               <!-------BOT TEXT AREA------------->
             <div class="botTextArea botTextAreaAfterClick">
-                 <p>Bonjour 🤓, je m'appelle Rebecca, ma passion pour le code accompagné m'a permis d'apprendre à créer différents types d'applications web.
+                 <p>Bonjour 🤓, je m'appelle Rebecca.
                     Souhaitez vous en savoir plus sur moi?<br/>
                  <p>
             </div>
