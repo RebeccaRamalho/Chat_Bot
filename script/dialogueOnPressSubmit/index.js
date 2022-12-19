@@ -240,8 +240,6 @@ function animateCategories() {
         document.querySelectorAll(".genericYes").length - 2
       ]
     ) {
-
-
       yesEventButton = document.querySelector(
         `#yesButton${document
           .querySelectorAll(".genericYes")
@@ -257,7 +255,6 @@ function animateCategories() {
           ].attributes[1].textContent.slice(8)}`
       );
 
-
       firstYesButton.classList.remove("yes");
       firstNoButton.classList.remove("no");
     } else {
@@ -268,7 +265,6 @@ function animateCategories() {
         firstYesButton.classList.remove("yes");
         firstNoButton.classList.remove("no");
       }
- 
     }
     yesEventButton.classList.add("invisible");
     noEventButton.classList.add("invisible");
@@ -291,7 +287,6 @@ function animateCategories() {
   }
 
   function makeDotsMove() {
-
     let chargingDotsThree = document.querySelector(
       `.chargingDots${enterSubmitCounter}`
     );
@@ -517,13 +512,13 @@ function animateCategories() {
   }, 4000);
 }
 /**
- * 
+ *
  * @param {number} compteurx (generic counter)
  * @param {number} compteur2 (changing the name to the category name )
  * @param {number} compteur3 (changing the name to the category name )
  * @param {number} compteur5 (changing the name to the category name )
- * @param {number} compteurLanguages 
- * @param {number} compteurHobbies 
+ * @param {number} compteurLanguages
+ * @param {number} compteurHobbies
  */
 function AskIfWantToSeeAnOtherExperience(
   compteurx,
@@ -1232,7 +1227,6 @@ function botAnsweringToInputVal(e) {
       compteurx = compteurSkillsAndYesInt;
       experienceDetails =
         "<b>Documenation:</b> versionning de wiki, jsdoc<br>-<b>Déploiement:</b> Apache2, Systemd<br>-<b>Test:</b> Jest, Supertest<br> -<b>Langage:</b> Javascript, Typescript<br> -<b>Outils de versionning:</b> github et git(rebase, commit, pull request, branche, issues)<br> -<b>OS:</b> Linux (ubuntu, linux mint, redhat, rocky linux)<br> -<b>Workflow:</b> Postman, slack, trello, npm, CLI, agilité<br> -<b>Librairies:</b> REACT JS, REACT native, axios <br> -<b>Base de donnée:</b> Mysql, Postgresql, MongoDB<br> -<b>Framework:</b> Express, dynacase<br> -<b>Veille:</b> Daily dev, feedly<br>";
-
     } else if (
       finalInputVal.includes("expériences") ||
       finalInputVal.includes("expérience") ||
@@ -1334,7 +1328,7 @@ function botAnsweringToInputVal(e) {
       );
       compteurx = compteurProfessionalExperiencesAndYesInt;
       experienceDetails =
-        "<br><b>De Janvier à Mars 2020</b> j'ai été fille Au pair auprès d'une famille à Londres. J'ai effectué comme principales tâches: les soins quotidiens à un enfant atteint d'épilepsie. <br><b> En Mars 2020 (1mois)</b> Femme de chambre à Hôtel Hyatt à Londres -Tâches principales: nettoyage des chambres de l'hôtel. <br><b>De Mai à Juin 2021</b> Développeuse web et web mobile, à Association Hand-of hope <br/> -Tâches principales: réalisation au cours d'un stage d'une application fullstack. <b>Depuis 2021</b> je suis en alternance auprès de la direction générale des finances.<br>-Tâches principales: refonte d'une application interne de workflow";
+        "<br><b>De Janvier à Mars 2020</b> j'ai été fille Au pair auprès d'une famille à Londres. J'ai effectué comme principales tâches: les soins quotidiens à un enfant atteint d'épilepsie. <br><b> En Mars 2020 (1mois)</b> Femme de chambre à Hôtel Hyatt à Londres -Tâches principales: nettoyage des chambres de l'hôtel. <br><b>De Mai à Juin 2021</b> Développeuse web et web mobile auprès de l'association Hand-of hope <br/> -Tâches principales: réalisation au cours d'un stage d'une application fullstack.  <b>De Décembre 2021 à Septembre 2022</b> j'ai éffectué une alternance auprès de la direction générale des finances.<br>-Tâches principale: refonte d'une application interne de workflow";
     }
     //SCOLARITY
     else if (
@@ -1495,7 +1489,6 @@ function botAnsweringToInputVal(e) {
     }, 8000);
 
     AskIfWantToSeeAnOtherExperience(compteurx);
-
 
     setTimeout(function () {
       cleartext();
@@ -2096,7 +2089,7 @@ function botAnsweringToInputVal(e) {
         : ((categorieAnswer.innerHTML = `<p class="font">${inputVal}</p>`),
           skills.classList.add("invisible"));
     }
-    categorieAnswer.style.marginTop = "6px"; 
+    categorieAnswer.style.marginTop = "6px";
     categorieAnswer.style.border = `2px solid #dbdeea`;
     categorieAnswer.style.backgroundColor = "#dbdeea";
     categorieAnswer.style.width = "229px";
@@ -2190,7 +2183,7 @@ function botAnsweringToInputVal(e) {
           languages.classList.add("invisible"));
     }
 
-    categorieAnswer.style.marginTop = "6px"; 
+    categorieAnswer.style.marginTop = "6px";
     categorieAnswer.style.border = `2px solid #dbdeea`;
     categorieAnswer.style.backgroundColor = "#dbdeea";
     categorieAnswer.style.width = "229px";
@@ -2434,7 +2427,6 @@ function botAnsweringToInputVal(e) {
       yesButton.classList.add("invisible");
       noButton.classList.add("invisible");
     }
-
 
     noInputAnswer.innerHTML = `<p class="font">${inputVal}</p>`;
     noInputAnswer.style.marginTop = "6px";
